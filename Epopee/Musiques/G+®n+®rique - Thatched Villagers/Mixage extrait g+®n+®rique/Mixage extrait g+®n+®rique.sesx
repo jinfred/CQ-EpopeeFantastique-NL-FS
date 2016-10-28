@@ -1,0 +1,2025 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE sesx>
+<sesx version="1.3">
+
+  <session appBuild="9.2.1.19" appVersion="9.2" audioChannelType="stereo" bitDepth="32" duration="12228068" sampleRate="48000">
+    <name>Extrait_pour_générique.sesx</name>
+    <tracks>
+      <audioTrack automationLaneOpenState="false" id="10001" index="1" select="false" visible="true">
+        <trackParameters trackHeight="88" trackHue="241.9999990906995" trackMinimized="false">
+          <name>Piste 1</name>
+        </trackParameters>
+        <trackAudioParameters audioChannelType="stereo" automationMode="1" monitoring="false" recordArmed="false" solo="false" soloSafe="false">
+          <trackOutput outputID="10000" type="trackID"/>
+          <trackInput inputID="1"/>
+          <component componentGuid="d8c78f36-961e-45f7-a471-30366e3f4196" componentID="Audition.Fader" id="trackFader" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1"/>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="0d650bea-331b-48a0-8d11-5667fc9f19f1" componentID="Audition.Mute" id="trackMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="2dc2fe4c-6a04-4b6f-b973-60dcc05091bd" componentID="Audition.StereoPanner" id="trackPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <component componentGuid="123854de-68cf-4210-8603-a3b011569628" componentID="Audition.EQ" id="trackEQ" name="EQ" powered="false">
+            <parameter index="0" name="Fréquence papillon grave" parameterValue="0.000834"/>
+            <parameter index="1" name="Gain papillon grave" parameterValue="0.5"/>
+            <parameter index="2" name="Fréquence papillon aigu" parameterValue="0.7497915"/>
+            <parameter index="3" name="Gain papillon aigu" parameterValue="0.5"/>
+            <parameter index="4" name="Bande d’égaliseur 1 – Fréquence centrale" parameterValue="0.001251"/>
+            <parameter index="5" name="Bande d’égaliseur 1 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="6" name="Bande d’égaliseur 1 – Gain" parameterValue="0.5"/>
+            <parameter index="7" name="Bande d’égaliseur 1 – Activation" parameterValue="1"/>
+            <parameter index="8" name="Bande d’égaliseur 2 – Fréquence centrale" parameterValue="0.0075063"/>
+            <parameter index="9" name="Bande d’égaliseur 2 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="10" name="Bande d’égaliseur 2 – Gain" parameterValue="0.5"/>
+            <parameter index="11" name="Bande d’égaliseur 2 – Activation" parameterValue="1"/>
+            <parameter index="12" name="Bande d’égaliseur 3 – Fréquence centrale" parameterValue="0.0325271"/>
+            <parameter index="13" name="Bande d’égaliseur 3 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="14" name="Bande d’égaliseur 3 – Gain" parameterValue="0.5"/>
+            <parameter index="15" name="Bande d’égaliseur 3 – Activation" parameterValue="1"/>
+            <parameter index="16" name="Bande d’égaliseur 4 – Fréquence centrale" parameterValue="0.1326105"/>
+            <parameter index="17" name="Bande d’égaliseur 4 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="18" name="Bande d’égaliseur 4 – Gain" parameterValue="0.5"/>
+            <parameter index="19" name="Bande d’égaliseur 4 – Activation" parameterValue="1"/>
+            <parameter index="20" name="Bande d’égaliseur 5 – Fréquence centrale" parameterValue="0.5329441"/>
+            <parameter index="21" name="Bande d’égaliseur 5 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="22" name="Bande d’égaliseur 5 – Gain" parameterValue="0.5"/>
+            <parameter index="23" name="Bande d’égaliseur 5 – Activation" parameterValue="1"/>
+            <parameter index="24" name="Gain principal" parameterValue="0.6666667"/>
+            <parameter index="25" name="Q constant" parameterValue="1"/>
+            <parameter index="26" name="Ordre de filtre coupe-bas" parameterValue="0"/>
+            <parameter index="27" name="Ordre de filtre coupe-haut" parameterValue="0"/>
+            <parameter index="28" name="Mode ultra-silencieux" parameterValue="0"/>
+            <parameter index="29" name="Etagère basse activée" parameterValue="1"/>
+            <parameter index="30" name="Etagère haute activée" parameterValue="1"/>
+            <parameter index="31" name="Taux d’échantillonnage d’origine" parameterValue="0.25"/>
+            <parameter index="32" name="Bande d’égaliseur 1 – Largeur de bande" parameterValue="0.0025"/>
+            <parameter index="33" name="Bande d’égaliseur 2 – Largeur de bande" parameterValue="0.01"/>
+            <parameter index="34" name="Bande d’égaliseur 3 – Largeur de bande" parameterValue="0.04"/>
+            <parameter index="35" name="Bande d’égaliseur 4 – Largeur de bande" parameterValue="0.16"/>
+            <parameter index="36" name="Bande d’égaliseur 5 – Largeur de bande" parameterValue="0.64"/>
+            <parameter index="37" name="Filtre passe-haut – Activation" parameterValue="0"/>
+            <parameter index="38" name="Fréquence coupure passe-haut" parameterValue="0"/>
+            <parameter index="39" name="Pente passe-haut" parameterValue="4"/>
+            <parameter index="40" name="Filtre passe-bas – Activation" parameterValue="0"/>
+            <parameter index="41" name="Fréquence coupure passe-bas" parameterValue="0.8331943"/>
+            <parameter index="42" name="Pente passe-bas" parameterValue="4"/>
+            <parameter index="43" name="Ignorer" parameterValue="0"/>
+            <parameter index="44" name="Plage graphique basse" parameterValue="1"/>
+          </component>
+        </trackAudioParameters>
+        <editParameter parameterIndex="0" slotIndex="4294967280"/>
+        <sendList>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="0">
+            <component componentGuid="97a8259d-91af-40b4-b71f-514ffb75bebd" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="1">
+            <component componentGuid="5418b2b9-1ac2-46ef-86e2-f73a5be86ed1" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="2">
+            <component componentGuid="fff8a9cc-fbba-400b-8ae0-bf240345fa48" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="3">
+            <component componentGuid="ca19a3cb-bc97-4c4e-997d-8506282cdaf3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="4">
+            <component componentGuid="4e8ab846-2472-44ff-b754-f11a3111eb50" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="5">
+            <component componentGuid="2ec1b757-39d8-4ff0-834a-cda06c55b46f" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="6">
+            <component componentGuid="2cc325f1-dadf-442e-83a0-780c377fafcf" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="7">
+            <component componentGuid="6cff845b-79fc-4392-a4f0-5c6e44e50d54" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="8">
+            <component componentGuid="ad168de6-6fca-49fb-8f86-ce758717bb26" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="9">
+            <component componentGuid="33ef54b8-e1e8-4f81-9811-7ffb190e1569" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="10">
+            <component componentGuid="2648da03-10a7-4865-ade9-38fc529bb523" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="11">
+            <component componentGuid="69596940-b0ab-4bf9-a333-6df37a53b6b3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="12">
+            <component componentGuid="bfb180a3-c5c3-44e0-8032-24e24c806eb1" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="13">
+            <component componentGuid="520d45ff-afb9-4d94-a1dc-b946e9799714" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="14">
+            <component componentGuid="86a49287-b51e-443b-8765-d5a9511669a4" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="15">
+            <component componentGuid="3c1288ae-a460-4e91-b86a-6062f46b14df" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+        </sendList>
+        <audioClip clipAutoCrossfade="true" crossFadeHeadClipID="-1" crossFadeTailClipID="-1" endPoint="1476797" fileID="0" hue="-1" id="0" lockedInTime="false" looped="false" name="Thatched Villagers" offline="false" select="false" sourceInPoint="4902452" sourceOutPoint="6379009" startPoint="240" zOrder="115">
+          <component componentGuid="4d6aee85-9d12-4686-9d0a-bfc0d6a7e0d1" componentID="Audition.Fader" id="clipGain" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1">
+              <parameterKeyframes enableSplines="false">
+                <parameterKeyframe sampleOffset="4904951" select="false" type="linear" value="0"/>
+                <parameterKeyframe sampleOffset="4907222" select="false" type="linear" value="0.5239837"/>
+                <parameterKeyframe sampleOffset="4918770" select="false" type="linear" value="0.65"/>
+                <parameterKeyframe sampleOffset="6348205" select="false" type="linear" value="0.65"/>
+                <parameterKeyframe sampleOffset="6354228" select="false" type="linear" value="0.6215447"/>
+                <parameterKeyframe sampleOffset="6359013" select="false" type="linear" value="0.1116019"/>
+                <parameterKeyframe sampleOffset="6372673" select="false" type="linear" value="0"/>
+              </parameterKeyframes>
+            </parameter>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="bdab09fd-0162-4354-a808-731ad30602a7" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="807b6103-a77b-4b1f-84c3-06809eb4bfa1" componentID="Audition.StereoPanner" id="clipPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <fadeIn crossFadeLinkType="linkedAsymmetric" endPoint="0" shape="0" startPoint="0" type="cosine"/>
+          <fadeOut crossFadeLinkType="linkedAsymmetric" endPoint="1476557" shape="0" startPoint="1476557" type="cosine"/>
+          <editParameter parameterIndex="0" slotIndex="4294967281"/>
+          <editParameter parameterIndex="0" slotIndex="4294967280"/>
+          <channelMap>
+            <channel index="0" sourceIndex="0"/>
+            <channel index="1" sourceIndex="1"/>
+          </channelMap>
+        </audioClip>
+      </audioTrack>
+      <audioTrack automationLaneOpenState="false" id="10002" index="2" select="false" visible="true">
+        <trackParameters trackHeight="88" trackHue="139.29080486297607" trackMinimized="false">
+          <name>Piste 2</name>
+        </trackParameters>
+        <trackAudioParameters audioChannelType="stereo" automationMode="1" monitoring="false" recordArmed="false" solo="false" soloSafe="false">
+          <trackOutput outputID="10000" type="trackID"/>
+          <trackInput inputID="1"/>
+          <component componentGuid="5eb02979-7a12-4c46-acfd-d5aba775db63" componentID="Audition.Fader" id="trackFader" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1"/>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="f823220b-e406-4e2b-b7b3-286539183f9b" componentID="Audition.Mute" id="trackMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="4e9a0d8b-735f-4555-b0c5-561d02ba8543" componentID="Audition.StereoPanner" id="trackPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <component componentGuid="49cb4fb2-1779-4fe9-9a86-af480eace32f" componentID="Audition.EQ" id="trackEQ" name="EQ" powered="false">
+            <parameter index="0" name="Fréquence papillon grave" parameterValue="0.000834"/>
+            <parameter index="1" name="Gain papillon grave" parameterValue="0.5"/>
+            <parameter index="2" name="Fréquence papillon aigu" parameterValue="0.7497915"/>
+            <parameter index="3" name="Gain papillon aigu" parameterValue="0.5"/>
+            <parameter index="4" name="Bande d’égaliseur 1 – Fréquence centrale" parameterValue="0.001251"/>
+            <parameter index="5" name="Bande d’égaliseur 1 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="6" name="Bande d’égaliseur 1 – Gain" parameterValue="0.5"/>
+            <parameter index="7" name="Bande d’égaliseur 1 – Activation" parameterValue="1"/>
+            <parameter index="8" name="Bande d’égaliseur 2 – Fréquence centrale" parameterValue="0.0075063"/>
+            <parameter index="9" name="Bande d’égaliseur 2 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="10" name="Bande d’égaliseur 2 – Gain" parameterValue="0.5"/>
+            <parameter index="11" name="Bande d’égaliseur 2 – Activation" parameterValue="1"/>
+            <parameter index="12" name="Bande d’égaliseur 3 – Fréquence centrale" parameterValue="0.0325271"/>
+            <parameter index="13" name="Bande d’égaliseur 3 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="14" name="Bande d’égaliseur 3 – Gain" parameterValue="0.5"/>
+            <parameter index="15" name="Bande d’égaliseur 3 – Activation" parameterValue="1"/>
+            <parameter index="16" name="Bande d’égaliseur 4 – Fréquence centrale" parameterValue="0.1326105"/>
+            <parameter index="17" name="Bande d’égaliseur 4 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="18" name="Bande d’égaliseur 4 – Gain" parameterValue="0.5"/>
+            <parameter index="19" name="Bande d’égaliseur 4 – Activation" parameterValue="1"/>
+            <parameter index="20" name="Bande d’égaliseur 5 – Fréquence centrale" parameterValue="0.5329441"/>
+            <parameter index="21" name="Bande d’égaliseur 5 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="22" name="Bande d’égaliseur 5 – Gain" parameterValue="0.5"/>
+            <parameter index="23" name="Bande d’égaliseur 5 – Activation" parameterValue="1"/>
+            <parameter index="24" name="Gain principal" parameterValue="0.6666667"/>
+            <parameter index="25" name="Q constant" parameterValue="1"/>
+            <parameter index="26" name="Ordre de filtre coupe-bas" parameterValue="0"/>
+            <parameter index="27" name="Ordre de filtre coupe-haut" parameterValue="0"/>
+            <parameter index="28" name="Mode ultra-silencieux" parameterValue="0"/>
+            <parameter index="29" name="Etagère basse activée" parameterValue="1"/>
+            <parameter index="30" name="Etagère haute activée" parameterValue="1"/>
+            <parameter index="31" name="Taux d’échantillonnage d’origine" parameterValue="0.25"/>
+            <parameter index="32" name="Bande d’égaliseur 1 – Largeur de bande" parameterValue="0.0025"/>
+            <parameter index="33" name="Bande d’égaliseur 2 – Largeur de bande" parameterValue="0.01"/>
+            <parameter index="34" name="Bande d’égaliseur 3 – Largeur de bande" parameterValue="0.04"/>
+            <parameter index="35" name="Bande d’égaliseur 4 – Largeur de bande" parameterValue="0.16"/>
+            <parameter index="36" name="Bande d’égaliseur 5 – Largeur de bande" parameterValue="0.64"/>
+            <parameter index="37" name="Filtre passe-haut – Activation" parameterValue="0"/>
+            <parameter index="38" name="Fréquence coupure passe-haut" parameterValue="0"/>
+            <parameter index="39" name="Pente passe-haut" parameterValue="4"/>
+            <parameter index="40" name="Filtre passe-bas – Activation" parameterValue="0"/>
+            <parameter index="41" name="Fréquence coupure passe-bas" parameterValue="0.8331943"/>
+            <parameter index="42" name="Pente passe-bas" parameterValue="4"/>
+            <parameter index="43" name="Ignorer" parameterValue="0"/>
+            <parameter index="44" name="Plage graphique basse" parameterValue="1"/>
+          </component>
+        </trackAudioParameters>
+        <editParameter parameterIndex="0" slotIndex="4294967280"/>
+        <sendList>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="0">
+            <component componentGuid="b74ae0a8-2d73-4c36-ae92-03ecb7d517d5" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="1">
+            <component componentGuid="b075635f-c6ec-4573-ac36-042dbdb788f3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="2">
+            <component componentGuid="e74527f6-3cf0-4a95-8e55-63eeded39fd3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="3">
+            <component componentGuid="f30bd056-ff7f-4c32-982c-a49eb9f2c97f" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="4">
+            <component componentGuid="75ef396c-54ed-455a-ae1a-e01aea767352" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="5">
+            <component componentGuid="e20e59d9-5d5d-4d6a-abc4-efe4a230ad28" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="6">
+            <component componentGuid="ff764821-95c7-4db5-9286-7d9ed546c7d1" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="7">
+            <component componentGuid="3e310a4a-bf39-46c5-9802-d2ad4a8b2835" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="8">
+            <component componentGuid="4812aa1c-2abd-40e8-885e-e97bc4f0aae3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="9">
+            <component componentGuid="28a017c2-3e77-46e4-9211-5bcbe952341a" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="10">
+            <component componentGuid="e2cb794e-0b0a-4ccf-b722-702db1dc3295" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="11">
+            <component componentGuid="dcef754d-c64f-4e09-8886-3ed8df5824c3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="12">
+            <component componentGuid="540bce9d-aa96-40dd-8df9-d0924bbf3054" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="13">
+            <component componentGuid="ec972bdd-8ba7-441f-ae42-655c3f4e9cb4" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="14">
+            <component componentGuid="942aadcd-0233-4396-a00b-40c3fe882c31" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="15">
+            <component componentGuid="076163ff-27bb-4fdf-ad56-2948417b8b67" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+        </sendList>
+        <audioClip clipAutoCrossfade="true" crossFadeHeadClipID="-1" crossFadeTailClipID="-1" endPoint="490571" fileID="0" hue="-1" id="0" lockedInTime="false" looped="false" name="Thatched Villagers" offline="false" select="false" sourceInPoint="0" sourceOutPoint="490571" startPoint="0" zOrder="117">
+          <component componentGuid="5d13757f-78b8-42eb-9c57-5a9355a2fe52" componentID="Audition.Fader" id="clipGain" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1">
+              <parameterKeyframes enableSplines="false">
+                <parameterKeyframe sampleOffset="460444" select="false" type="linear" value="0.65"/>
+                <parameterKeyframe sampleOffset="484165" select="false" type="linear" value="0.5733576"/>
+                <parameterKeyframe sampleOffset="487273" select="false" type="linear" value="0.4757077"/>
+                <parameterKeyframe sampleOffset="489978" select="true" type="linear" value="0"/>
+              </parameterKeyframes>
+            </parameter>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="42cd55c2-4d16-49c6-a87a-a499025ab208" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="5abe7f1f-c775-4807-bed8-3f2d9dadf0cc" componentID="Audition.StereoPanner" id="clipPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <fadeIn crossFadeLinkType="linkedAsymmetric" endPoint="0" shape="0" startPoint="0" type="cosine"/>
+          <fadeOut crossFadeLinkType="linkedAsymmetric" endPoint="490571" shape="0" startPoint="490571" type="cosine"/>
+          <editParameter parameterIndex="0" slotIndex="4294967281"/>
+          <editParameter parameterIndex="0" slotIndex="4294967280"/>
+          <channelMap>
+            <channel index="0" sourceIndex="0"/>
+            <channel index="1" sourceIndex="1"/>
+          </channelMap>
+        </audioClip>
+        <audioClip clipAutoCrossfade="true" crossFadeHeadClipID="-1" crossFadeTailClipID="-1" endPoint="1492801" fileID="0" hue="-1" id="1" lockedInTime="false" looped="false" name="Thatched Villagers" offline="false" select="true" sourceInPoint="6325956" sourceOutPoint="6395015" startPoint="1423742" zOrder="123">
+          <effectsRack preFader="true">
+            <component componentGuid="451e3c63-51ef-4f3f-a863-980a532bf165" id="rackMix" powered="true">
+              <parameter index="0" parameterValue="0"/>
+              <parameter index="1" parameterValue="0"/>
+            </component>
+            <component componentGuid="817679ba-8084-4b6d-94da-e69565cab951" id="rackInput" powered="true">
+              <parameter index="0" parameterValue="1"/>
+              <parameter index="1" parameterValue="0"/>
+            </component>
+            <component componentGuid="22d1e323-ef54-4436-89f6-d751ed744303" id="rackOutput" powered="true">
+              <parameter index="0" parameterValue="1"/>
+              <parameter index="1" parameterValue="0"/>
+            </component>
+            <slot powered="true" slotIndex="0">
+              <component componentGuid="879b4bd4-047e-4251-9e8c-89e7ab423e85" componentID="7ea99d31-ca8f-454f-acd7-81a258efb336" editorHeight="492" editorLeft="702" editorTop="294" editorWidth="516" name="Réverbération studio">
+                <channelMap direction="input">
+                  <channel index="0" sourceIndex="0"/>
+                  <channel index="1" sourceIndex="1"/>
+                </channelMap>
+                <channelMap direction="output">
+                  <channel index="0" sourceIndex="0"/>
+                  <channel index="1" sourceIndex="1"/>
+                </channelMap>
+                <parameter index="0" name="Coupure fréquence basse" parameterValue="0"/>
+                <parameter index="1" name="Coupure fréquence élevée" parameterValue="1"/>
+                <parameter index="2" name="Taille de la pièce" parameterValue="0.4893048"/>
+                <parameter index="3" name="Largeur" parameterValue="1"/>
+                <parameter index="4" name="Diffusion" parameterValue="1"/>
+                <parameter index="5" name="Amortissement" parameterValue="0.7807487"/>
+                <parameter index="6" name="Atténuation" parameterValue="0.2346939"/>
+                <parameter index="7" name="Premières réflexions" parameterValue="0.1991444"/>
+                <parameter index="8" name="Retard des premières réflexions" parameterValue="0.5"/>
+                <parameter index="9" name="Niveau de sortie original" parameterValue="0"/>
+                <parameter index="10" name="Niveau de sortie résultant" parameterValue="0.75"/>
+                <parameter index="11" name="Est en cours de traitement" parameterValue="0.2512563"/>
+                <parameter index="12" name="Nombre de canaux" parameterValue="0.0625"/>
+              </component>
+            </slot>
+          </effectsRack>
+          <component componentGuid="ec8f2858-6bf7-4910-a65c-5c865df3cf01" componentID="Audition.Fader" id="clipGain" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="0.0106226">
+              <parameterKeyframes enableSplines="false">
+                <parameterKeyframe sampleOffset="4904879" select="false" type="linear" value="0.0849593"/>
+                <parameterKeyframe sampleOffset="4907222" select="false" type="linear" value="0.5239837"/>
+                <parameterKeyframe sampleOffset="4918770" select="false" type="linear" value="0.65"/>
+                <parameterKeyframe sampleOffset="6325252" select="false" type="linear" value="0"/>
+                <parameterKeyframe sampleOffset="6335816" select="false" type="linear" value="0.65"/>
+                <parameterKeyframe sampleOffset="6348205" select="false" type="linear" value="0.65"/>
+                <parameterKeyframe sampleOffset="6354184" select="false" type="linear" value="0.4676985"/>
+                <parameterKeyframe sampleOffset="6359111" select="false" type="linear" value="0"/>
+                <parameterKeyframe sampleOffset="6372673" select="false" type="linear" value="0"/>
+              </parameterKeyframes>
+            </parameter>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="6f887d36-46c1-4e55-b456-820b5134fa5a" componentID="Audition.Mute" id="clipMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="4fc95bdf-b6ee-4914-9028-ee0549070b9e" componentID="Audition.StereoPanner" id="clipPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <fadeIn crossFadeLinkType="linkedAsymmetric" endPoint="0" shape="0" startPoint="0" type="cosine"/>
+          <fadeOut crossFadeLinkType="linkedAsymmetric" endPoint="69059" shape="0" startPoint="69059" type="cosine"/>
+          <editParameter parameterIndex="0" slotIndex="4294967281"/>
+          <editParameter parameterIndex="0" slotIndex="4294967280"/>
+          <channelMap>
+            <channel index="0" sourceIndex="0"/>
+            <channel index="1" sourceIndex="1"/>
+          </channelMap>
+        </audioClip>
+      </audioTrack>
+      <audioTrack automationLaneOpenState="false" id="10003" index="3" select="true" visible="true">
+        <trackParameters trackHeight="88" trackHue="349.45333957672119" trackMinimized="false">
+          <name>Piste 3</name>
+        </trackParameters>
+        <trackAudioParameters audioChannelType="stereo" automationMode="1" monitoring="false" recordArmed="false" solo="false" soloSafe="false">
+          <trackOutput outputID="10000" type="trackID"/>
+          <trackInput inputID="1"/>
+          <component componentGuid="7d0e2def-d0c6-43d8-abe6-d6520dc63d5d" componentID="Audition.Fader" id="trackFader" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1"/>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="eefc7887-88c9-4822-90ab-9fa65fc5deff" componentID="Audition.Mute" id="trackMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="1"/>
+          </component>
+          <component componentGuid="3f1714f1-a344-416b-a312-05d8b79c92c4" componentID="Audition.StereoPanner" id="trackPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <component componentGuid="bc271667-0ff7-4c45-a6c3-ed86ce97e597" componentID="Audition.EQ" id="trackEQ" name="EQ" powered="false">
+            <parameter index="0" name="Fréquence papillon grave" parameterValue="0.000834"/>
+            <parameter index="1" name="Gain papillon grave" parameterValue="0.5"/>
+            <parameter index="2" name="Fréquence papillon aigu" parameterValue="0.7497915"/>
+            <parameter index="3" name="Gain papillon aigu" parameterValue="0.5"/>
+            <parameter index="4" name="Bande d’égaliseur 1 – Fréquence centrale" parameterValue="0.001251"/>
+            <parameter index="5" name="Bande d’égaliseur 1 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="6" name="Bande d’égaliseur 1 – Gain" parameterValue="0.5"/>
+            <parameter index="7" name="Bande d’égaliseur 1 – Activation" parameterValue="1"/>
+            <parameter index="8" name="Bande d’égaliseur 2 – Fréquence centrale" parameterValue="0.0075063"/>
+            <parameter index="9" name="Bande d’égaliseur 2 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="10" name="Bande d’égaliseur 2 – Gain" parameterValue="0.5"/>
+            <parameter index="11" name="Bande d’égaliseur 2 – Activation" parameterValue="1"/>
+            <parameter index="12" name="Bande d’égaliseur 3 – Fréquence centrale" parameterValue="0.0325271"/>
+            <parameter index="13" name="Bande d’égaliseur 3 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="14" name="Bande d’égaliseur 3 – Gain" parameterValue="0.5"/>
+            <parameter index="15" name="Bande d’égaliseur 3 – Activation" parameterValue="1"/>
+            <parameter index="16" name="Bande d’égaliseur 4 – Fréquence centrale" parameterValue="0.1326105"/>
+            <parameter index="17" name="Bande d’égaliseur 4 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="18" name="Bande d’égaliseur 4 – Gain" parameterValue="0.5"/>
+            <parameter index="19" name="Bande d’égaliseur 4 – Activation" parameterValue="1"/>
+            <parameter index="20" name="Bande d’égaliseur 5 – Fréquence centrale" parameterValue="0.5329441"/>
+            <parameter index="21" name="Bande d’égaliseur 5 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="22" name="Bande d’égaliseur 5 – Gain" parameterValue="0.5"/>
+            <parameter index="23" name="Bande d’égaliseur 5 – Activation" parameterValue="1"/>
+            <parameter index="24" name="Gain principal" parameterValue="0.6666667"/>
+            <parameter index="25" name="Q constant" parameterValue="1"/>
+            <parameter index="26" name="Ordre de filtre coupe-bas" parameterValue="0"/>
+            <parameter index="27" name="Ordre de filtre coupe-haut" parameterValue="0"/>
+            <parameter index="28" name="Mode ultra-silencieux" parameterValue="0"/>
+            <parameter index="29" name="Etagère basse activée" parameterValue="1"/>
+            <parameter index="30" name="Etagère haute activée" parameterValue="1"/>
+            <parameter index="31" name="Taux d’échantillonnage d’origine" parameterValue="0.25"/>
+            <parameter index="32" name="Bande d’égaliseur 1 – Largeur de bande" parameterValue="0.0025"/>
+            <parameter index="33" name="Bande d’égaliseur 2 – Largeur de bande" parameterValue="0.01"/>
+            <parameter index="34" name="Bande d’égaliseur 3 – Largeur de bande" parameterValue="0.04"/>
+            <parameter index="35" name="Bande d’égaliseur 4 – Largeur de bande" parameterValue="0.16"/>
+            <parameter index="36" name="Bande d’égaliseur 5 – Largeur de bande" parameterValue="0.64"/>
+            <parameter index="37" name="Filtre passe-haut – Activation" parameterValue="0"/>
+            <parameter index="38" name="Fréquence coupure passe-haut" parameterValue="0"/>
+            <parameter index="39" name="Pente passe-haut" parameterValue="4"/>
+            <parameter index="40" name="Filtre passe-bas – Activation" parameterValue="0"/>
+            <parameter index="41" name="Fréquence coupure passe-bas" parameterValue="0.8331943"/>
+            <parameter index="42" name="Pente passe-bas" parameterValue="4"/>
+            <parameter index="43" name="Ignorer" parameterValue="0"/>
+            <parameter index="44" name="Plage graphique basse" parameterValue="1"/>
+          </component>
+        </trackAudioParameters>
+        <editParameter parameterIndex="0" slotIndex="4294967280"/>
+        <sendList>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="0">
+            <component componentGuid="eee9f99e-c80d-4ef3-a038-5a8a1e341b03" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="1">
+            <component componentGuid="6a69daea-c684-4f9c-9337-463aabc7005c" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="2">
+            <component componentGuid="3f5f9692-a064-4a8c-8e0f-a0ee5a3edfb6" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="3">
+            <component componentGuid="8507fa85-27e6-48cf-9591-419bbd076ffc" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="4">
+            <component componentGuid="d9520d33-2773-47d2-8053-aa0ef2a9391a" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="5">
+            <component componentGuid="7835ef0e-24b4-4b28-afa9-ef66658ccb1a" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="6">
+            <component componentGuid="683539d3-4f9e-4ad2-9a47-e525c706b173" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="7">
+            <component componentGuid="ce11e1d6-6569-4ebe-8486-009a024074bf" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="8">
+            <component componentGuid="d4dd25e4-0bc7-42a9-a4f9-651dbdbdb62b" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="9">
+            <component componentGuid="53db3fe9-14f7-469c-9c8f-4e3721dbe3f3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="10">
+            <component componentGuid="db4e2084-bbc7-4ef1-b7f3-ac56c4da7731" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="11">
+            <component componentGuid="d4ce79dd-8b20-4826-a091-63ad51eec3ba" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="12">
+            <component componentGuid="76e12ae2-f55e-4386-b118-f96c97303c70" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="13">
+            <component componentGuid="429ded0c-8355-45d9-843e-6afac8cd9e4f" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="14">
+            <component componentGuid="6c2fff63-7a09-453e-b6a5-344f1e9991a3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="15">
+            <component componentGuid="ac755381-e396-4bf5-b317-fe13d353cc3a" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+        </sendList>
+      </audioTrack>
+      <audioTrack automationLaneOpenState="false" id="10004" index="4" select="false" visible="true">
+        <trackParameters trackHeight="88" trackHue="226.62580490112305" trackMinimized="false">
+          <name>Piste 4</name>
+        </trackParameters>
+        <trackAudioParameters audioChannelType="stereo" automationMode="1" monitoring="false" recordArmed="false" solo="false" soloSafe="false">
+          <trackOutput outputID="10000" type="trackID"/>
+          <trackInput inputID="1"/>
+          <component componentGuid="b3ed3b97-d75b-40bc-95c7-62812bd4afef" componentID="Audition.Fader" id="trackFader" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1"/>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="12fab51b-94d8-4f0c-8b42-ee621566ceac" componentID="Audition.Mute" id="trackMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="b16fe588-84c7-4792-b3a1-30c568cfacf7" componentID="Audition.StereoPanner" id="trackPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <component componentGuid="36c12ab8-a01c-49f0-a37e-a75c520fbc65" componentID="Audition.EQ" id="trackEQ" name="EQ" powered="false">
+            <parameter index="0" name="Fréquence papillon grave" parameterValue="0.000834"/>
+            <parameter index="1" name="Gain papillon grave" parameterValue="0.5"/>
+            <parameter index="2" name="Fréquence papillon aigu" parameterValue="0.7497915"/>
+            <parameter index="3" name="Gain papillon aigu" parameterValue="0.5"/>
+            <parameter index="4" name="Bande d’égaliseur 1 – Fréquence centrale" parameterValue="0.001251"/>
+            <parameter index="5" name="Bande d’égaliseur 1 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="6" name="Bande d’égaliseur 1 – Gain" parameterValue="0.5"/>
+            <parameter index="7" name="Bande d’égaliseur 1 – Activation" parameterValue="1"/>
+            <parameter index="8" name="Bande d’égaliseur 2 – Fréquence centrale" parameterValue="0.0075063"/>
+            <parameter index="9" name="Bande d’égaliseur 2 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="10" name="Bande d’égaliseur 2 – Gain" parameterValue="0.5"/>
+            <parameter index="11" name="Bande d’égaliseur 2 – Activation" parameterValue="1"/>
+            <parameter index="12" name="Bande d’égaliseur 3 – Fréquence centrale" parameterValue="0.0325271"/>
+            <parameter index="13" name="Bande d’égaliseur 3 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="14" name="Bande d’égaliseur 3 – Gain" parameterValue="0.5"/>
+            <parameter index="15" name="Bande d’égaliseur 3 – Activation" parameterValue="1"/>
+            <parameter index="16" name="Bande d’égaliseur 4 – Fréquence centrale" parameterValue="0.1326105"/>
+            <parameter index="17" name="Bande d’égaliseur 4 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="18" name="Bande d’égaliseur 4 – Gain" parameterValue="0.5"/>
+            <parameter index="19" name="Bande d’égaliseur 4 – Activation" parameterValue="1"/>
+            <parameter index="20" name="Bande d’égaliseur 5 – Fréquence centrale" parameterValue="0.5329441"/>
+            <parameter index="21" name="Bande d’égaliseur 5 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="22" name="Bande d’égaliseur 5 – Gain" parameterValue="0.5"/>
+            <parameter index="23" name="Bande d’égaliseur 5 – Activation" parameterValue="1"/>
+            <parameter index="24" name="Gain principal" parameterValue="0.6666667"/>
+            <parameter index="25" name="Q constant" parameterValue="1"/>
+            <parameter index="26" name="Ordre de filtre coupe-bas" parameterValue="0"/>
+            <parameter index="27" name="Ordre de filtre coupe-haut" parameterValue="0"/>
+            <parameter index="28" name="Mode ultra-silencieux" parameterValue="0"/>
+            <parameter index="29" name="Etagère basse activée" parameterValue="1"/>
+            <parameter index="30" name="Etagère haute activée" parameterValue="1"/>
+            <parameter index="31" name="Taux d’échantillonnage d’origine" parameterValue="0.25"/>
+            <parameter index="32" name="Bande d’égaliseur 1 – Largeur de bande" parameterValue="0.0025"/>
+            <parameter index="33" name="Bande d’égaliseur 2 – Largeur de bande" parameterValue="0.01"/>
+            <parameter index="34" name="Bande d’égaliseur 3 – Largeur de bande" parameterValue="0.04"/>
+            <parameter index="35" name="Bande d’égaliseur 4 – Largeur de bande" parameterValue="0.16"/>
+            <parameter index="36" name="Bande d’égaliseur 5 – Largeur de bande" parameterValue="0.64"/>
+            <parameter index="37" name="Filtre passe-haut – Activation" parameterValue="0"/>
+            <parameter index="38" name="Fréquence coupure passe-haut" parameterValue="0"/>
+            <parameter index="39" name="Pente passe-haut" parameterValue="4"/>
+            <parameter index="40" name="Filtre passe-bas – Activation" parameterValue="0"/>
+            <parameter index="41" name="Fréquence coupure passe-bas" parameterValue="0.8331943"/>
+            <parameter index="42" name="Pente passe-bas" parameterValue="4"/>
+            <parameter index="43" name="Ignorer" parameterValue="0"/>
+            <parameter index="44" name="Plage graphique basse" parameterValue="1"/>
+          </component>
+        </trackAudioParameters>
+        <editParameter parameterIndex="0" slotIndex="4294967280"/>
+        <sendList>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="0">
+            <component componentGuid="cb08fdd4-96ed-4fe0-84a9-e8d518b2e98d" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="1">
+            <component componentGuid="b3742650-f308-454d-aad6-8bff2f73d19c" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="2">
+            <component componentGuid="ba61e122-3e6e-44c6-8dc1-81b9e01238a3" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="3">
+            <component componentGuid="b85155e5-4ad7-4414-b0e4-bd50f5093738" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="4">
+            <component componentGuid="75a1f614-1be2-4ddc-b097-44c6e35fd40a" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="5">
+            <component componentGuid="8f376aa6-4cb8-4281-b75b-c3af16b259bc" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="6">
+            <component componentGuid="586f420d-46af-4016-9395-44c2646b62cd" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="7">
+            <component componentGuid="654fe1de-969b-4324-bfec-ea01faf347eb" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="8">
+            <component componentGuid="6dcdf23c-b13a-4276-a496-195c90ecaae1" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="9">
+            <component componentGuid="f4767bee-cb32-4db6-bbc0-3ec79e7a96c2" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="10">
+            <component componentGuid="3d24208c-2971-4e58-abe0-96e96f0f8751" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="11">
+            <component componentGuid="e876c4f9-a71c-41e9-87fc-9d8b6a8c6beb" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="12">
+            <component componentGuid="4b0cd50e-fa8d-4697-8d98-473cc65fb7ae" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="13">
+            <component componentGuid="ed09dd08-7d08-438e-a011-e9567aaf4038" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="14">
+            <component componentGuid="2fe1df31-07e1-4ae1-a6d8-5f4b213501c1" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="15">
+            <component componentGuid="91b7abb1-ed60-4f4b-bce3-f4e06f8087e8" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+        </sendList>
+      </audioTrack>
+      <audioTrack automationLaneOpenState="false" id="10005" index="5" select="false" visible="true">
+        <trackParameters trackHeight="88" trackHue="83.462576866149902" trackMinimized="false">
+          <name>Piste 5</name>
+        </trackParameters>
+        <trackAudioParameters audioChannelType="stereo" automationMode="1" monitoring="false" recordArmed="false" solo="false" soloSafe="false">
+          <trackOutput outputID="10000" type="trackID"/>
+          <trackInput inputID="1"/>
+          <component componentGuid="b33a8e4b-6cb8-4f29-98ab-5edd7ee2e90c" componentID="Audition.Fader" id="trackFader" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1"/>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="0685e09c-ac41-4b53-9a6b-431cb7793978" componentID="Audition.Mute" id="trackMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="cd48082f-293a-4261-bf4f-1946233450e9" componentID="Audition.StereoPanner" id="trackPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <component componentGuid="b5ea4240-5f24-44a1-ac78-b593900e22e2" componentID="Audition.EQ" id="trackEQ" name="EQ" powered="false">
+            <parameter index="0" name="Fréquence papillon grave" parameterValue="0.000834"/>
+            <parameter index="1" name="Gain papillon grave" parameterValue="0.5"/>
+            <parameter index="2" name="Fréquence papillon aigu" parameterValue="0.7497915"/>
+            <parameter index="3" name="Gain papillon aigu" parameterValue="0.5"/>
+            <parameter index="4" name="Bande d’égaliseur 1 – Fréquence centrale" parameterValue="0.001251"/>
+            <parameter index="5" name="Bande d’égaliseur 1 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="6" name="Bande d’égaliseur 1 – Gain" parameterValue="0.5"/>
+            <parameter index="7" name="Bande d’égaliseur 1 – Activation" parameterValue="1"/>
+            <parameter index="8" name="Bande d’égaliseur 2 – Fréquence centrale" parameterValue="0.0075063"/>
+            <parameter index="9" name="Bande d’égaliseur 2 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="10" name="Bande d’égaliseur 2 – Gain" parameterValue="0.5"/>
+            <parameter index="11" name="Bande d’égaliseur 2 – Activation" parameterValue="1"/>
+            <parameter index="12" name="Bande d’égaliseur 3 – Fréquence centrale" parameterValue="0.0325271"/>
+            <parameter index="13" name="Bande d’égaliseur 3 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="14" name="Bande d’égaliseur 3 – Gain" parameterValue="0.5"/>
+            <parameter index="15" name="Bande d’égaliseur 3 – Activation" parameterValue="1"/>
+            <parameter index="16" name="Bande d’égaliseur 4 – Fréquence centrale" parameterValue="0.1326105"/>
+            <parameter index="17" name="Bande d’égaliseur 4 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="18" name="Bande d’égaliseur 4 – Gain" parameterValue="0.5"/>
+            <parameter index="19" name="Bande d’égaliseur 4 – Activation" parameterValue="1"/>
+            <parameter index="20" name="Bande d’égaliseur 5 – Fréquence centrale" parameterValue="0.5329441"/>
+            <parameter index="21" name="Bande d’égaliseur 5 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="22" name="Bande d’égaliseur 5 – Gain" parameterValue="0.5"/>
+            <parameter index="23" name="Bande d’égaliseur 5 – Activation" parameterValue="1"/>
+            <parameter index="24" name="Gain principal" parameterValue="0.6666667"/>
+            <parameter index="25" name="Q constant" parameterValue="1"/>
+            <parameter index="26" name="Ordre de filtre coupe-bas" parameterValue="0"/>
+            <parameter index="27" name="Ordre de filtre coupe-haut" parameterValue="0"/>
+            <parameter index="28" name="Mode ultra-silencieux" parameterValue="0"/>
+            <parameter index="29" name="Etagère basse activée" parameterValue="1"/>
+            <parameter index="30" name="Etagère haute activée" parameterValue="1"/>
+            <parameter index="31" name="Taux d’échantillonnage d’origine" parameterValue="0.25"/>
+            <parameter index="32" name="Bande d’égaliseur 1 – Largeur de bande" parameterValue="0.0025"/>
+            <parameter index="33" name="Bande d’égaliseur 2 – Largeur de bande" parameterValue="0.01"/>
+            <parameter index="34" name="Bande d’égaliseur 3 – Largeur de bande" parameterValue="0.04"/>
+            <parameter index="35" name="Bande d’égaliseur 4 – Largeur de bande" parameterValue="0.16"/>
+            <parameter index="36" name="Bande d’égaliseur 5 – Largeur de bande" parameterValue="0.64"/>
+            <parameter index="37" name="Filtre passe-haut – Activation" parameterValue="0"/>
+            <parameter index="38" name="Fréquence coupure passe-haut" parameterValue="0"/>
+            <parameter index="39" name="Pente passe-haut" parameterValue="4"/>
+            <parameter index="40" name="Filtre passe-bas – Activation" parameterValue="0"/>
+            <parameter index="41" name="Fréquence coupure passe-bas" parameterValue="0.8331943"/>
+            <parameter index="42" name="Pente passe-bas" parameterValue="4"/>
+            <parameter index="43" name="Ignorer" parameterValue="0"/>
+            <parameter index="44" name="Plage graphique basse" parameterValue="1"/>
+          </component>
+        </trackAudioParameters>
+        <editParameter parameterIndex="0" slotIndex="4294967280"/>
+        <sendList>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="0">
+            <component componentGuid="59bd131d-f748-4b83-845b-169f4a535ce6" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="1">
+            <component componentGuid="ff0ea2b1-3be5-4251-928d-2e549edc2474" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="2">
+            <component componentGuid="5a00b267-cf00-4463-8491-a895400f0432" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="3">
+            <component componentGuid="a8b9700c-2350-43a7-b830-08dffeea9062" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="4">
+            <component componentGuid="54322e59-5c34-4ca2-a52e-9741600f2c59" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="5">
+            <component componentGuid="21a7940a-a2d7-400a-8f29-c27cc70cf7c6" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="6">
+            <component componentGuid="546c0c1d-3624-499b-9592-11aac6f12192" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="7">
+            <component componentGuid="2bbabc71-c10b-44df-8ef3-61902b011209" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="8">
+            <component componentGuid="2f1450e1-cc64-413d-9013-e24ae416de67" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="9">
+            <component componentGuid="1aa71bfa-f86c-49fe-b224-5a64732fca86" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="10">
+            <component componentGuid="26d68a46-ad1f-4262-9121-a46d1f1a683b" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="11">
+            <component componentGuid="bcc8ea6f-33ba-414d-9ad0-f8243a1baf20" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="12">
+            <component componentGuid="57db52f7-3669-4195-b8f9-6dd54dbfd2c4" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="13">
+            <component componentGuid="6bdc1ff6-a194-419d-9655-0e3b88c60f7a" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="14">
+            <component componentGuid="e82c5b2a-fee8-425c-93d8-acf02b92a400" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="15">
+            <component componentGuid="800ec217-1aa8-40f3-9a6d-2050aae6155a" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+        </sendList>
+      </audioTrack>
+      <audioTrack automationLaneOpenState="false" id="10006" index="6" select="false" visible="true">
+        <trackParameters trackHeight="88" trackHue="165.10777473449707" trackMinimized="false">
+          <name>Piste 6</name>
+        </trackParameters>
+        <trackAudioParameters audioChannelType="stereo" automationMode="1" monitoring="false" recordArmed="false" solo="false" soloSafe="false">
+          <trackOutput outputID="10000" type="trackID"/>
+          <trackInput inputID="1"/>
+          <component componentGuid="dee65b82-4c3e-4bde-a473-c93c704b3748" componentID="Audition.Fader" id="trackFader" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1"/>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="dd72c27f-000f-4dd3-869c-f18dbf203605" componentID="Audition.Mute" id="trackMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="eb2b040b-304d-47d8-b619-493863570ba8" componentID="Audition.StereoPanner" id="trackPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <component componentGuid="199eae32-57c2-49bc-880f-99c5a90364d0" componentID="Audition.EQ" id="trackEQ" name="EQ" powered="false">
+            <parameter index="0" name="Fréquence papillon grave" parameterValue="0.000834"/>
+            <parameter index="1" name="Gain papillon grave" parameterValue="0.5"/>
+            <parameter index="2" name="Fréquence papillon aigu" parameterValue="0.7497915"/>
+            <parameter index="3" name="Gain papillon aigu" parameterValue="0.5"/>
+            <parameter index="4" name="Bande d’égaliseur 1 – Fréquence centrale" parameterValue="0.001251"/>
+            <parameter index="5" name="Bande d’égaliseur 1 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="6" name="Bande d’égaliseur 1 – Gain" parameterValue="0.5"/>
+            <parameter index="7" name="Bande d’égaliseur 1 – Activation" parameterValue="1"/>
+            <parameter index="8" name="Bande d’égaliseur 2 – Fréquence centrale" parameterValue="0.0075063"/>
+            <parameter index="9" name="Bande d’égaliseur 2 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="10" name="Bande d’égaliseur 2 – Gain" parameterValue="0.5"/>
+            <parameter index="11" name="Bande d’égaliseur 2 – Activation" parameterValue="1"/>
+            <parameter index="12" name="Bande d’égaliseur 3 – Fréquence centrale" parameterValue="0.0325271"/>
+            <parameter index="13" name="Bande d’égaliseur 3 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="14" name="Bande d’égaliseur 3 – Gain" parameterValue="0.5"/>
+            <parameter index="15" name="Bande d’égaliseur 3 – Activation" parameterValue="1"/>
+            <parameter index="16" name="Bande d’égaliseur 4 – Fréquence centrale" parameterValue="0.1326105"/>
+            <parameter index="17" name="Bande d’égaliseur 4 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="18" name="Bande d’égaliseur 4 – Gain" parameterValue="0.5"/>
+            <parameter index="19" name="Bande d’égaliseur 4 – Activation" parameterValue="1"/>
+            <parameter index="20" name="Bande d’égaliseur 5 – Fréquence centrale" parameterValue="0.5329441"/>
+            <parameter index="21" name="Bande d’égaliseur 5 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="22" name="Bande d’égaliseur 5 – Gain" parameterValue="0.5"/>
+            <parameter index="23" name="Bande d’égaliseur 5 – Activation" parameterValue="1"/>
+            <parameter index="24" name="Gain principal" parameterValue="0.6666667"/>
+            <parameter index="25" name="Q constant" parameterValue="1"/>
+            <parameter index="26" name="Ordre de filtre coupe-bas" parameterValue="0"/>
+            <parameter index="27" name="Ordre de filtre coupe-haut" parameterValue="0"/>
+            <parameter index="28" name="Mode ultra-silencieux" parameterValue="0"/>
+            <parameter index="29" name="Etagère basse activée" parameterValue="1"/>
+            <parameter index="30" name="Etagère haute activée" parameterValue="1"/>
+            <parameter index="31" name="Taux d’échantillonnage d’origine" parameterValue="0.25"/>
+            <parameter index="32" name="Bande d’égaliseur 1 – Largeur de bande" parameterValue="0.0025"/>
+            <parameter index="33" name="Bande d’égaliseur 2 – Largeur de bande" parameterValue="0.01"/>
+            <parameter index="34" name="Bande d’égaliseur 3 – Largeur de bande" parameterValue="0.04"/>
+            <parameter index="35" name="Bande d’égaliseur 4 – Largeur de bande" parameterValue="0.16"/>
+            <parameter index="36" name="Bande d’égaliseur 5 – Largeur de bande" parameterValue="0.64"/>
+            <parameter index="37" name="Filtre passe-haut – Activation" parameterValue="0"/>
+            <parameter index="38" name="Fréquence coupure passe-haut" parameterValue="0"/>
+            <parameter index="39" name="Pente passe-haut" parameterValue="4"/>
+            <parameter index="40" name="Filtre passe-bas – Activation" parameterValue="0"/>
+            <parameter index="41" name="Fréquence coupure passe-bas" parameterValue="0.8331943"/>
+            <parameter index="42" name="Pente passe-bas" parameterValue="4"/>
+            <parameter index="43" name="Ignorer" parameterValue="0"/>
+            <parameter index="44" name="Plage graphique basse" parameterValue="1"/>
+          </component>
+        </trackAudioParameters>
+        <editParameter parameterIndex="0" slotIndex="4294967280"/>
+        <sendList>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="0">
+            <component componentGuid="09b7b3c1-7763-4869-8017-6d603d878444" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="1">
+            <component componentGuid="b8cd963f-efe3-4705-8bb0-dd1f4b6e794d" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="2">
+            <component componentGuid="4c575fce-e4f4-4f0a-a33b-33635834cd14" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="3">
+            <component componentGuid="08e1eec2-0231-478b-8af9-894e751beb74" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="4">
+            <component componentGuid="c834d273-2e0d-4495-b8d5-22d2f6777d4b" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="5">
+            <component componentGuid="e9ab87cf-7647-49c2-8815-368172a11fc9" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="6">
+            <component componentGuid="e2b41606-a2e2-499c-88f0-97f38d8eb54e" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="7">
+            <component componentGuid="0c44ee94-2980-4c57-84a9-1f7ff97fb1c8" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="8">
+            <component componentGuid="6b6f88d2-d1ff-4fc0-b510-ec19029ced88" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="9">
+            <component componentGuid="659914c0-30de-4a85-a0e5-593c1cd765ec" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="10">
+            <component componentGuid="fc0d9716-6f05-4992-8a98-48794fc3c15e" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="11">
+            <component componentGuid="e670ab61-e61d-42f5-9643-e9bc984424d5" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="12">
+            <component componentGuid="a21e94d5-8717-4b80-8cb1-c8041a2505ba" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="13">
+            <component componentGuid="bcd73606-bde1-4bca-8103-2af6279349af" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="14">
+            <component componentGuid="92bf4816-1ee1-49ea-b286-268a36904f20" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="15">
+            <component componentGuid="e39e20bd-f57c-4bfb-8a27-8b0eeb3ecac4" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+        </sendList>
+      </audioTrack>
+      <masterTrack automationLaneOpenState="false" id="10000" index="7" select="false" visible="true">
+        <trackParameters trackHeight="88" trackHue="-1" trackMinimized="false">
+          <name>Principale</name>
+        </trackParameters>
+        <trackAudioParameters audioChannelType="stereo" automationMode="1" monitoring="false" recordArmed="false" solo="false" soloSafe="true">
+          <trackOutput outputID="1" type="hardwareOutput"/>
+          <trackInput inputID="-1"/>
+          <component componentGuid="fee42bbb-48e6-4eb5-8fbc-1452bfe34d09" componentID="Audition.Fader" id="trackFader" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="1"/>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="0a7bc41f-213a-4a73-9cb3-7e6d798b048c" componentID="Audition.Mute" id="trackMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="1f8ab96f-794c-4e48-b77c-0357345590e4" componentID="Audition.StereoPanner" id="trackPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <component componentGuid="f38232a2-2820-44e7-8874-84ecdf5fd881" componentID="Audition.EQ" id="trackEQ" name="EQ" powered="false">
+            <parameter index="0" name="Fréquence papillon grave" parameterValue="0.000834"/>
+            <parameter index="1" name="Gain papillon grave" parameterValue="0.5"/>
+            <parameter index="2" name="Fréquence papillon aigu" parameterValue="0.7497915"/>
+            <parameter index="3" name="Gain papillon aigu" parameterValue="0.5"/>
+            <parameter index="4" name="Bande d’égaliseur 1 – Fréquence centrale" parameterValue="0.001251"/>
+            <parameter index="5" name="Bande d’égaliseur 1 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="6" name="Bande d’égaliseur 1 – Gain" parameterValue="0.5"/>
+            <parameter index="7" name="Bande d’égaliseur 1 – Activation" parameterValue="1"/>
+            <parameter index="8" name="Bande d’égaliseur 2 – Fréquence centrale" parameterValue="0.0075063"/>
+            <parameter index="9" name="Bande d’égaliseur 2 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="10" name="Bande d’égaliseur 2 – Gain" parameterValue="0.5"/>
+            <parameter index="11" name="Bande d’égaliseur 2 – Activation" parameterValue="1"/>
+            <parameter index="12" name="Bande d’égaliseur 3 – Fréquence centrale" parameterValue="0.0325271"/>
+            <parameter index="13" name="Bande d’égaliseur 3 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="14" name="Bande d’égaliseur 3 – Gain" parameterValue="0.5"/>
+            <parameter index="15" name="Bande d’égaliseur 3 – Activation" parameterValue="1"/>
+            <parameter index="16" name="Bande d’égaliseur 4 – Fréquence centrale" parameterValue="0.1326105"/>
+            <parameter index="17" name="Bande d’égaliseur 4 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="18" name="Bande d’égaliseur 4 – Gain" parameterValue="0.5"/>
+            <parameter index="19" name="Bande d’égaliseur 4 – Activation" parameterValue="1"/>
+            <parameter index="20" name="Bande d’égaliseur 5 – Fréquence centrale" parameterValue="0.5329441"/>
+            <parameter index="21" name="Bande d’égaliseur 5 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="22" name="Bande d’égaliseur 5 – Gain" parameterValue="0.5"/>
+            <parameter index="23" name="Bande d’égaliseur 5 – Activation" parameterValue="1"/>
+            <parameter index="24" name="Gain principal" parameterValue="0.6666667"/>
+            <parameter index="25" name="Q constant" parameterValue="1"/>
+            <parameter index="26" name="Ordre de filtre coupe-bas" parameterValue="0"/>
+            <parameter index="27" name="Ordre de filtre coupe-haut" parameterValue="0"/>
+            <parameter index="28" name="Mode ultra-silencieux" parameterValue="0"/>
+            <parameter index="29" name="Etagère basse activée" parameterValue="1"/>
+            <parameter index="30" name="Etagère haute activée" parameterValue="1"/>
+            <parameter index="31" name="Taux d’échantillonnage d’origine" parameterValue="0.25"/>
+            <parameter index="32" name="Bande d’égaliseur 1 – Largeur de bande" parameterValue="0.0025"/>
+            <parameter index="33" name="Bande d’égaliseur 2 – Largeur de bande" parameterValue="0.01"/>
+            <parameter index="34" name="Bande d’égaliseur 3 – Largeur de bande" parameterValue="0.04"/>
+            <parameter index="35" name="Bande d’égaliseur 4 – Largeur de bande" parameterValue="0.16"/>
+            <parameter index="36" name="Bande d’égaliseur 5 – Largeur de bande" parameterValue="0.64"/>
+            <parameter index="37" name="Filtre passe-haut – Activation" parameterValue="0"/>
+            <parameter index="38" name="Fréquence coupure passe-haut" parameterValue="0"/>
+            <parameter index="39" name="Pente passe-haut" parameterValue="4"/>
+            <parameter index="40" name="Filtre passe-bas – Activation" parameterValue="0"/>
+            <parameter index="41" name="Fréquence coupure passe-bas" parameterValue="0.8331943"/>
+            <parameter index="42" name="Pente passe-bas" parameterValue="4"/>
+            <parameter index="43" name="Ignorer" parameterValue="0"/>
+            <parameter index="44" name="Plage graphique basse" parameterValue="1"/>
+          </component>
+        </trackAudioParameters>
+        <editParameter parameterIndex="0" slotIndex="4294967280"/>
+      </masterTrack>
+    </tracks>
+    <sessionState ctiPosition="229966" smpteStart="0">
+      <selectionState selectionDuration="0" selectionStart="229966"/>
+      <viewState horizontalViewDuration="794855" horizontalViewStart="0" trackControlsWidth="224" verticalScrollOffset="0"/>
+      <timeFormatState beatsPerBar="4" beatsPerMinute="120" customFrameRate="12" linkToDefaultTimeSettings="true" noteLength="4" subdivisions="16" timeCodeDropFrame="false" timeCodeFrameRate="30" timeCodeNTSC="false" timeFormat="timeFormatDecimal"/>
+      <mixingOptionState defaultPanModeLogarithmic="false" panPower="-3"/>
+    </sessionState>
+    <xmpMetadata><![CDATA[<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c132 79.159330, 2016/05/06-01:10:55        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""
+            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
+            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
+            xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
+            xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/">
+         <xmp:CreatorTool>Adobe Audition CC 2015.2 (Windows)</xmp:CreatorTool>
+         <xmp:CreateDate>2016-09-27T19:40:45-04:00</xmp:CreateDate>
+         <xmp:MetadataDate>2016-09-27T21:33:30-04:00</xmp:MetadataDate>
+         <xmp:ModifyDate>2016-09-27T21:33:30-04:00</xmp:ModifyDate>
+         <xmpMM:InstanceID>xmp.iid:4f3916ef-2eb1-9043-b73f-194f3d997222</xmpMM:InstanceID>
+         <xmpMM:DocumentID>xmp.did:09fce6f6-4c59-f748-bb8d-c5d4fdf67f74</xmpMM:DocumentID>
+         <xmpMM:OriginalDocumentID>xmp.did:4c066318-15c7-a343-a163-f3fab29edb26</xmpMM:OriginalDocumentID>
+         <xmpMM:History>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:4c066318-15c7-a343-a163-f3fab29edb26</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:40:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:b8e26c48-2ada-a746-af46-5e5f73d6e79c</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:40:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:bf33f7d1-f6ee-da47-bccf-c056132c36d9</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:40:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:b62998d4-6908-4e43-89a8-ffea422288ff</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:40:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:b6436be4-445a-8a47-aa9b-945ac9a49b44</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:40:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:eae729cc-38dd-fb4c-a2ad-6d01ce858218</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:46:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:17645b9b-e662-0e42-90c6-3b4d16cf905f</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:46:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:1b479aa3-e4cd-2940-b522-1a6e4ec7b015</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:49:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:9db3891c-746f-454b-89ed-bc2d24f51bba</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:49:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:bfcd4884-6df0-504b-968c-f7ce425ee3fd</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:52:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:c1337dc9-2add-094e-8b66-cd0796510efc</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T19:52:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:0eded56b-63e7-ed44-8129-e76bc9d2864d</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:00:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:e3a43c2b-bb4c-0945-9aa1-e6da3cd56923</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:00:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:5e9a244f-2f42-5f43-88ba-fd0e7dbd63d7</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:01:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:e5d975d1-212e-3c43-aeb3-578e2c4748bf</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:01:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:7c1959a7-a31f-7b41-9388-48b82b790333</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:06:24-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:549a6256-c00b-f743-a836-d281bd5ec539</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:06:24-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:d2b9cf7b-45bb-d140-8211-a27bb9d2e360</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:10:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:4ddb25c4-2acf-9242-9fe8-869ee96307d0</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:10:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:8eaf200e-b74d-f943-ac7e-9fc20b81156f</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:10:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:d7833b4b-d0f0-bf4d-8efe-300eb553cb84</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:10:51-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:22224cf3-9b86-c247-b307-fbd0014c1d68</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:36:49-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:4afec3e5-b9a4-3444-874c-64645c8a6101</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:36:49-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:04faaa2d-f511-d547-afa1-b1d615169ea7</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:40:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:13142724-dee3-cb4c-90c4-a2f7c2d8883a</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:40:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:ad6b3b62-22d5-da4f-9e69-c44625ff566b</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:45:49-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:79722411-e42c-e84b-b8a4-27cf95b6e651</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:45:49-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:9db19a5c-b484-314f-9386-78792d303960</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:48:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:3533d5bd-4ff7-f845-bb18-8f6e67ce8a5c</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:48:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:94f0d78f-e271-bf46-9325-ecff618fef9e</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:54:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:eafcc3d5-4f89-eb4f-b165-1243f2e09f5e</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:54:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:274412c6-989e-c04b-b8e0-1111efb44adc</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:57:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:50fb3a52-bd44-ef4a-8e4e-62e476cc5e6a</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T20:57:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:22baf5e1-dd0e-3d43-a197-6ad1ee4f32bd</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:03:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:b716607f-464d-cd40-b268-3b23be587d76</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:03:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:508d833d-1325-4648-8249-4f0637f297f6</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:06:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:8ce90353-63b5-0a40-a6b9-ae2c59df6703</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:06:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:c76e56f9-d193-6148-b413-308779b9148c</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:09:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:e72584b0-e01a-5646-8849-0413e40842d6</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:09:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:62548499-b775-8b49-b205-42a4416636d9</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:10:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:cda91677-1d1e-814e-a80a-1113370d422b</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:10:45-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:e012ecaf-c89f-2349-8179-e21a095a109b</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:12:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:c700ef93-64b9-6c44-ba1d-8c6b3fb5a6e7</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:12:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:7c33c48f-3d8d-b245-94c3-47acaee45fff</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:17:40-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:bc9766f0-47fe-724c-9775-cd4e5f04ff12</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:17:40-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:e8ee0726-f999-1a4c-9f23-ce241caf2ed1</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:18:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:84e4b8d2-cc8f-c943-a166-222679124749</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:18:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:8b78f0c0-2e35-8f46-8745-a7e190e2ea1f</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:21:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:07217fc3-4ef3-c54e-9188-6e4351a60eca</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:21:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:0731409a-1fd1-bc44-af18-dfc756851e48</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:24:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:6f407e19-b9b8-304e-ba0c-79348fbb4e73</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:24:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:4b13f081-6f94-1441-9529-12b8f9f7b3be</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:27:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:71d1e99e-1ad1-4945-ad03-b83b4f93a27a</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:27:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:069d42df-43df-7346-9ce2-c6c0e9467360</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:29:30-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:07f53846-735c-6b40-9251-a73992cbe2b3</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:29:30-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:25d189ed-7caa-a746-b6a9-558c7f48945b</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:32:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:bca46b80-51e5-2841-950d-6337a7195e58</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:32:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:8ccf7d66-c1e0-b341-92fa-f208c477f909</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:32:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:09fce6f6-4c59-f748-bb8d-c5d4fdf67f74</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:32:50-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:a855c89d-76bf-9b4e-b673-d03bfb327dfc</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:33:30-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:4f3916ef-2eb1-9043-b73f-194f3d997222</stEvt:instanceID>
+                  <stEvt:when>2016-09-27T21:33:30-04:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC 2015.2 (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+            </rdf:Seq>
+         </xmpMM:History>
+         <xmpMM:DerivedFrom rdf:parseType="Resource">
+            <stRef:instanceID>xmp.iid:8ccf7d66-c1e0-b341-92fa-f208c477f909</stRef:instanceID>
+            <stRef:documentID>xmp.did:bca46b80-51e5-2841-950d-6337a7195e58</stRef:documentID>
+            <stRef:originalDocumentID>xmp.did:4c066318-15c7-a343-a163-f3fab29edb26</stRef:originalDocumentID>
+         </xmpMM:DerivedFrom>
+         <dc:format>application/xml</dc:format>
+         <xmpDM:Tracks>
+            <rdf:Bag>
+               <rdf:li rdf:parseType="Resource">
+                  <xmpDM:trackName>CuePoint Markers</xmpDM:trackName>
+                  <xmpDM:trackType>Cue</xmpDM:trackType>
+                  <xmpDM:frameRate>f48000</xmpDM:frameRate>
+                  <xmpDM:markers>
+                     <rdf:Seq>
+                        <rdf:li rdf:parseType="Resource">
+                           <xmpDM:startTime>1381782</xmpDM:startTime>
+                           <xmpDM:name>Marqueur 01</xmpDM:name>
+                           <xmpDM:cuePointParams>
+                              <rdf:Seq>
+                                 <rdf:li rdf:parseType="Resource">
+                                    <xmpDM:key>marker_guid</xmpDM:key>
+                                    <xmpDM:value>xmp:id:2476e02d-8128-ef48-a6da-21fce8ea98a3</xmpDM:value>
+                                 </rdf:li>
+                              </rdf:Seq>
+                           </xmpDM:cuePointParams>
+                           <xmpDM:guid>xmp:id:2476e02d-8128-ef48-a6da-21fce8ea98a3</xmpDM:guid>
+                        </rdf:li>
+                     </rdf:Seq>
+                  </xmpDM:markers>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <xmpDM:trackName>CD Track Markers</xmpDM:trackName>
+                  <xmpDM:trackType>Track</xmpDM:trackType>
+                  <xmpDM:frameRate>f48000</xmpDM:frameRate>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <xmpDM:trackName>Subclip Markers</xmpDM:trackName>
+                  <xmpDM:trackType>InOut</xmpDM:trackType>
+                  <xmpDM:frameRate>f48000</xmpDM:frameRate>
+               </rdf:li>
+            </rdf:Bag>
+         </xmpDM:Tracks>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?>]]></xmpMetadata>
+    <clipGroups/>
+    <metronome enabled="false" pattern="downBeat subdivision subdivision subdivision " soundSet="sticks">
+      <metronomeTrack automationLaneOpenState="false" id="40000" index="0" select="false" visible="false">
+        <trackParameters trackHeight="77" trackHue="-1" trackMinimized="false">
+          <name>Métronome</name>
+        </trackParameters>
+        <trackAudioParameters audioChannelType="mono" automationMode="1" monitoring="false" recordArmed="false" solo="false" soloSafe="true">
+          <trackOutput outputID="10000" type="trackID"/>
+          <trackInput inputID="-1"/>
+          <component componentGuid="7ae2b219-9873-4440-8f91-5f22c51e925b" componentID="Audition.Fader" id="trackFader" name="volume" powered="true">
+            <parameter index="0" name="volume" parameterValue="0.5011872"/>
+            <parameter index="1" name="static gain" parameterValue="1"/>
+          </component>
+          <component componentGuid="6b6f462a-9f16-4239-870b-831c45a79240" componentID="Audition.Mute" id="trackMute" name="Mute" powered="true">
+            <parameter index="0" parameterValue="0"/>
+            <parameter index="1" name="mute" parameterValue="0"/>
+          </component>
+          <component componentGuid="80812451-6cfe-43eb-b14e-cfc72b8880dc" componentID="Audition.StereoPanner" id="trackPan" name="StereoPanner" powered="true">
+            <parameter index="0" name="Panoramique" parameterValue="0"/>
+          </component>
+          <component componentGuid="29a85845-f08c-4086-b876-44e64c08bfce" componentID="Audition.EQ" id="trackEQ" name="EQ" powered="false">
+            <parameter index="0" name="Fréquence papillon grave" parameterValue="0.000834"/>
+            <parameter index="1" name="Gain papillon grave" parameterValue="0.5"/>
+            <parameter index="2" name="Fréquence papillon aigu" parameterValue="0.7497915"/>
+            <parameter index="3" name="Gain papillon aigu" parameterValue="0.5"/>
+            <parameter index="4" name="Bande d’égaliseur 1 – Fréquence centrale" parameterValue="0.001251"/>
+            <parameter index="5" name="Bande d’égaliseur 1 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="6" name="Bande d’égaliseur 1 – Gain" parameterValue="0.5"/>
+            <parameter index="7" name="Bande d’égaliseur 1 – Activation" parameterValue="1"/>
+            <parameter index="8" name="Bande d’égaliseur 2 – Fréquence centrale" parameterValue="0.0075063"/>
+            <parameter index="9" name="Bande d’égaliseur 2 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="10" name="Bande d’égaliseur 2 – Gain" parameterValue="0.5"/>
+            <parameter index="11" name="Bande d’égaliseur 2 – Activation" parameterValue="1"/>
+            <parameter index="12" name="Bande d’égaliseur 3 – Fréquence centrale" parameterValue="0.0325271"/>
+            <parameter index="13" name="Bande d’égaliseur 3 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="14" name="Bande d’égaliseur 3 – Gain" parameterValue="0.5"/>
+            <parameter index="15" name="Bande d’égaliseur 3 – Activation" parameterValue="1"/>
+            <parameter index="16" name="Bande d’égaliseur 4 – Fréquence centrale" parameterValue="0.1326105"/>
+            <parameter index="17" name="Bande d’égaliseur 4 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="18" name="Bande d’égaliseur 4 – Gain" parameterValue="0.5"/>
+            <parameter index="19" name="Bande d’égaliseur 4 – Activation" parameterValue="1"/>
+            <parameter index="20" name="Bande d’égaliseur 5 – Fréquence centrale" parameterValue="0.5329441"/>
+            <parameter index="21" name="Bande d’égaliseur 5 – Facteur Q" parameterValue="0.0002"/>
+            <parameter index="22" name="Bande d’égaliseur 5 – Gain" parameterValue="0.5"/>
+            <parameter index="23" name="Bande d’égaliseur 5 – Activation" parameterValue="1"/>
+            <parameter index="24" name="Gain principal" parameterValue="0.6666667"/>
+            <parameter index="25" name="Q constant" parameterValue="1"/>
+            <parameter index="26" name="Ordre de filtre coupe-bas" parameterValue="0"/>
+            <parameter index="27" name="Ordre de filtre coupe-haut" parameterValue="0"/>
+            <parameter index="28" name="Mode ultra-silencieux" parameterValue="0"/>
+            <parameter index="29" name="Etagère basse activée" parameterValue="1"/>
+            <parameter index="30" name="Etagère haute activée" parameterValue="1"/>
+            <parameter index="31" name="Taux d’échantillonnage d’origine" parameterValue="0.25"/>
+            <parameter index="32" name="Bande d’égaliseur 1 – Largeur de bande" parameterValue="0.0025"/>
+            <parameter index="33" name="Bande d’égaliseur 2 – Largeur de bande" parameterValue="0.01"/>
+            <parameter index="34" name="Bande d’égaliseur 3 – Largeur de bande" parameterValue="0.04"/>
+            <parameter index="35" name="Bande d’égaliseur 4 – Largeur de bande" parameterValue="0.16"/>
+            <parameter index="36" name="Bande d’égaliseur 5 – Largeur de bande" parameterValue="0.64"/>
+            <parameter index="37" name="Filtre passe-haut – Activation" parameterValue="0"/>
+            <parameter index="38" name="Fréquence coupure passe-haut" parameterValue="0"/>
+            <parameter index="39" name="Pente passe-haut" parameterValue="4"/>
+            <parameter index="40" name="Filtre passe-bas – Activation" parameterValue="0"/>
+            <parameter index="41" name="Fréquence coupure passe-bas" parameterValue="0.8331943"/>
+            <parameter index="42" name="Pente passe-bas" parameterValue="4"/>
+            <parameter index="43" name="Ignorer" parameterValue="0"/>
+            <parameter index="44" name="Plage graphique basse" parameterValue="1"/>
+          </component>
+        </trackAudioParameters>
+        <editParameter parameterIndex="0" slotIndex="4294967280"/>
+        <sendList>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="0">
+            <component componentGuid="e14bbfb3-e7b6-445d-8043-e7428481e578" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="1">
+            <component componentGuid="ff596214-c61d-4bb5-be44-4a76a7a6b596" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="2">
+            <component componentGuid="c01da635-c4f4-4c99-b56a-1ec6e1135151" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="3">
+            <component componentGuid="637bea52-2c01-4f69-8ff0-36eae3b19bd0" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="4">
+            <component componentGuid="014fb7b5-c831-4153-a921-b89ab98c2005" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="5">
+            <component componentGuid="d8744bbc-4a16-4569-9e01-9ad32272aa39" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="6">
+            <component componentGuid="22bbd9a6-1653-493f-8e86-109325fe1e51" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="7">
+            <component componentGuid="088a2248-36a1-48a2-be55-04eba7340b82" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="8">
+            <component componentGuid="9a376cc5-b728-4267-bf8f-faa6e59514f1" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="9">
+            <component componentGuid="4449c1c6-ca8d-45d2-8ecd-b93f619cdd02" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="10">
+            <component componentGuid="71b44c42-c7b7-4d26-beec-08a3c0cd6d37" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="11">
+            <component componentGuid="ffd67640-3302-470a-8d6b-271a3ba003bb" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="12">
+            <component componentGuid="1a1a684e-5362-44d0-afaf-1342c6b6bb66" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="13">
+            <component componentGuid="30ed8e14-d02c-4372-b824-f2bc266a415e" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="14">
+            <component componentGuid="5daac22f-5689-4bb5-8a10-38b69072eafb" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+          <sendSlot preFader="false" sendOutputID="0" slotIndex="15">
+            <component componentGuid="b361f26d-0882-41f8-b5d2-e8058f5e956e" id="sendComponent" powered="false">
+              <parameter index="0" name="Marche/Arrêt" parameterValue="0"/>
+              <parameter index="1" name="Niveau" parameterValue="0"/>
+            </component>
+            <component id="sendPan" powered="true"/>
+          </sendSlot>
+        </sendList>
+      </metronomeTrack>
+    </metronome>
+    <properties>
+      <property key="EssentialSoundConfigurations">[{"Guid":"a8b40e3e-13e7-4c1f-b382-96058f1f691d","Name":"$$$/app/Presets/DefaultPresetName=(Default)","PresetData":{"ModeID":"ambience","Models":{"model_loudness":{"DefaultLoudness":{"type":"float","value":-30},"LoudnessStandard":{"type":"std::uint32_t","value":0},"MaxLoudness":{"type":"float","value":-12},"MinLoudness":{"type":"float","value":-35}},"model_soundeffects":{"ReverbPresets":{"type":"tree::any","value":{"$$$/app/Presets/EssentialSound/ReverbPreset/LargeRoomAmbience=Large Room Ambience":{"type":"array::float","value":[0.051507499068975449,0.32432401180267334,0.29292899370193481,0.30000001192092896,0.20000000298023224,0,0.14285700023174286,0.40000000596046448,0.5,0.69999998807907104,0.30000001192092896,0.25125628709793091,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/OutsideAmbience=Outside Ambience":{"type":"array::float","value":[0.091708503663539886,0.043893899768590927,1,0.5,0.20000000298023224,0.80000001192092896,0.18367299437522888,1,0.5,0,0.80000001192092896,0.25125628709793091,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/RoomAmbience=Room Ambience":{"type":"array::float","value":[0.057788901031017303,0.44944900274276733,0.49494898319244385,0.89999997615814209,0.10000000149011612,0.15000000596046448,0.081632703542709351,0.40000000596046448,0.5,0.80000001192092896,0.20000000298023224,0.25125628709793091,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/WindEffect=Wind Effect":{"type":"array::float","value":[0.19597999751567841,0.6896899938583374,0.69696998596191406,0.25,0.5,0.5,0.23469400405883789,0.51999998092651367,0.5,0.75,0.25,0.25125628709793091,0.03125]}}}},"model_stereowidth":{},"model_volume":{"MaxGain":{"type":"float","value":6},"MinGain":{"type":"float","value":-15}}}},"Type":"1c19ca71-c24c-49cd-8dd5-2cc46018507a","Version":1},{"Guid":"58dc27a8-6a2a-480c-bd0c-4b45fff346a6","Name":"$$$/app/Presets/DefaultPresetName=(Default)","PresetData":{"ModeID":"dialog","Models":{"model_clarity":{"EQPresets":{"type":"tree::any","value":{"$$$/app/Presets/EssentialSound/EQPreset/BackgroundVoice=Background Voice":{"type":"array::float","value":[0.12099699676036835,0.5,0.39240506291389465,0,0.5,0.5,0.5,0.5,0.5,0.47827938199043274,0.45772689580917358,0.45778733491897583,0.47946760058403015,0.5,0]},"$$$/app/Presets/EssentialSound/EQPreset/Intercom=Intercom":{"type":"array::float","value":[0.19432899355888367,0.5,1,0,0.071499988436698914,0.071499988436698914,0.071499988436698914,0.40238627791404724,0.48571401834487915,0.5,0.55155748128890991,0.59602576494216919,0.22246670722961426,0.071499988436698914,0]},"$$$/app/Presets/EssentialSound/EQPreset/LockedInTheTrunk=Locked in the Trunk":{"type":"array::float","value":[0.12099699676036835,0.5,0.79746836423873901,0,0.5,0.5,0.5,0.5,0.5,0.32846158742904663,0.15721426904201508,0.15721426904201508,0.15721426904201508,0.15721426904201508,0]},"$$$/app/Presets/EssentialSound/EQPreset/OldRadio=Old Radio":{"type":"array::float","value":[0.12099699676036835,0.5,0.79746836423873901,0,0.15721426904201508,0.15721426904201508,0.15721426904201508,0.28442040085792542,0.48315632343292236,0.36498492956161499,0.52853888273239136,0.43511500954627991,0.27154684066772461,0.15721426904201508,0]},"$$$/app/Presets/EssentialSound/EQPreset/OnTheTelephone=On the Telephone":{"type":"array::float","value":[0.12099699676036835,0.5,0.39240506291389465,0,0.32864287495613098,0.32864287495613098,0.32864287495613098,0.32864287495613098,0.48571401834487915,0.53071397542953491,0.53071397542953491,0.48357096314430237,0.32864287495613098,0.32864287495613098,0]},"$$$/app/Presets/EssentialSound/EQPreset/OutsideOfTheRoom=Outside of the Room":{"type":"array::float","value":[0.12099699676036835,0.5,0.79746836423873901,0,0.42539370059967041,0.47865453362464905,0.5,0.5,0.48571401834487915,0.40073278546333313,0.25656309723854065,0.15721426904201508,0.15721426904201508,0.15721426904201508,0]},"$$$/app/Presets/EssentialSound/EQPreset/PodcastVoice=Podcast Voice":{"type":"array::float","value":[0.12099699676036835,0.5,0.39240506291389465,0,0.5,0.5,0.5,0.51789408922195435,0.50770342350006104,0.5,0.51789408922195435,0.528114914894104,0.5102812647819519,0.5,0]},"$$$/app/Presets/EssentialSound/EQPreset/SubtleBoostFemale=Subtle Boost (Female)":{"type":"array::float","value":[0.096553400158882141,0.5,0.29113924503326416,0,0.5,0.5,0.5,0.5,0.5,0.51933407783508301,0.54642897844314575,0.52706766128540039,0.5,0.5,0]},"$$$/app/Presets/EssentialSound/EQPreset/SubtleBoostMale=Subtle Boost (Male)":{"type":"array::float","value":[0.096553400158882141,0.5,0.29113924503326416,0,0.5,0.5,0.5,0.5,0.5,0.5135338306427002,0.54642897844314575,0.51933407783508301,0.5,0.5,0]},"$$$/app/Presets/EssentialSound/EQPreset/ThatPublicRadioSound=That Public Radio Sound":{"type":"array::float","value":[0.12099699676036835,0.5,0.79746836423873901,0,0.15721426904201508,0.15721426904201508,0.15721426904201508,0.36334344744682312,0.49468311667442322,0.5,0.5,0.5,0.5,0.5,0]},"$$$/app/Presets/EssentialSound/EQPreset/VocalPresence=Vocal Presence":{"type":"array::float","value":[0.096553400158882141,0.5,0.32489451766014099,0,0.3572143018245697,0.3572143018245697,0.46428570151329041,0.47857141494750977,0.4763694703578949,0.49570354819297791,0.55924957990646362,0.56523394584655762,0.50859290361404419,0.46992480754852295,0]}}}},"model_loudness":{"DefaultLoudness":{"type":"float","value":-23},"LoudnessStandard":{"type":"std::uint32_t","value":0},"MaxLoudness":{"type":"float","value":-12},"MinLoudness":{"type":"float","value":-35}},"model_restoration":{"ReduceNoiseMaxSetting":{"type":"array::float","value":[0.60000002384185791,0.40000000596046448,0.5,0.5,0.2465750128030777,0.60000002384185791,2048,0,0]},"ReduceNoiseMinSetting":{"type":"array::float","value":[0.375,0.20000000298023224,0.60000002384185791,0.5625,0.10958899557590485,0.30000001192092896,512,0,0]},"ReduceRumbleMaxSetting":{"type":"array::float","value":[1,0.084112152457237244,0.375,0,0,0.00083333335351198912,1,0,1,0.0390625,0.00083408987848088145,0,0.0041666668839752674,0.00022554649331141263,0.0046875001862645149,0.75,0.0052083334885537624,0.75,1,0.75,0.0040520834736526012,0.75,0.0042629167437553406,0.00022554649331141263,0.0064883334562182426,0.00022554649331141263,0.006866666954010725,0.75,0.0071704164147377014,0.00022554649331141263,0.01041458360850811,0.00022554649331141263,0.010900000110268593,0.75,0.011407917365431786,0.00022554649331141263,0.015606249682605267,0.00022554649331141263,0.016333334147930145,0.75,0.017094582319259644,0.00022554649331141263,0.026243748143315315,0.00022554649331141263,0.0274666678160429,0.75,0.028746666386723518,0.00022554649331141263,0.041658751666545868,0.00022554649331141263,0.043600000441074371,0.75,0.045631669461727142,0.00022554649331141263,0.062424581497907639,0.00022554649331141263,0.065333336591720581,0.75,0.068377502262592316,0.00022554649331141263,0.10497540980577469,0.00022554649331141263,0.1098666712641716,0.75,0.11498583108186722,0.00022554649331141263,0.16663584113121033,0.00022554649331141263,0.17440000176429749,0.75,0.18252624571323395,0.00022554649331141263,0.91874998807907104,0.00022554649331141263,1,0.00022554649331141263,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"ReduceRumbleMinSetting":{"type":"array::float","value":[1,0.084112152457237244,0.375,0,0,0.00083333335351198912,1,0,1,0.0390625,0.00083408987848088145,0.75,0.0041666668839752674,0.75,0.0046875001862645149,0.75,0.0052083334885537624,0.75,1,0.75,0.91874998807907104,0.61237245798110962,1,0.61237245798110962,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"ReduceSibilanceMaxSetting":{"type":"array::float","value":[0.5,0.19983997941017151,0.18367347121238708,0.26086956262588501,0.52702701091766357,0,1,0,0,0,0,0.75,1,1,0.40000000596046448]},"ReduceSibilanceMinSetting":{"type":"array::float","value":[0.875,0.19983997941017151,0.18367347121238708,0.19130434095859528,0.25675675272941589,0,1,0,0,0,0,0.75,1,1,0.40000000596046448]}},"model_soundeffects":{"ReverbPresets":{"type":"tree::any","value":{"$$$/app/Presets/EssentialSound/ReverbPreset/Auditorium=Auditorium":{"type":"array::float","value":[0.013047545216977596,0.15895412862300873,1,0.89999997615814209,0,0.52007436752319336,0.41663265228271484,0.46000000834465027,0.5,0.73000001907348633,0.15999999642372131,0.75376886129379272,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/Church=Church":{"type":"array::float","value":[0.032663315534591675,0.39939939975738525,0.79797977209091187,0.25,0.5,0.5,0.2297959178686142,0.72000002861022949,0.5,0.62999999523162842,0.87999999523162842,0.25125628709793091,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/LargeReflectiveRoom=Large Reflective Room":{"type":"array::float","value":[0.0074449013918638229,0.098988421261310577,0.79890537261962891,0.89999997615814209,0.10000000149011612,0.40110713243484497,0.060284845530986786,0.27522978186607361,0.5,0.73000001907348633,0.31999999284744263,0.25125628709793091,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/OutsideTheClub=Outside the Club":{"type":"array::float","value":[0.020615793764591217,0.050136558711528778,0.69696998596191406,0.25,0.094355784356594086,0.22242647409439087,0.1071428582072258,0.2800000011920929,0.5,0.73000001907348633,0.46000000834465027,0.25125628709793091,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/SmallDryRoom=Small Dry Room":{"type":"array::float","value":[0.24623115360736847,0.69975000619888306,0.29292899370193481,0.40000000596046448,0.20000000298023224,0.40000000596046448,0.039285715669393539,0.10000000149011612,0.5,1,0.5,0.75376886129379272,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/ThickenVoice=Thicken Voice":{"type":"array::float","value":[0.19597999751567841,0.23931467533111572,0.69696998596191406,0.25,0.5,0.53999996185302734,0.020408162847161293,0.20945435762405396,0.5,1,0.34999999403953552,0.25125628709793091,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/WarmRoom=Warm Room":{"type":"array::float","value":[0.020100502297282219,0.074074074625968933,0.49494948983192444,0.40000000596046448,0.74960309267044067,0.40000000596046448,0.1239795908331871,0.67000001668930054,0.5,0.85000002384185791,0.56000000238418579,0.25125628709793091,0.03125]},"$$$/app/Presets/EssentialSound/ReverbPreset/WarmVoice=Warm Voice":{"type":"array::float","value":[0.19597989320755005,0.89989989995956421,0,0.40000000596046448,0.20000000298023224,0.40000000596046448,0.10204081982374191,0.090000003576278687,0.5,1,0.30000001192092896,0.25125628709793091,0.03125]}}}},"model_volume":{"MaxGain":{"type":"float","value":6},"MinGain":{"type":"float","value":-15}}}},"Type":"1c19ca71-c24c-49cd-8dd5-2cc46018507a","Version":1},{"Guid":"31ba96a6-5d3e-4d89-b1e1-1dbe3c055d0c","Name":"$$$/app/Presets/DefaultPresetName=(Default)","PresetData":{"ModeID":"music","Models":{"model_duration":{},"model_loudness":{"DefaultLoudness":{"type":"float","value":-25},"LoudnessStandard":{"type":"std::uint32_t","value":0},"MaxLoudness":{"type":"float","value":-12},"MinLoudness":{"type":"float","value":-35}},"model_volume":{"MaxGain":{"type":"float","value":6},"MinGain":{"type":"float","value":-15}}}},"Type":"1c19ca71-c24c-49cd-8dd5-2cc46018507a","Version":1},{"Guid":"cea63332-1adc-44a9-a6eb-5490f965859b","Name":"$$$/app/Presets/DefaultPresetName=(Default)","PresetData":{"ModeID":"sfx","Models":{"model_loudness":{"DefaultLoudness":{"type":"float","value":-21},"LoudnessStandard":{"type":"std::uint32_t","value":0},"MaxLoudness":{"type":"float","value":-12},"MinLoudness":{"type":"float","value":-35}},"model_pan":{},"model_soundeffects":{"ReverbPresets":{"type":"tree::any","value":{"$$$/app/Presets/EssentialSound/ReverbPreset/HeavyReverb=Heavy Reverb":{"type":"array::float","value":[0.13316600024700165,0.29929900169372559,1,0.95999997854232788,0.85000002384185791,0.5,0.51530599594116211,0.30000001192092896,0.5,0.5,0.5,0.25125628709793091,0.0625]},"$$$/app/Presets/EssentialSound/ReverbPreset/LightReverb=Light Reverb":{"type":"array::float","value":[0.095477402210235596,0.29929900169372559,0.090909101068973541,1,1,0.80000001192092896,0.22449000179767609,0.60000002384185791,0.5,0.69999998807907104,0.30000001192092896,0.25125628709793091,0.0625]},"$$$/app/Presets/EssentialSound/ReverbPreset/OutsideReverb=Outside Reverb":{"type":"array::float","value":[0.091708503663539886,0.043893899768590927,1,0.5,0.20000000298023224,0.80000001192092896,0.18367299437522888,1,0.5,0,0.80000001192092896,0.25125628709793091,0.0625]},"$$$/app/Presets/EssentialSound/ReverbPreset/RoomReverb=Room Reverb":{"type":"array::float","value":[0.057788901031017303,0.44944900274276733,0.49494898319244385,0.89999997615814209,0.10000000149011612,0.15000000596046448,0.081632703542709351,0.40000000596046448,0.5,0.80000001192092896,0.20000000298023224,0.25125628709793091,0.0625]}}}},"model_volume":{"MaxGain":{"type":"float","value":6},"MinGain":{"type":"float","value":-15}}}},"Type":"1c19ca71-c24c-49cd-8dd5-2cc46018507a","Version":1}]</property>
+    </properties>
+  </session>
+
+  <files>
+    <file absolutePath="C:\Users\jtrem\Dropbox\CQ\07\Épopée fantastique (SOURCES)\Musiques\Générique - Thatched Villagers\Thatched Villagers.mp3" id="0" importerPrivateSettings="BitsPerSecond:0:320000;CompressionQuality:0:4;CompressionType:0:0;" mediaHandler="AmioMP3" relativePath="../Thatched Villagers.mp3"/>
+  </files>
+
+  <audioDevice inputID="" outputID="3441E30B-7679-4E8F-8F0D-8C587296FAA4">
+    <inputPort id="1" name="Entrée stéréo par défaut"/>
+    <outputPort id="1" name="Sortie par défaut"/>
+    <outputPort id="2" name="[01M] Haut-parleurs (Realtek High Definition Audio) 1"/>
+    <outputPort id="3" name="[02M] Haut-parleurs (Realtek High Definition Audio) 2"/>
+    <outputPort id="4" name="Sortie stéréo par défaut"/>
+    <outputPort id="5" name="[01S] Haut-parleurs (Realtek High Definition Audio) 1"/>
+    <outputPort id="6" name="Sortie Surround par défaut"/>
+  </audioDevice>
+
+</sesx>
