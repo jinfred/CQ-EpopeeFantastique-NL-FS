@@ -9,7 +9,8 @@
   
 
   
-<!-- To localize the description, use the following format for the description element.
+
+  <!-- To localize the description, use the following format for the description element.
 	<description>
 		<text xml:lang="en">English App description goes here</text>
 		<text xml:lang="fr">French App description goes here</text>
@@ -22,7 +23,8 @@
   
 
   
-<!-- To localize the name, use the following format for the name element.
+
+  <!-- To localize the name, use the following format for the name element.
 	<name>
 		<text xml:lang="en">English App name goes here</text>
 		<text xml:lang="fr">French App name goes here</text>
