@@ -24,6 +24,7 @@
 		private var _memPosPerso:Point; // Point, position du perso dans l'écran précédent (X, Y)
 
 		private var _dialogue = new Dialogue();
+		private var _dialogueMarchand = new DialogueMarchand();
 		private var _estEnDialogue:Boolean = false;
 		
 		private var _facteurTemps:Number=1;
@@ -193,6 +194,18 @@
 		  si c'est une réplique, un combat ou un dialogue.
 		******************************************************************************/
 		public function declencherDialogue(tSequence:Array, demandeur:MovieClip):Boolean {
+			if(_dialogue.declencherSiOk(tSequence, demandeur)){
+				addChild(_dialogue);
+				_estEnDialogue = true; //est utilisé pour prévenir les déplacements du perso
+				_gauche=false, _droite=false, _haut=false, _bas=false; //arret de tous les mouvements en cours 
+				_ecranDeJeu.arreterJoueur(_spero);
+				return true; //signifie que le dialogue a eu lieu
+			} else {
+				return false; //signifie que le dialogue n'a pas eu lieu
+			} //if+else
+		} //declencherDialogue
+		
+		public function declencherDialogueMarchand(tSequence:Array, demandeur:MovieClip):Boolean {
 			if(_dialogue.declencherSiOk(tSequence, demandeur)){
 				addChild(_dialogue);
 				_estEnDialogue = true; //est utilisé pour prévenir les déplacements du perso
