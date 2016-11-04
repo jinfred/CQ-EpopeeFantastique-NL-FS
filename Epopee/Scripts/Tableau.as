@@ -224,7 +224,11 @@
 			var nomDuTableau = this.toString();
 			if (nomDuTableau.indexOf("Marchand") >= 0) {
 				estMarchand = true;
+				updateNbOr();
 			}
+		}
+
+		public function updateNbOr(): void {
 			if (estMarchand) {
 				uiNbPiecesOr.text = "Tu as : " + _jeu.getFortune() + " pièces d'or";
 				//trace(_jeu.getFortune());

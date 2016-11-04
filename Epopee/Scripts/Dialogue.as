@@ -22,6 +22,8 @@
 
 		private var _jeu: MovieClip;
 
+		private var _nomDeObjet;
+
 		public function Dialogue() {
 			// CONSTRUCTEUR
 			addEventListener(Event.ADDED_TO_STAGE, init);
@@ -56,10 +58,12 @@
 			if (clipDemandeur != _clipDemandeur || (_memTempsFinDialogue + _delaiSansRepetition < tempsActuel)) {
 				//Puisque ce n'est pas le même clipDemandeur ou que le délai est écoulé, on affiche!
 				var nomDeObjet = clipDemandeur.toString();
+				_nomDeObjet = nomDeObjet;
 				_iEtape = 0;
 				_tSequence = tSequence;
+				trace(nomDeObjet);
 				_clipDemandeur = clipDemandeur; //mémorisation, pour la prochaine fois
-				if (nomDeObjet.indexOf("Marchand") >= 0 && clipDemandeur.getAssezDargent() == true) {
+				if (nomDeObjet.indexOf("Marchand") >= 0 && clipDemandeur.getAssezDargent() == true || nomDeObjet.indexOf("Puit") >= 0 && clipDemandeur.getAssezDargent() == true && _iEtape >= _tSequence.length) {
 					btOui.visible = true;
 					btNon.visible = true;
 					btSuite.visible = false;
@@ -95,7 +99,11 @@
 				[_OBJET, clipDemandeur.getNomSimple(), 1],
 				[_DISPARITION]
 			];
-			//_jeu.enleverOr(_objet.getPrixObjet);	Ne fonctionnera pas, doit faire des modifications
+			var _prixItem = clipDemandeur.getPrixObjet()
+			trace(_prixItem)
+			_jeu.enleverOr(_prixItem);
+			trace(clipDemandeur);
+			_jeu.getEcranDeJeu().updateNbOr();
 			declencherEtape();
 		}
 
@@ -140,6 +148,18 @@
 						var txtReplique: String = tEtape[1];
 						var txtNomPerso: String = ((tEtape.length > 2) ? tEtape[2] : _clipDemandeur.getNomSimple()); //le nom prévu, sinon c'est le nom du demandeur
 						message_txt.text = ((txtNomPerso != "") ? txtNomPerso + " – " : "") + txtReplique; //construction de la chaine à afficher
+						if (_nomDeObjet.indexOf("Puit") >= 0) {
+							if (_iEtape == _tSequence.length) {
+								var clipDemandeur = _clipDemandeur;
+								var tSequence = _tSequence;
+								btOui.visible = true;
+								btNon.visible = true;
+								btSuite.visible = false;
+								btOui.addEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
+								btNon.addEventListener(MouseEvent.CLICK, refuserObjet);
+							}
+
+						}
 						break;
 					case _COMBAT:
 						//c'est un combat a déclencher

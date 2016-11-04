@@ -88,9 +88,9 @@
 				} //if+else if
 				else if (nomDuClip.indexOf("marchand") >= 0) {
 					trace(nomDuClip);
-					if (nomDuClip=="epeemarchand_mc") {
+					if (nomDuClip == "epeemarchand_mc") {
 						_assezDargent = false;
-						_prixObjet=1
+						_prixObjet = 1
 						if (_jeu.getFortune() >= _prixObjet) {
 							_assezDargent = true;
 							_nomSimple = "L'épée magique d'Azkhaban";
@@ -114,9 +114,40 @@
 							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
 							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
 							return "Dialogue";
-						}
-					}
+						} // else
+					} //if "epeemarchand_mc"
 
+
+				} // else if "marchand"
+				else if (nomDuClip.indexOf("puit") >= 0) {
+					_assezDargent = false;
+					_prixObjet = 1
+					if (_jeu.getFortune() >= _prixObjet) {
+						_assezDargent = true;
+						_nomSimple = "Spéro";
+						tSequence = [
+							[_REPLIQUE, "Un puit magique !"],
+							[_REPLIQUE, "Certain disent qu'il te donne des pouvoirs magiques si tu lance une pièce d'or..."],
+							[_REPLIQUE, "Devrais-je lancer une pièce d'or ?"],
+						];
+						if (modeTest) {
+							return "Ok";
+						} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+						_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+						return "Dialogue";
+					} else {
+						_nomSimple = "Spéro";
+						tSequence = [
+							[_REPLIQUE, "Un puit magique !"],
+							[_REPLIQUE, "Certain disent qu'il te donne des pouvoirs magiques si tu lance une pièce d'or..."],
+							[_REPLIQUE, "Si seulement j'avais une pièce d'or à lancer..."],
+						];
+						if (modeTest) {
+							return "Ok";
+						} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+						_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+						return "Dialogue";
+					} // else
 
 				}
 			} //if(!_absence)
@@ -159,7 +190,7 @@
 		public function getAssezDargent(): Boolean {
 			return _assezDargent;
 		}
-		
+
 		public function getPrixObjet(): Boolean {
 			return _prixObjet;
 		}
