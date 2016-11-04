@@ -28,7 +28,7 @@
         <fullScreen>false</fullScreen>
         <autoOrients>false</autoOrients>
         <aspectRatio>portrait</aspectRatio>
-        <renderMode>cpu</renderMode>
+        <renderMode>direct</renderMode>
         <width>1280</width>
         <maximizable>true</maximizable>
         <minimizable>true</minimizable>
@@ -43,4 +43,5 @@
         <image128x128>appIconsForPublish/x128.png</image128x128>
     </icon>
     <supportedLanguages>fr</supportedLanguages>
+    <version>1.0</version>
 </application>
