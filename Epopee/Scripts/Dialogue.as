@@ -95,6 +95,7 @@
 				[_OBJET, clipDemandeur.getNomSimple(), 1],
 				[_DISPARITION]
 			];
+			//_jeu.enleverOr(_objet.getPrixObjet);	Ne fonctionnera pas, doit faire des modifications
 			declencherEtape();
 		}
 

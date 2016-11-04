@@ -132,9 +132,16 @@
 					var direction: String;
 					if (dirX <= 0) {
 						direction = "Gauche";
-					} else {
+					}
+					if (dirX >= 0) {
 						direction = "Droite";
 					} //if+else
+					if (dirY < 0) {
+						direction = "Haut";
+					}
+					if (dirY > 0) {
+						direction = "Bas";
+					}
 					perso.jouerAnim(direction);
 					perso.placerCorps(new Point(newPosX, newPosY)); // c'est le perso qui se place lui-même
 				} else {
@@ -219,7 +226,7 @@
 				estMarchand = true;
 			}
 			if (estMarchand) {
-				uiNbPiecesOr.text = "Tu as : "+_jeu.getFortune()+" pièces d'or";
+				uiNbPiecesOr.text = "Tu as : " + _jeu.getFortune() + " pièces d'or";
 				//trace(_jeu.getFortune());
 			}
 		}

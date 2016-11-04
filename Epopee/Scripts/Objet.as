@@ -159,6 +159,10 @@
 		public function getAssezDargent(): Boolean {
 			return _assezDargent;
 		}
+		
+		public function getPrixObjet(): Boolean {
+			return _prixObjet;
+		}
 
 	} //class
 } //package
