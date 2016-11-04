@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<application xmlns="http://ns.adobe.com/air/application/20.0">
+    <id>ca.qc.cstj.tim.epopeefantastique</id>
+    <versionNumber>1.0</versionNumber>
+    <filename>EpopeeFantastique</filename>
+    <description>Projet fait dans le cadre de controle qualite.</description>
+    <!-- To localize the description, use the following format for the description element.
+	<description>
+		<text xml:lang="en">English App description goes here</text>
+		<text xml:lang="fr">French App description goes here</text>
+		<text xml:lang="ja">Japanese App description goes here</text>
+	</description>
+	-->
+    <name>EpopeeFantastique</name>
+    <!-- To localize the name, use the following format for the name element.
+	<name>
+		<text xml:lang="en">English App name goes here</text>
+		<text xml:lang="fr">French App name goes here</text>
+		<text xml:lang="ja">Japanese App name goes here</text>
+	</name>
+	-->
+    <copyright></copyright>
+    <initialWindow>
+        <content>EpopeeFantastique.swf</content>
+        <systemChrome>standard</systemChrome>
+        <transparent>false</transparent>
+        <visible>true</visible>
+        <fullScreen>false</fullScreen>
+        <autoOrients>false</autoOrients>
+        <aspectRatio>portrait</aspectRatio>
+        <renderMode>cpu</renderMode>
+        <width>1280</width>
+        <maximizable>true</maximizable>
+        <minimizable>true</minimizable>
+        <resizable>true</resizable>
+    </initialWindow>
+    <customUpdateUI>false</customUpdateUI>
+    <allowBrowserInvocation>false</allowBrowserInvocation>
+    <icon>
+        <image16x16>appIconsForPublish/x16.png</image16x16>
+        <image32x32>appIconsForPublish/x32.png</image32x32>
+        <image48x48>appIconsForPublish/x48.png</image48x48>
+        <image128x128>appIconsForPublish/x128.png</image128x128>
+    </icon>
+    <supportedLanguages>fr</supportedLanguages>
+    
+</application>
