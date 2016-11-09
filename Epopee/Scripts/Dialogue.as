@@ -4,6 +4,7 @@
 	import flash.events.MouseEvent;
 	import flash.events.KeyboardEvent;
 	import flash.ui.Keyboard;
+	import flash.display.*;
 
 	public class Dialogue extends MovieClip {
 
@@ -23,6 +24,10 @@
 		private var _jeu: MovieClip;
 
 		private var _nomDeObjet;
+
+		private var dialogueMarchand: Boolean = false;
+
+		private var _toggleOuiNon: int = -1; //-1 veut dire non, 1 veut dire oui
 
 		public function Dialogue() {
 			// CONSTRUCTEUR
@@ -54,6 +59,7 @@
 		Fonction declencherSiOk
 		******************************************************************************/
 		public function declencherSiOk(tSequence: Array, clipDemandeur: MovieClip): Boolean {
+			dialogueMarchand = false;
 			var tempsActuel: uint = new Date().time;
 			if (clipDemandeur != _clipDemandeur || (_memTempsFinDialogue + _delaiSansRepetition < tempsActuel)) {
 				//Puisque ce n'est pas le même clipDemandeur ou que le délai est écoulé, on affiche!
@@ -61,15 +67,19 @@
 				_nomDeObjet = nomDeObjet;
 				_iEtape = 0;
 				_tSequence = tSequence;
-				trace(nomDeObjet);
+				trace(dialogueMarchand);
 				_clipDemandeur = clipDemandeur; //mémorisation, pour la prochaine fois
-				if (nomDeObjet.indexOf("Marchand") >= 0 && clipDemandeur.getAssezDargent() == true || nomDeObjet.indexOf("Puit") >= 0 && clipDemandeur.getAssezDargent() == true && _iEtape >= _tSequence.length) {
+				if (nomDeObjet.indexOf("Marchand") >= 0 && clipDemandeur.getAssezDargent() == true || nomDeObjet.indexOf("Puit") >= 0 && clipDemandeur.getAssezDargent() == true && _iEtape >= _tSequence.length && _tSequence.length >= 2) {
+					dialogueMarchand = true;
+				}
+				if (dialogueMarchand) {
 					btOui.visible = true;
 					btNon.visible = true;
 					btSuite.visible = false;
 					btOui.addEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
 					btNon.addEventListener(MouseEvent.CLICK, refuserObjet);
 				}
+				dialogueMarchand = false;
 				declencherEtape();
 				btSuite.addEventListener(MouseEvent.CLICK, declencherEtape);
 				return true; //true indique que le dialogue débute
@@ -104,11 +114,13 @@
 			_jeu.enleverOr(_prixItem);
 			trace(clipDemandeur);
 			_jeu.getEcranDeJeu().updateNbOr();
+			dialogueMarchand = false;
 			declencherEtape();
 		}
 
 		private function refuserObjet(e: Event = null): void {
 			btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
+			dialogueMarchand = false;
 			declencherEtape();
 		}
 
@@ -120,7 +132,12 @@
 
 			message_txt.text = "";
 			_memTempsFinDialogue = new Date().time; // notons le temps pour éviter de ravoir le même message immédiatement
-
+			dialogueMarchand = false;
+			btOui.visible = false;
+			btNon.visible = false;
+			btSuite.visible = true;
+			btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
+			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet);
 			_jeu.terminerDialogue();
 		} //quitterDialogue
 
@@ -149,7 +166,7 @@
 						var txtNomPerso: String = ((tEtape.length > 2) ? tEtape[2] : _clipDemandeur.getNomSimple()); //le nom prévu, sinon c'est le nom du demandeur
 						message_txt.text = ((txtNomPerso != "") ? txtNomPerso + " – " : "") + txtReplique; //construction de la chaine à afficher
 						if (_nomDeObjet.indexOf("Puit") >= 0) {
-							if (_iEtape == _tSequence.length) {
+							if (_iEtape == _tSequence.length && _clipDemandeur.getAssezDargent() == true) {
 								var clipDemandeur = _clipDemandeur;
 								var tSequence = _tSequence;
 								btOui.visible = true;
@@ -157,6 +174,10 @@
 								btSuite.visible = false;
 								btOui.addEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
 								btNon.addEventListener(MouseEvent.CLICK, refuserObjet);
+
+								//stage.addEventListener(KeyboardEvent.KEY_DOWN, funcToggleOuiNon);
+								//stage.addEventListener(Event.ENTER_FRAME, toggleLoop);
+
 							}
 
 						}
@@ -194,17 +215,74 @@
 			} //if+else principal
 		} //declencherEtape
 
+		/*private function funcToggleOuiNon(e: KeyboardEvent): void {
+			if (e.keyCode == 37) { //flèche de gauche
+				_toggleOuiNon = -1;
+				trace("Left");
+				trace(_toggleOuiNon);
+			}
+
+			if (e.keyCode == 39) { //flèche de droite
+				_toggleOuiNon = 1;
+				trace("Right");
+				trace(_toggleOuiNon);
+			}
+
+
+		}
+
+		private function toggleLoop(e: Event): void {
+			if (_toggleOuiNon == -1) {
+				btOui.upState = btOui.overState;
+				btNon.upState = btNon.upState;
+			}
+
+			if (_toggleOuiNon == 1) {
+				btNon.upState = btNon.overState;
+				btOui.upState = btOui.upState;
+			}
+
+		}*/
+
+		private function updateBoutons(): void {
+			if (_toggleOuiNon == 1) {
+				btOui.downState = btOui.downState;
+				btNon.upState = btNon.upState;
+			}
+
+			if (_toggleOuiNon == -1) {
+				btNon.upState = btNon.downState;
+				btOui.upState = btOui.upState;
+			}
+		}
+
 		/******************************************************************************
 		Fonction frappeClavierDialogue
 		  Elle est exécutée quand une touche du clavier est enfoncée pendant l'affichage du dialogue.
 		******************************************************************************/
 		public function frappeClavierDialogue(e: KeyboardEvent): void {
+			var currDownNon: DisplayObject = btNon.downState;
+			var currDownOui: DisplayObject = btOui.downState;
 			switch (e.keyCode) {
 				case Keyboard.SPACE:
 				case Keyboard.ENTER:
 					declencherEtape(e);
 					break;
 			} //switch
+
+			switch (e.keyCode) {
+				case 39:
+					_toggleOuiNon = 1;
+					trace("Right");
+					trace(_toggleOuiNon);
+					break;
+				case 37:
+					_toggleOuiNon = -1;
+					trace("Left");
+					trace(_toggleOuiNon);
+					break;
+			}
+			updateBoutons();
 		} //frappeClavierDialogue
 
 	} //class
