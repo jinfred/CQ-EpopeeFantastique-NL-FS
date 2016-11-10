@@ -402,6 +402,7 @@
 				} //if+else
 				calculerDommages();
 				_tPersos[iPersoCible].blesser(_dommages);
+				_tPersos[iPersoCible].jouerAnim("Damage");
 
 				afficherEtape(leMonstre.getNom() + _messAction + _tPersos[iPersoCible].getNom() + " pour " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.");
 				var nbMorts: int = 0;
