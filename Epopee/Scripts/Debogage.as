@@ -1,16 +1,21 @@
 ﻿package  {
 	import flash.display.MovieClip;
+	import flash.display.SimpleButton;
+	import flash.display.Sprite;
 	import flash.display.DisplayObject;
 	import flash.events.Event;
+	import flash.events.MouseEvent;
 	import flash.events.KeyboardEvent;
 	import flash.ui.Keyboard;
 	import flash.text.TextField;
+	import flash.text.TextFormat;
 	import flash.utils.getQualifiedClassName;
 	import flash.geom.Point;
 
-	/*******************************************************************************
-	ATTENTION: Pour le moment cette classe ne doit pas être modifiée. (PAS DU TOUT!)
-	*******************************************************************************/	
+	/********************************************************************************
+	ATTENTION: Cette classe peut maintenant être modifiée pour ajouter des fonctions 
+	           ou les réparer, mais il est strictement défendu d'en retirer!!!
+	********************************************************************************/	
 	
 	public class Debogage extends MovieClip {
 		// CONSTRUCTEUR
@@ -19,16 +24,22 @@
 		private var _phaseEntreeMDP:Boolean=false;	
 		private var _MDP:String="tim";	
 		private var _lettresEntreesMDP:String="";	
-		
+
+	
 		private var _txtInfoDebogage:TextField = new TextField();
 		private var _marge:uint = 10;
 		private var _txtAffiche:String="";
 		private var _memTxtAffiche:String="";
 		private var _miseAJourAuto:Boolean = true;
+		private var _yProchainBtnGauche:uint=_marge;
+		private var _yProchainBtnDroite:uint=_marge;
+		private var _leFrameJeu:uint;
+		private var _FPS_INITIAL = 24;
 		
 		private var _jeu:MovieClip;
 
 		public function Debogage(jeu) { 
+			// CONSTRUCTEUR
 			_jeu = jeu; // initialisation de la référence à jeu (requis avant init)
 			addEventListener(Event.ADDED_TO_STAGE, init);
 		}
@@ -39,24 +50,53 @@
 		private function init(e:Event):void {
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			addEventListener(Event.REMOVED_FROM_STAGE, nettoyer);
+
+			_leFrameJeu = MovieClip(_jeu.parent).currentFrame;
+			
+			if(_miseAJourAuto){ addEventListener(Event.ENTER_FRAME, changerTxt); }
+			//ajouts de boutons pour accéder aux différents tableaux:
+			try{
+				for each(var nomTableau:String in _jeu.getTTableaux()){
+					ajouterBtnTableau(nomTableau);
+				} //for
+			} catch(e:Error){
+				throw(new Error("Oh là là, une erreur est survenue à la récupération des tableaux du jeu pour le débogage. [Vérifiez la fonction «getTTableaux» de la classe Jeu.as: elle doit retourner un Array valide des noms des tableaux du jeu.]"));
+			} //try+catch
+			//ajouts de boutons supplémentaires pour des fn complémentaires:
+			var option:String;
+			for each(option in ["amorcer un combat", "soigner les équipiers", "soigner les monstres", "presque tuer les équipiers", 
+								"presque tuer les monstres", "vaincre ce combat", "rétablir mana des équipiers", "presque passer un niveau", 
+								"équipiers super puissants", "équipiers super faibles", "enrichir le joueur", 
+								"animations plus rapides", "animations plus lentes", "animations normales",
+								"montrer/cacher les zones"]){
+				ajouterBtnFn(option);
+			} //for
 			
 			// ajout préparation d'un champ texte:
 			_txtInfoDebogage.x = stage.stageWidth + _marge;
-			_txtInfoDebogage.y = _marge;
-			with(_txtInfoDebogage){ wordWrap = true; width = 250; }
+			_txtInfoDebogage.y = _yProchainBtnDroite; //stage.stageHeight - _marge - _txtInfoDebogage.height;
+			with(_txtInfoDebogage){ wordWrap = true; width = 250; height = 400; }
 			changerTxt();
-			addChild(_txtInfoDebogage);
-			if(_miseAJourAuto){ addEventListener(Event.ENTER_FRAME, changerTxt); }
+			addChild(_txtInfoDebogage);		
+
 		} //init
 		
 		/******************************************************************************
 		Fonction nettoyer
 		******************************************************************************/		
-		private function nettoyer(e:Event):void {
+		private function nettoyer(e:Event=null):void {
 			removeEventListener(Event.REMOVED_FROM_STAGE, nettoyer);
 			if(_miseAJourAuto){ removeEventListener(Event.ENTER_FRAME, changerTxt); }
 			addEventListener(Event.ADDED_TO_STAGE, init); 
-			removeChild(_txtInfoDebogage);
+
+
+			while (numChildren > 0) { removeChildAt(0); } //élimination de tous les boutons et champs
+			
+			_yProchainBtnGauche = _yProchainBtnDroite = _marge; //remise à neuf de la position pour les premiers btns
+			
+			stage.frameRate = _FPS_INITIAL; //retour à la vitesse de lecture initiale
+			
+			log("Les boutons de débogage ont été éliminés!",2);
 		} //nettoyer
 		
 		/******************************************************************************
@@ -164,7 +204,7 @@
 			//début du test:
 			try{
 				for each(nomTableau in _jeu.getTTableaux()){ //boucle sur tous les tableaux déclarés
-					var txtEtape:String = "Début du test du tableau "+nomTableau
+					txtEtape = "Début du test du tableau "+nomTableau
 					log(txtEtape, 2);
 					txtRapport += txtEtape += "\n";
 					
@@ -198,11 +238,11 @@
 						} //for
 						
 							txtEtape = "  Contenu du tableau "+nomTableau+": \n";
-							txtEtape += "   • "+tTeleports.length  +" téléport(s) : [" +extraireNoms(tTeleports)+"]\n";
-							txtEtape += "   • "+tPortes.length     +" porte(s) : ["    +extraireNoms(tPortes)+"]\n";
-							txtEtape += "   • "+tPNJs.length       +" PNJ(s) : ["      +extraireNoms(tPNJs)+"]\n";
-							txtEtape += "   • "+tObjets.length     +" objet(s) : ["    +extraireNoms(tObjets)+"]\n";
-							txtEtape += "   • "+tObstacles.length  +" obstacle(s) \n";
+							txtEtape += "   • "+tTeleports.length      +" téléport(s) : ["+extraireNoms(tTeleports)+"]\n";
+							txtEtape += "   • "+tPortes.length         +" porte(s) : ["+extraireNoms(tPortes)+"]\n";
+							txtEtape += "   • "+tPNJs.length           +" PNJ(s) : ["+extraireNoms(tPNJs)+"]\n";
+							txtEtape += "   • "+tObjets.length         +" objet(s) : ["+extraireNoms(tObjets)+"]\n";
+							txtEtape += "   • "+tObstacles.length      +" obstacle(s) \n";
 							txtRapport += txtEtape += "\n";
 					} catch(e:Error){
 						throw(new Error("Une erreur est survenue en cherchant les enfants du tableau."));
@@ -281,12 +321,178 @@
 		Fonction changerTxt
 		******************************************************************************/		
 		private function changerTxt(e:Event=null):void {
-			_txtAffiche = _jeu.getTxtVersion() + "\n\n" + _jeu.getEcranDeJeu() + "\n\n" + _jeu.getTPersos() + "\n\n" + _jeu.getTObjets();
+
+			_txtAffiche = _jeu.getTxtVersion() + "\n\n"
+			+ "Écran: "+_jeu.getEcranDeJeu() + "\n\n" 
+			+ "Équipe: " + _jeu.getTPersos() + "\n\n" 
+			+ "Objets: " + _jeu.getTObjets() + "\n\n" 
+			+ "Or: " + _jeu.getFortune() + "\n\n"
+			+ "IPS: " + stage.frameRate.toFixed(0) + " (vitesse des transitions: " + _jeu.getFacteurTemps().toFixed(2) + ")\n\n";
+			// ^ un bon endroit pour ajouter des infos utiles au débogage!
+			
 			if(_txtAffiche != _memTxtAffiche){
 				_memTxtAffiche = _txtAffiche;
 				_txtInfoDebogage.text = _txtAffiche;
 			} //if
-		} //changerTxt 
+
+			
+			//test pour détecter si le jeu est fini (au cas où il ne serait pas éliminé...):
+			if(_leFrameJeu != MovieClip(_jeu.parent).currentFrame){
+				//le frame a changé, il faut éliminer les boutons de débogage!
+				nettoyer();
+			} //if
+		} //changerTxt
+
+		/******************************************************************************
+		Fonction ajouterBtnTableau
+		******************************************************************************/		
+		private function ajouterBtnTableau(ecranDestination:String):void{
+			var unBtnGo:SimpleButton = stpDessineMoiUnBouton(ecranDestination); //création d'une instance et ajout du bouton souhaité
+			unBtnGo.x = 0-_marge-unBtnGo.width;
+			unBtnGo.y = _yProchainBtnGauche;
+			addChild(unBtnGo);
+			unBtnGo.addEventListener(MouseEvent.CLICK, function():void{_jeu.changerEcranJeu(ecranDestination);allerAuPremierTeleport(ecranDestination);});
+			_yProchainBtnGauche += unBtnGo.height+_marge;
+		} //ajouterBtnTableau
 		
+		/******************************************************************************
+		Fonction ajouterBtnFn
+		******************************************************************************/			
+		private function ajouterBtnFn(description:String):void{
+			var unBtnGo:SimpleButton = stpDessineMoiUnBouton(description); //création d'une instance et ajout du bouton souhaité
+			unBtnGo.x = stage.stageWidth+_marge;
+			unBtnGo.y = _yProchainBtnDroite;
+			addChild(unBtnGo);
+			unBtnGo.addEventListener(MouseEvent.CLICK, 
+				function():void{
+					try{
+						var perso:Perso;
+						var monstre:Monstre;
+						switch(description){
+							case "amorcer un combat": 
+								_jeu.amorcerCombat(); break;
+							case "soigner les équipiers": 
+								_jeu.soigner(50); break;
+							case "soigner les monstres": 
+								for each(monstre in _jeu.getEcranDeJeu().getTMonstres()){monstre.guerir(50);}; break;
+							case "presque tuer les équipiers": 
+								for each(perso in _jeu.getTPersos()){ perso.blesser( perso.getPVAct()-1 ); }; break;
+							case "presque tuer les monstres": 
+								for each(monstre in _jeu.getEcranDeJeu().getTMonstres()){ monstre.blesser( monstre.getPVAct()-1 ); }; break;
+							case "vaincre ce combat": 
+								_jeu.getEcranDeJeu().victoire(); break;
+							case "rétablir mana des équipiers": 
+								for each(perso in _jeu.getTPersos()){ perso.setPMAct(perso.getPMMax()) }; break;
+							case "presque passer un niveau": 
+								for each(perso in _jeu.getTPersos()){ perso.setXPAct(perso.getXPSuivant()-1) }; break;
+							case "équipiers super puissants": 
+								for each(perso in _jeu.getTPersos()){ perso.superForceDebogage(); }; break;
+							case "équipiers super faibles": 
+								for each(perso in _jeu.getTPersos()){ perso.mauvietteDebogage(); }; break;
+							case "enrichir le joueur": 
+								_jeu.ajouterOr(50); break;
+							case "animations plus rapides": 
+								if( stage.frameRate <= 100 ){
+									_jeu.setFacteurTemps( _jeu.getFacteurTemps()*0.4 );
+									stage.frameRate = _FPS_INITIAL / _jeu.getFacteurTemps(); 
+								} else {
+									log("Pour des raisons de performances, il n'est pas possible d'accélérer davantage.", 2);
+								}
+								break;
+							case "animations plus lentes": 
+								_jeu.setFacteurTemps( _jeu.getFacteurTemps()/0.4 );
+								stage.frameRate = _FPS_INITIAL / _jeu.getFacteurTemps(); break;
+							case "animations normales": 
+								_jeu.setFacteurTemps(1); stage.frameRate = _FPS_INITIAL; break;
+							case "montrer/cacher les zones": 
+								_jeu.setZonesTechniquesVisibles( !_jeu.getZonesTechniquesVisibles() ); 
+								_jeu.dispatchEvent(new Event("changementVisibilite"));
+								break;
+						}
+					} catch(e:Error) {
+						log("Cette fonction n'est pas disponible. Si vous croyez que c'est une erreur, contactez votre développeur pour lui demander de la réparer!");
+					}
+				}
+			); //fin de l'ajout de l'écouteur!!!
+			_yProchainBtnDroite += unBtnGo.height+_marge;
+		} //ajouterBtnFn
+		
+		/******************************************************************************
+		Fonction stpDessineMoiUnBouton
+		******************************************************************************/		
+		private function stpDessineMoiUnBouton(texte:String):SimpleButton{
+			var unBtn:SimpleButton = new SimpleButton(); //création d'une instance (vide)
+
+			//création du rectangle du bouton:
+			var spriteDuBtn:Sprite = stpDessineMoiUnRectangle(1, 0x000000, 0x577373, 196, 22);
+			var spriteDuBtnOver:Sprite = stpDessineMoiUnRectangle(3, 0x000000, 0x779393, 196, 22);
+			
+			//création de l'étiquette (selon la taille du btn) et ajout sur les bouton:
+			spriteDuBtn.addChild(stpPrepareMoiUnTxt(texte, spriteDuBtn.width, spriteDuBtn.height, 16)); 
+			spriteDuBtnOver.addChild(stpPrepareMoiUnTxt(texte, spriteDuBtn.width, spriteDuBtn.height, 16)); 
+
+			//définition rapide des états du bouton:
+			unBtn.downState = unBtn.upState = unBtn.hitTestState = spriteDuBtn;
+			
+			//spriteDuBtnOver.addChild(spriteDuBtn);
+			unBtn.overState = spriteDuBtnOver;
+			
+			return(unBtn)
+		} //stpDessineMoiUnBouton
+		
+		/******************************************************************************
+		Fonction stpPrepareMoiUnTxt
+		******************************************************************************/		
+		private function stpPrepareMoiUnTxt(texte:String, largeur:uint, hauteur:uint, taillePolice:uint):TextField{
+			//création et préparation du champ:
+			var txtBtn:TextField = new TextField();    
+			txtBtn.text = texte;
+			txtBtn.height = hauteur;
+			txtBtn.width = largeur;
+			txtBtn.x = 2; // petite marge!
+			
+			//création du style:
+			var formatageTxt:TextFormat = new TextFormat(); 
+			formatageTxt.size = taillePolice; 
+			formatageTxt.font = "_sans";
+			
+			//application du style:
+			txtBtn.setTextFormat(formatageTxt);
+			
+			return(txtBtn);
+		} //stpPrepareMoiUnTxt
+		
+		/******************************************************************************
+		Fonction stpPrepareMoiUnTxt
+		******************************************************************************/		
+		private function stpDessineMoiUnRectangle(epaisseurLigne:Number, couleurLigne:uint, couleurRemp:uint, largeur:uint, hauteur:uint):Sprite{
+			var spriteConteneur:Sprite = new Sprite();
+			spriteConteneur.graphics.lineStyle(epaisseurLigne, couleurLigne);
+			spriteConteneur.graphics.beginFill(couleurRemp,2);
+			spriteConteneur.graphics.drawRect(0,0,largeur,hauteur);
+			spriteConteneur.graphics.endFill();
+			return spriteConteneur;
+		} //stpDessineMoiUnRectangle
+		
+		/******************************************************************************
+		Fonction allerAuPremierTeleport
+		******************************************************************************/		
+		private function allerAuPremierTeleport(ecranDestination:String):void{
+			try{
+				var ecranDeJeu:MovieClip = _jeu.getEcranDeJeu();
+				for(var i=0; i<ecranDeJeu.numChildren-1; i++){
+					var unEnfant = ecranDeJeu.getChildAt(i);
+					var nomEnfant:String = unEnfant.name;
+					if(nomEnfant.indexOf("teleport")==0){
+						//c'est un téléport! c'est reparti pour un grand voyage...
+						_jeu.changerEcranJeu(ecranDestination, nomEnfant);
+						break; //inutile de chercher davantage!
+					} //if
+				} //for
+			} catch(e:Error){
+				throw(new Error("Oh là là, une erreur est survenue en cherchant un téléport dans le tableau. [Vérifiez la fonction «getEcranDeJeu» de la classe Jeu.as: elle doit retourner un MovieClip de l'écran en cours.]"));
+			} //try+catch
+		} //allerAuPremierTeleport
+
 	} //class
 } //package
