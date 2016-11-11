@@ -2,12 +2,85 @@
 #################################################################################
 ---------------------------------------------------------------------------------
 L'ÉPOPÉE FANTASTIQUE
-PAR __INSCRIVEZ_VOS_NOMS_ICI_:_NE_LAISSEZ_PAS_CETTE_LIGNE_AINSI_&%!$?__
+PAR Nicolas Labonté et Frédérique St-Georges
 TIM – CÉGEP DE SAINT-JÉRÔME
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.9 alpha 1
+Date: 2016-11-11.
+Par Frédérique St-Georges
+Nouveautés:
+- Ajout du visuel permanent de Delwyn et Caitlyn
+- Correction de la tête de Spero.
+- Correction du cycle de marche.
+- Ajout d'animation de combat pour Caitlyn.
+- Intégration de nouveaux modèles de PNJs.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.8 alpha 1
+Date: 2016-11-10.
+Par Nicolas Labonté
+Nouveautés:
+- Intégration de la programmation des animations de combat (visuel temporaire).
+- Ajout d'une map: Ravin.
+- Intégration complète de portes et de téléports.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.7 alpha 1
+Date: 2016-11-09.
+Par Nicolas Labonté et Frédérique St-Georges
+Nouveautés:
+- Ajout des clips des maps (Ajouter les éléments de décors).
+- Ajout des portes et téléports.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.6 alpha 1
+Date: 2016-11-08.
+Par Nicolas Labonté
+Nouveautés:
+- Réglage du problème de dialogue après avoir fait un hitTest avec les objets marchands.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.5 alpha 1
+Date: 2016-11-04.
+Par Nicolas Labonté et Frédérique St-Georges
+Nouveautés:
+- Ajout de programmation du puit (visuel temporaire).
+- Retraçage des maisons et des buissons.
+- Mise à jour de l'échéancier.
+- Mise à jour du publish model.
+- Nouvelles icônes.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.4 alpha 1
+Date: 2016-11-01.
+Par Nicolas Labonté et Frédérique St-Georges
+Nouveautés:
+- Ajout des cycles de marche vers le haut et vers le bas pour [Spero]
+- Ajout de la programmation liée aux cycles de marches
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.3 alpha 1
+Date: 2016-11-01.
+Par Nicolas Labonté et Frédérique St-Georges
+Nouveautés:
+- Colorisation de l'entièreté de la cinématique.
+- Ajout de programmation pour que le joueur puisse passer les bouts de cinématique.
+- Ajout du marchand et de sa programmation (visuel temporaire).
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.1 alpha 1
+Date: 2016-10-30.
+Par Frédérique St-Georges
+Nouveautés:
+- Ajout du prototype de cinématique.
+- Colorisation du village détruit de la cinématique.
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 VERSION 2.0 alpha 1
-Date: 2016-10-...
+Date: 2016-10-29.
+Par Nicolas Labonté
 Nouveautés:
 - Fait en sorte que le joueur ne puisse pas fuire le combat avec le sous-chef1
 - Fait en sorte que l'utilisation de la magie coûte des points de magie qui se régénèrent en attaquant
