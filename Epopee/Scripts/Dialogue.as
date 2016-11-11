@@ -29,6 +29,8 @@
 
 		private var _toggleOuiNon: int = -1; //-1 veut dire non, 1 veut dire oui
 
+		private var tPersos: Array = [];
+
 		public function Dialogue() {
 			// CONSTRUCTEUR
 			addEventListener(Event.ADDED_TO_STAGE, init);
@@ -110,10 +112,17 @@
 				[_DISPARITION]
 			];
 			var _prixItem = clipDemandeur.getPrixObjet()
-			trace(_prixItem)
 			_jeu.enleverOr(_prixItem);
-			trace(clipDemandeur);
 			_jeu.getEcranDeJeu().updateNbOr();
+			var _nomDuClip = clipDemandeur.toString();
+			if (_nomDuClip.indexOf("Puit") >= 0) {
+				tPersos = _jeu.getTPersos();
+				var _niveautPersos;
+				for (var i: uint = 0; i <= tPersos.length - 1; i++) {
+					_niveautPersos = tPersos[i].getNiveau();
+					tPersos[i].setNiveau(_niveautPersos + 1);
+				}
+			}
 			dialogueMarchand = false;
 			declencherEtape();
 		}

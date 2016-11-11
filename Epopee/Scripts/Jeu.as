@@ -62,7 +62,7 @@
 			_nova   = new PersoNova();     
 			_lucem  = new PersoLucem();   
 			_fortis = new PersoFortis(); 
-            //caractéristiques:    nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, niv, XPAct, XPSuivant, estPresent
+            //caractéristiques:    nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVites	se, niv, XPAct, XPSuivant, estPresent
 			_spero.initParam(  "Spero",   125,   125,    50,    50,      25,      25,          5,          5,          20,   1,     0,       100, true);
 			_nova.initParam(    "Nova",   100,   100,    10,    10,      20,      20,         15,         10,          10,   1,     0,       100, false);
 			_lucem.initParam(  "Lucem",    50,    50,    75,    75,      10,      15,         25,         25,          25,   1,     0,       100, false);
