@@ -31,8 +31,8 @@
 		
 		private var _prochainCombat:int // Entier, nombre de tours avant le prochain combat
 		private var _combatPossible:Boolean = false; // Booleen, indique si l'écran en cours permet les combats
-		private var _tTableauxPacifiques:Array = ["Village", "MaisonAmi", "MaisonMaman", "MaisonChamane", "Chateau", "SalleDuRoi", "Caverne", "Marchand1", "Village2", "Foret2", "foretEnchantee02", "foretEnchantee03", "foretEnchantee04", "foretEnchantee05", "foretEnchantee06", "foretEnchantee07", "foretEnchantee08"];
-		private var _tTableauxDangereux:Array = ["Foret", "Foret2", "Ravin", "Rocaille"];
+		private var _tTableauxPacifiques:Array = ["Village", "MaisonAmi", "MaisonMaman", "MaisonChamane", "Chateau", "SalleDuRoi", "Caverne", "Marchand1", "Village2", "Foret2", "Marais05", "Lac", "RavinChateau", "InterieurTemple", "Temple", "EntreeVille", "Ville", "Marais04", "Entree"];
+		private var _tTableauxDangereux:Array = ["Foret", "Foret2", "Ravin", "Rocaille", "foretEnchantee02", "foretEnchantee03", "foretEnchantee04", "foretEnchantee05", "foretEnchantee06", "foretEnchantee07", "foretEnchantee08", "Camp01", "Camp02", "Camp03", "Camp04", "Bibliotheque", "SalleDuRoi", "SalleSecrete", "Marais01", "Marais02", "Marais03"];
 		private var _tTousLesTableaux:Array = _tTableauxPacifiques.concat(_tTableauxDangereux); //permet de créer un Array contenant tous les tableaux
 
 		private var _distance:Number;
