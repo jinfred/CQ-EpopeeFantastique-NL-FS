@@ -25,17 +25,19 @@
 		public function Etre(){ } // CONSTRUCTEUR
 		
 		public function initParamEtre(nom:String, PVAct:int, PVMax:int, PMAct:int, PMMax:int, baseAtt:int, baseDef:int, baseAttMag:int, baseDefMag:int, baseVitesse:int, type:String, niveau:int=1){
-		var mutliplicateurNiveau = 1+(niveau-1*0.1);
+		var mutliplicateurNiveau = (niveau+(niveau+1))*0.04;
+		trace(mutliplicateurNiveau);
+		trace(PVMax * mutliplicateurNiveau);
 			_nom=nom;
-			_PVAct=PVAct;
-			_PVMax=Math.floor(PVMax * mutliplicateurNiveau);
-			_PMAct=PMAct;
-			_PMMax=Math.floor(PMMax * mutliplicateurNiveau);
-			_baseAtt=Math.floor(baseAtt * mutliplicateurNiveau);
-			_baseDef=Math.floor(baseDef * mutliplicateurNiveau);
-			_baseAttMag=Math.floor(baseAttMag * mutliplicateurNiveau);
-			_baseDefMag=Math.floor(baseDefMag * mutliplicateurNiveau);
-			_baseVitesse=Math.floor(baseVitesse * mutliplicateurNiveau);
+			_PVMax=Math.floor((PVMax * mutliplicateurNiveau) + PVMax);
+			_PVAct=_PVMax;
+			_PMMax=Math.floor((PMMax * mutliplicateurNiveau) + PMMax);
+			_PMAct=_PMMax;
+			_baseAtt=Math.floor((baseAtt * mutliplicateurNiveau) + baseAtt);
+			_baseDef=Math.floor((baseDef * mutliplicateurNiveau) + baseDef);
+			_baseAttMag=Math.floor((baseAttMag * mutliplicateurNiveau) + baseAttMag);
+			_baseDefMag=Math.floor((baseDefMag * mutliplicateurNiveau) + baseDefMag);
+			_baseVitesse=Math.floor((baseVitesse * mutliplicateurNiveau) + baseVitesse);
 			_type=type;
 			addEventListener(Event.REMOVED_FROM_STAGE, nettoyer)
 		} //initParamEtre
