@@ -5,12 +5,11 @@
 	import flash.events.TimerEvent;
 	import flash.events.KeyboardEvent;
 	import flash.ui.Keyboard;
-	import flash.utils.Timer;
-	import flash.utils.setInterval;
-	import flash.utils.clearInterval;
+	import flash.utils.*;
 	import flash.media.Sound;
 	import flash.media.SoundChannel;
 	import flash.geom.Point;
+	import flash.display.DisplayObject;
 
 	public class Combat extends MovieClip {
 		private var _tPersos: Array, _tMonstres: Array; // Array des 2 groupes: permettent d'accéder aux propriétés de tous les participants (PV, attaques, etc.)
@@ -27,7 +26,7 @@
 		private var _attaque: Number, _defense: Number, _dommages: Number;
 		private var _jeu: MovieClip;
 
-		private var _cible: String;
+		private var _cible: Monstre;
 
 		public function Combat(unTableauPersos: Array, unTypeCombat: String) {
 			// CONSTRUCTEUR
@@ -67,9 +66,12 @@
 					//rien de spécial n'est prévu, donc on passe par le même script que les autres combats (default):
 				default:
 					creerMonstres();
-					trace("Non, là!");
-					stage.addEventListener(MouseEvent.CLICK, choisirCible);
 			} //switch
+
+			for (var j: int = 0; j < _tMonstres.length; j++) {
+				trace(getQualifiedClassName(_tMonstres[j]));
+				(_tMonstres[j] as Monstre).addEventListener(MouseEvent.CLICK, choisirCible);
+			}
 
 			addEventListener(Event.REMOVED_FROM_STAGE, nettoyer);
 
@@ -113,7 +115,8 @@
 			else {
 				nbMonstres = 4;
 			} //5% des cas (salut mon ami... on s'amuse, non?!)
-			for (var i: int = 0; i <= nbMonstres; i++) {
+			nbMonstres=4;
+			for (var i: int = 0; i < nbMonstres; i++) {
 				var placeMonstre: MovieClip = MovieClip(getChildByName("placeMonstre" + i));
 				var choix: int = Math.floor(Math.random() * 3) + 1;
 				switch (choix) {
@@ -134,6 +137,7 @@
 						break;
 				} //switch
 				addChild(_tMonstres[i]); //ajout de l'object monstre, afin de lui permettre d'ajouter son MC ensuite
+				trace(placeMonstre, i, nbMonstres);
 				_tMonstres[i].placerCorps(new Point(placeMonstre.x, placeMonstre.y)); //ajout du MC, à la position X, Y souhaitée;
 			} //for
 			afficherNomsMonstres();
@@ -426,7 +430,26 @@
 		private function choisirCible(e: MouseEvent): void {
 			//_cible = (e.target.name).slice(8, 5);
 
-			trace(e.target.getNom());
+			//trace(e.target.getNom());
+
+			var m: Monstre = null;
+			var t: DisplayObject = DisplayObject(e.target);
+
+			if (t is Monstre) {
+				m = Monstre(t);
+			} else {
+				while (t.parent !== null && m == null) {
+					t=DisplayObject(t.parent);
+					if(t is Monstre) m = Monstre(t);
+				}
+			}
+
+			if (m !==null){
+				_cible=m;
+				trace(_cible);
+			}
+
+
 
 			/*for (var i: uint = 0; i <= _tMonstres.length-1; i++) {
 				if (e.target == _tMonstres[i]) {
@@ -458,13 +481,13 @@
 					_attaque = lePerso.etablirAttRonde();
 
 					trace(_cible);
-					_defense = _tMonstres[_iMonstreCible].getBaseDef(); // _iMonstreCible correspond à l'indice du monstre ciblé dans tMonstres
+					_defense = _cible.getBaseDef(); // _iMonstreCible correspond à l'indice du monstre ciblé dans tMonstres
 					if (isNaN(_attaque) || isNaN(_defense)) {
 						log("boque important: _attaque=" + _attaque + " _defense=" + _defense)
 					} //if
 					calculerDommages();
-					_tMonstres[_iMonstreCible].blesser(_dommages);
-					_messAction = lePerso.getNom() + " fait " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage sur " + _tMonstres[_iMonstreCible].getNom() + ".";
+					_cible.blesser(_dommages);
+					_messAction = lePerso.getNom() + " fait " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage sur " + _cible.getNom() + ".";
 					lePerso.jouerAnim("Attaque");
 					switch (lePerso.getNom()) {
 						case "Nova":
@@ -487,7 +510,7 @@
 
 				} else { //c'est donc la magie
 					var PMAct: int = lePerso.getPMAct();
-					_defense = _tMonstres[_iMonstreCible].getBaseDefMag();
+					_defense = _cible.getBaseDefMag();
 					switch (lePerso.getNom()) {
 						case "Nova":
 						case "Fortis":
@@ -503,28 +526,28 @@
 									if (nbChanceAttaque == 1) {
 										trace("I MISSED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 										_messAction = lePerso.getNom() + " À manqué sa cible";
-										_tMonstres[_iMonstreCible].blesser(0);
+										_cible.blesser(0);
 										lePerso.setPMAct(PMAct - 10);
 										break;
 									} else {
 										calculerDommages();
-										_tMonstres[_iMonstreCible].blesser(_dommages);
+										_cible.blesser(_dommages);
 										lePerso.setPMAct(PMAct - 10);
 									}
 									calculerDommages();
-									_tMonstres[_iMonstreCible].blesser(_dommages);
+									_cible.blesser(_dommages);
 									lePerso.setPMAct(PMAct - 10);
 								} else {
 									//lePerso.setAction() = "Attaque";
 									_messAction = lePerso.getNom() + " Attaque car il n'a pas assez de points de magie (25)";
 									_attaque = lePerso.etablirAttRonde();
-									_defense = _tMonstres[_iMonstreCible].getBaseDef(); // _iMonstreCible correspond à l'indice du monstre ciblé dans tMonstres
+									_defense = _cible.getBaseDef(); // _iMonstreCible correspond à l'indice du monstre ciblé dans tMonstres
 									if (isNaN(_attaque) || isNaN(_defense)) {
 										log("boque important: _attaque=" + _attaque + " _defense=" + _defense);
 									} //if
 									calculerDommages();
-									_tMonstres[_iMonstreCible].blesser(_dommages);
-									_messAction = lePerso.getNom() + " fait " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage sur " + _tMonstres[_iMonstreCible].getNom() + ".";
+									_cible.blesser(_dommages);
+									_messAction = lePerso.getNom() + " fait " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage sur " + _cible.getNom() + ".";
 									lePerso.jouerAnim("Attaque");
 									lePerso.setPMAct(PMAct + 10);
 								}
@@ -543,13 +566,13 @@
 								//lePerso.setAction() = "Attaque";
 								_messAction = lePerso.getNom() + " Attaque car il n'a pas assez de points de magie (25)";
 								_attaque = lePerso.etablirAttRonde();
-								_defense = _tMonstres[_iMonstreCible].getBaseDef(); // _iMonstreCible correspond à l'indice du monstre ciblé dans tMonstres
+								_defense = _cible.getBaseDef(); // _iMonstreCible correspond à l'indice du monstre ciblé dans tMonstres
 								if (isNaN(_attaque) || isNaN(_defense)) {
 									log("boque important: _attaque=" + _attaque + " _defense=" + _defense);
 								} //if
 								calculerDommages();
-								_tMonstres[_iMonstreCible].blesser(_dommages);
-								_messAction = lePerso.getNom() + " fait " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage sur " + _tMonstres[_iMonstreCible].getNom() + ".";
+								_cible.blesser(_dommages);
+								_messAction = lePerso.getNom() + " fait " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage sur " + _cible.getNom() + ".";
 								lePerso.jouerAnim("Attaque");
 								lePerso.setPMAct(PMAct + 15);
 							}
@@ -557,23 +580,24 @@
 					} //switch
 					switch (lePerso.getNom()) {
 						case "Spero":
-							_messAction = lePerso.getNom() + " profère des insultes à " + _tMonstres[_iMonstreCible].getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
+							_messAction = lePerso.getNom() + " profère des insultes à " + _cible.getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
 							break;
 						case "Nova":
-							_messAction = lePerso.getNom() + " lance une flèche enchantée sur " + _tMonstres[_iMonstreCible].getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
+							_messAction = lePerso.getNom() + " lance une flèche enchantée sur " + _cible.getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
 							break;
 						case "Lucem":
 							_messAction = lePerso.getNom() + " lance «Guérison» sur le groupe, permettant de récupérer " + _attaque + " point" + ((_attaque > 1) ? "s" : "") + ".";
 							break;
 						case "Fortis":
-							_messAction = lePerso.getNom() + " lance «Boule de Feu» sur " + _tMonstres[_iMonstreCible].getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
+							_messAction = lePerso.getNom() + " lance «Boule de Feu» sur " + _cible.getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
 							break;
 					} //switch
 					lePerso.jouerAnim("Attaque"); //à changer pour montrer la magie
 
 				} //if(c'est une attaque)			
 				if (_tMonstres[_iMonstreCible].getPVAct() <= 0) {
-					_iMonstreCible++; // si le monstre est mort, on change de cible
+					_tMonstres[_iMonstreCible].removeEventListener(MouseEvent.CLICK, choisirCible);
+					_cible=_tMonstres[_iMonstreCible++]; // si le monstre est mort, on change de cible
 				} //if
 
 				afficherEtape(_messAction);
