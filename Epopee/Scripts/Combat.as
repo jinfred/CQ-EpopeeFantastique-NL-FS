@@ -117,22 +117,52 @@
 			} //5% des cas (salut mon ami... on s'amuse, non?!)
 			for (var i: int = 0; i < nbMonstres; i++) {
 				var placeMonstre: MovieClip = MovieClip(getChildByName("placeMonstre" + i));
-				var choix: int = Math.floor(Math.random() * 3) + 1;
+				var choix: int = Math.floor(Math.random() * 9) + 1;
 				switch (choix) {
 					case 1:
-						_tMonstres[i] = new MonstreKorrigan();
+						_tMonstres[i] = new MonstreFantomeBleu();
 						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
-						_tMonstres[i].initParam("Korrigan", 150, 200, 75, 75, 25, 20, 10, 10, 10, 25);
+						_tMonstres[i].initParam("Fantôme Bleu", 150, 200, 75, 75, 25, 20, 10, 10, 10, 25);
 						break;
 					case 2:
-						_tMonstres[i] = new MonstreBlorg();
+						_tMonstres[i] = new MonstreFantomeJaune();
 						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
-						_tMonstres[i].initParam("Blorg", 75, 125, 0, 0, 15, 25, 10, 5, 5, 15);
+						_tMonstres[i].initParam("Fantôme Jaune", 75, 125, 0, 0, 15, 25, 10, 5, 5, 15);
 						break;
 					case 3:
-						_tMonstres[i] = new MonstreTumulus();
+						_tMonstres[i] = new MonstreFantomeRouge();
 						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
-						_tMonstres[i].initParam("Tumulus", 100, 175, 50, 50, 10, 15, 30, 30, 15, 20);
+						_tMonstres[i].initParam("Fantôme Rouge", 100, 175, 50, 50, 10, 15, 30, 30, 15, 20);
+						break;
+					case 4:
+						_tMonstres[i] = new MonstreFantomeVert();
+						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
+						_tMonstres[i].initParam("Fantôme Vert", 100, 175, 50, 50, 10, 15, 30, 30, 15, 20);
+						break;
+					case 5:
+						_tMonstres[i] = new MonstreFomoireHache();
+						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
+						_tMonstres[i].initParam("Fomoire", 100, 175, 50, 50, 10, 15, 30, 30, 15, 20);
+						break;
+					case 6:
+						_tMonstres[i] = new MonstreFomoireLance();
+						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
+						_tMonstres[i].initParam("Fomoire", 100, 175, 50, 50, 10, 15, 30, 30, 15, 20);
+						break;
+					case 7:
+						_tMonstres[i] = new MonstreFomoireMage();
+						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
+						_tMonstres[i].initParam("Fomoire", 100, 175, 50, 50, 10, 15, 30, 30, 15, 20);
+						break;
+					case 8:
+						_tMonstres[i] = new MonstreLoupFeu();
+						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
+						_tMonstres[i].initParam("Loup Élémental", 100, 175, 50, 50, 10, 15, 30, 30, 15, 20);
+						break;
+					case 9:
+						_tMonstres[i] = new MonstreLoupTerre();
+						//caractéristiques:            nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
+						_tMonstres[i].initParam("Élémental", 100, 175, 50, 50, 10, 15, 30, 30, 15, 20);
 						break;
 				} //switch
 				addChild(_tMonstres[i]); //ajout de l'object monstre, afin de lui permettre d'ajouter son MC ensuite
