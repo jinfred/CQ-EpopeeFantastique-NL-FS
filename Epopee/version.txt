@@ -7,13 +7,20 @@ TIM – CÉGEP DE SAINT-JÉRÔME
 
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-VERSION 2.10.01 alpha 1
+VERSION 2.11 alpha 2
 Date: 2016-11-16.
 Par Frédérique St-Georges
 Nouveautés:
 - Ajout des dessins de Mordred.
 - Conversion du loup en symbole.
 - Séparation des calques du Loup et Mordred.
+- Intégration du système de dialogues liés à l'histoire - Forêt Enchantée
+- Rehausse du système de combat (choix de cible)
+- Finition de la mécanique des puits
+- Intégration de nouveau mode de debogage, accommodation des 36 niveaux
+- Mécanique de Delwin (Mage) manque ses sorts 10% de chance
+- Nombreux fix de bugs, optimization et fonctionnalités diverses
+- ...
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 VERSION 2.10 alpha 1
