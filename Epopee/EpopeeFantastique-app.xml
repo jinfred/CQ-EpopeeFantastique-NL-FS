@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<application xmlns="http://ns.adobe.com/air/application/20.0">
+<application xmlns="http://ns.adobe.com/air/application/21.0">
     <id>ca.qc.cstj.tim.epopeefantastique</id>
     <versionNumber>1.0</versionNumber>
     <filename>EpopeeFantastique</filename>
@@ -96,7 +96,10 @@
 
   
 
-  <!-- To localize the description, use the following format for the description element.
+  
+
+  
+<!-- To localize the description, use the following format for the description element.
 	<description>
 		<text xml:lang="en">English App description goes here</text>
 		<text xml:lang="fr">French App description goes here</text>
@@ -196,7 +199,10 @@
 
   
 
-  <!-- To localize the name, use the following format for the name element.
+  
+
+  
+<!-- To localize the name, use the following format for the name element.
 	<name>
 		<text xml:lang="en">English App name goes here</text>
 		<text xml:lang="fr">French App name goes here</text>
