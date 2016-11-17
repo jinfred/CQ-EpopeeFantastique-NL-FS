@@ -7,6 +7,15 @@ TIM – CÉGEP DE SAINT-JÉRÔME
 
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+VERSION 2.10.01 alpha 1
+Date: 2016-11-16.
+Par Frédérique St-Georges
+Nouveautés:
+- Ajout des dessins de Mordred.
+- Conversion du loup en symbole.
+- Séparation des calques du Loup et Mordred.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 VERSION 2.10 alpha 1
 Date: 2016-11-15.
 Par Frédérique St-Georges
