@@ -7,9 +7,22 @@ TIM – CÉGEP DE SAINT-JÉRÔME
 
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+VERSION 2.12 alpha 2
+Date: 2016-11-17.
+Par Frédérique St-Georges
+Nouveautés:
+- Ajout d'animation de Mordred.
+- Colorisation des loups de terre et de feu
+- Animation des loups de terre et de feu
+- Ajout de nouvelles cornes pour Fomoire mage et Fomoire Lancier.
+- Ajout de nouvelles armes pour Fomoire mage et Fomoire Lancier.
+- Ajout de nouvelles animations pour Fomoire mage et Fomoire Lancier.
+- Ajout des variantes des fantômes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 VERSION 2.11 alpha 2
 Date: 2016-11-16.
-Par Frédérique St-Georges
+Par Frédérique St-Georges et Nicolas Labonté
 Nouveautés:
 - Ajout des dessins de Mordred.
 - Conversion du loup en symbole.
