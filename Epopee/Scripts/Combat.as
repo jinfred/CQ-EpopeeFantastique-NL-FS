@@ -27,7 +27,9 @@
 		private var _jeu: MovieClip;
 
 		private var _cible: Monstre;
-		private var _nbMonstresMorts:uint=0;
+		private var _ancienneCible: Monstre;
+		private var _nbMonstresMorts: uint = 0;
+		private var cibleActive: Boolean = false;
 
 		public function Combat(unTableauPersos: Array, unTypeCombat: String) {
 			// CONSTRUCTEUR
@@ -87,9 +89,9 @@
 		******************************************************************************/
 		private function creerChef(): void {
 			_tMonstres = [];
-			_tMonstres.push(new MonstreChef());
+			_tMonstres.push(new MonstreMordred());
 			//caractéristiques:          nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
-			_tMonstres[0].initParam("Torgul", 500, 500, 250, 250, 50, 25, 50, 50, 50, 25);
+			_tMonstres[0].initParam("Mordred", 500, 500, 250, 250, 50, 25, 50, 50, 50, 25);
 			addChild(_tMonstres[0]); //ajout de l'object monstre, afin de lui permettre d'ajouter son MC ensuite
 			_tMonstres[0].placerCorps(new Point(300, 200)); //ajout du clip, à la position X, Y souhaitée;
 			afficherNomsMonstres();
@@ -395,7 +397,7 @@
 				_peutChoisir = false;
 				barreActions_mc.removeEventListener(MouseEvent.CLICK, choisirAction);
 				barreActions_mc.alpha = 0.25;
-				_messAction = "Choisissez une cible a (please embed accents) attaquer";
+				_messAction = "Choisissez une cible à attaquer";
 				afficherEtape(_messAction);
 			} else {
 				trace("HERE !");
@@ -488,35 +490,28 @@
 				}
 			}
 
+			_ancienneCible = _cible;
+
 			if (_cible == null) {
-				trace("I AM NULL");
+				//trace("I AM NULL");
 				_cible = m;
 				activerLesChoix(null);
 			}
 
 			if (m !== null) {
+				var target = new flecheCibleCombat();
+				//if (cibleActive) {
+				//	trace(_ancienneCible);
+				//	//_ancienneCible = _cible;
+				//	_ancienneCible.removeChild(target);   // Elever le cercle rouge sur l'ancienne cible
+				//}
 				_cible = m;
-				trace(_cible);
+				//trace(_cible);
+				//_cible.addChild(new flecheCibleCombat());
+				//_cible.addChild(target);  // // Ajouter le cercle rouge sur la nouvelle cible
+				cibleActive = true;
+				//_ancienneCible=_cible
 			}
-
-
-
-			/*for (var i: uint = 0; i <= _tMonstres.length-1; i++) {
-				if (e.target == _tMonstres[i]) {
-					trace("tMonstres");
-				}else{
-					trace("Nope....");
-				}
-			}*/
-
-
-
-			/*if(e.target.getNom() == "Blorg" || e.target.getNom() == "Korrigan" || e.target.getNom() == "Tumulus"){
-				trace("YES WE DO !");
-			}else if(e.target.getNom() == null){
-				trace("This is not the object you are looking for");
-			}*/
-			//trace(e.target.getNom());
 		}
 
 		/******************************************************************************
