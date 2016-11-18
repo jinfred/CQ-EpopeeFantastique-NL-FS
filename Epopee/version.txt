@@ -7,6 +7,15 @@ TIM – CÉGEP DE SAINT-JÉRÔME
 
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+VERSION 2.13 alpha 2
+Date: 2016-11-17.
+Par Frédérique St-Georges et Nicolas Labonté
+Nouveautés:
+- Ajout d'éléments pour la map.
+- Intégration des monstres. Ils peuvent mainteant être combattus.
+- Ajout de collision et clootures invisibles pour certains éléments de la map.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 VERSION 2.12 alpha 2
 Date: 2016-11-17.
 Par Frédérique St-Georges
