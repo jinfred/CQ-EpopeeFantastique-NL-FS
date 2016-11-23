@@ -4,6 +4,7 @@
 	import flash.ui.Keyboard;
 	import flash.events.Event;
 	import flash.geom.Point;
+	import flash.utils.*;
 
 	public class Tableau extends MovieClip {
 		private var _tPersos: Array;
@@ -50,6 +51,7 @@
 
 			placerSandwichPerso();
 			gestionMarchand();
+			deplacerCollisionGuard();
 		} //initParam
 
 		/******************************************************************************
@@ -69,6 +71,20 @@
 			removeEventListener(Event.REMOVED_FROM_STAGE, nettoyer);
 			log("MÉNAGE DU NIVEAU", 3);
 		} //nettoyer
+
+
+		/******************************************************************************
+		Cette fonction sert à s'assurer que le chemin ne sera plus bloqué par une zone 
+		de collision une fois que le héros aura trouvé Excalibur
+		******************************************************************************/
+		private function deplacerCollisionGuard(): void {
+			trace(this);
+			if (_jeu.getCheminForetEstLibre() == true && this is TabVillage2) {
+				trace("HELO");
+				var zoneObstacle = this.getChildByName("obstacleGuard_mc");
+				zoneObstacle.y += 200;
+			}
+		}
 
 		/******************************************************************************
 		Fonction listerObstacles

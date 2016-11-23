@@ -148,6 +148,15 @@
 			btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
 			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet);
 			_jeu.terminerDialogue();
+			
+			if(_clipDemandeur.name.indexOf("LostWoodsDelwin") >= 0){
+				_jeu.getEcranDeJeu().sortTeleport_mc.visible = true;
+			}
+			
+			if(_clipDemandeur.name.indexOf("Exaclibur") >= 0){
+				_jeu.getEcranDeJeu().pnjExaclibur_mc.gotoAndStop("Sans Epee");
+			}
+				
 		} //quitterDialogue
 
 		/******************************************************************************

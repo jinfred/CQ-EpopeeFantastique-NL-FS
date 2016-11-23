@@ -49,7 +49,8 @@
 				visible = false;
 			} // si ce n'est pas desMaintenant, l'instance demeure visible pour le moment
 		} //cacher
-
+		
+		
 		/******************************************************************************
 		Fonction interagir
 		  Elle permet de déclencher l'interaction liée au PNJ rencontré (et les dialogues...)
@@ -213,13 +214,7 @@
 						];
 						_jeu.noterAbsence("barriere_1"); // pour masquer la barriere lors du prochain affichage du tableau
 						break;
-					case "pnjFortis_mc":
-						tSequence = [
-							[_REPLIQUE, "Bonjour, je suis Fortis, je peux vous aider avec la puissance de ma magie!"],
-							[_EQUIPIER],
-							[_DISPARITION]
-						];
-						break;
+
 					case "pnjGardeDuPont_mc":
 						_nomSimple = "Sous-chef";
 						tSequence = [
@@ -247,7 +242,7 @@
 							[_DISPARITION, false]
 						];
 						break;
-					
+
 					case "pnjLostWoodsDagan2_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
@@ -255,7 +250,7 @@
 							[_DISPARITION, false]
 						];
 						break;
-					
+
 					case "pnjLostWoodsDagan3_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
@@ -263,7 +258,7 @@
 							[_DISPARITION, false]
 						];
 						break;
-					
+
 					case "pnjLostWoodsDagan4_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
@@ -271,7 +266,7 @@
 							[_DISPARITION, false]
 						];
 						break;
-					
+
 					case "pnjLostWoodsDagan5_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
@@ -279,7 +274,7 @@
 							[_DISPARITION, false]
 						];
 						break;
-					
+
 					case "pnjLostWoodsDagan6_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
@@ -304,6 +299,59 @@
 							[_DISPARITION, false]
 						];
 						break;
+
+					case "pnjFortis_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "Qu’est-ce qui s’est passé ?", "Dagan"],
+							[_REPLIQUE, "Oh… non ! Ce n’était pas supposé se passer comme ça !", "Delwin"],
+							[_REPLIQUE, "Mais où sommes-nous ?", "Delwin"],
+							[_REPLIQUE, "J’en sais rien… essayons de retrouver notre chemin.", "Dagan"],
+							[_EQUIPIER],
+							[_DISPARITION, false]
+						];
+						break;
+
+					case "pnjGuardForet_mc":
+						if (_jeu.getPersoHasExcalibur() == true) {
+							tSequence = [
+								[_REPLIQUE, "Mais… C’est…", "Garde"],
+								[_REPLIQUE, "EXCALIBUR?!", "Garde"],
+								[_REPLIQUE, "Cela veut dire que tu es le héros qui va sauver Kylemore?", "Garde"],
+								[_REPLIQUE, "Cette forêt mène directement au château du roi. C’est le seul chemin.", "Garde"],
+								[_REPLIQUE, "Attention, cette forêt est dangereuse et pleine de monstres.", "Garde"],
+								[_REPLIQUE, "Beaucoup de gens se perdent et on ne les retrouve plus jamais…", "Garde"],
+								[_DISPARITION, false]
+							];
+							_jeu.setCheminForetEstLibre(true);
+							var zoneObstacle = _tab.getChildByName("obstacleGuard_mc");
+							//_tab.removeChild(zoneObstacle);
+							zoneObstacle.y+=200;
+							break;
+						} else {
+							tSequence = [
+								[_REPLIQUE, "Olà, gamin!", "Garde"],
+								[_REPLIQUE, "Personne n’a le droit d’entrer dans ces bois. C’est bien trop dangereux.", "Garde"],
+								[_REPLIQUE, "Seuls ceux qui ont une épée ont une chance de s’en sortir.", "Garde"],
+								[_REPLIQUE, "Reviens avec Excalibur elle-même et je te laisse passer.", "Garde"],
+								[_REPLIQUE, "Mais tu ne peux pas avoir une telle épée, tu n’es qu’un gamin.", "Garde"],
+								[_REPLIQUE, "HA! HA! HA!", "Garde"],
+							];
+							break;
+						}
+						break;
+
+					case "pnjExaclibur_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "Héros, les temps sont durs", "L'épée magique Excalibur"],
+							[_REPLIQUE, "Nous comptons tous sur toi pour ramener la paix au monde de Kylemore", "L'épée magique Excalibur"],
+							[_REPLIQUE, "Avec mon aide, et des camarades... nous vaincrons Mordred.", "L'épée magique Excalibur"],
+							[_OBJET, "Excalibur", 1],
+						];
+						_jeu.setPersoHasExcalibur(true);
+						break;
+
 
 						//Dialogues personnalisés - FIN
 					default:
