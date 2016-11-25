@@ -13,7 +13,7 @@
         <key>LSRequiresCarbon</key>
         <true/>
         <key>CFBundleIdentifier</key>
-        <string>ca.qc.cstj.tim.epopeefantastique</string>
+        <string>EpopeeFantastique</string>
         <key>CFBundleGetInfoString</key>
         <string>1.0,</string>
         <key>CFBundleShortVersionString</key>
@@ -24,11 +24,5 @@
         <string>EpopeeFantastique</string>
         <key>NSHighResolutionCapable</key>
         <false/>
-        <key>CFBundleIconFile</key>
-        <string>Icon.icns</string>
-        <key>CFBundleLocalizations</key>
-        <array>
-            <string>fr</string>
-        </array>
     </dict>
 </plist>

@@ -52,6 +52,7 @@
 			placerSandwichPerso();
 			gestionMarchand();
 			deplacerCollisionGuard();
+			excaliburPlacerFrameVide();
 		} //initParam
 
 		/******************************************************************************
@@ -78,11 +79,19 @@
 		de collision une fois que le héros aura trouvé Excalibur
 		******************************************************************************/
 		private function deplacerCollisionGuard(): void {
-			trace(this);
 			if (_jeu.getCheminForetEstLibre() == true && this is TabVillage2) {
 				trace("HELO");
 				var zoneObstacle = this.getChildByName("obstacleGuard_mc");
 				zoneObstacle.y += 200;
+			}
+		}
+		
+		/******************************************************************************
+		Cette fonction sert à règler 
+		******************************************************************************/
+		private function excaliburPlacerFrameVide(): void {
+			if (_jeu.getPersoHasExcalibur() == true && this is TabForet) {
+				pnjExaclibur_mc.gotoAndPlay("Sans Epee");
 			}
 		}
 

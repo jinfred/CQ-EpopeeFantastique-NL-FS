@@ -184,6 +184,7 @@
 			// string possédant les noms des monstres pour l'afficher
 			for (var i: int = 0; i < _tMonstres.length; i++) {
 				nomsDesMonstres += (_tMonstres[i].getNom() + "\n");
+				_tMonstres[i].placerStatsEnnemies();
 			}
 			messagesRonde_txt.text = nomsDesMonstres;
 		} //afficherNomsMonstres

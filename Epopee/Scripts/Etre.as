@@ -17,9 +17,7 @@
 		public var pVitesseRonde:int; // sa vitesse pour cette ronde d'attaque (variable publique pour permettre un tri sur le Array des attaquants dans combat.as)
 		protected var _type:String; // le type : perso ou monstre
 		protected var _stats_mc:MovieClip; // le MC des points
-		
-		//protected var niveauPerso:Number = Perso.getNiveau();  // Le niveau du personnage
-		//protected var multiplicateurStats:Number = niveauPerso*1.10;  // Le niveau du personnage multiplié par 1.10
+		protected var _statsEnnemies_mc:MovieClip; // le MC des points des ennemies
 		
 		
 		public function Etre(){ } // CONSTRUCTEUR
@@ -151,6 +149,17 @@
 				afficherStats();
 			} //if
 		} //placerStats
+		
+		
+		public function placerStatsEnnemies():void{
+			if(_type !== "Perso"){ // temporaire: il faudrait ajouter une mécanique pour les monstres
+				_statsEnnemies_mc = new statsEnnemies();
+				_statsEnnemies_mc.x = 45; _statsEnnemies_mc.y = 0;
+				addChild(_statsEnnemies_mc);
+				trace("Monstre");
+				afficherStats();
+			} //if
+		} //placerStatsEnnemies
 
 		/******************************************************************************
 		Fonction enleverStats
@@ -159,6 +168,11 @@
 			if( _stats_mc != null ){ //ne pas enlever les points s'ils ne sont pas affichés...
 				removeChild(_stats_mc);
 				_stats_mc = null;
+			} //if
+			
+			if( _statsEnnemies_mc != null ){ //ne pas enlever les points s'ils ne sont pas affichés...
+				removeChild(_statsEnnemies_mc);
+				_statsEnnemies_mc = null;
 			} //if
 		} //enleverStats
 
@@ -169,6 +183,10 @@
 			if( _stats_mc != null ){ //ne pas essayer d'afficher si les points ne sont pas placés!
 				_stats_mc.PV_txt.text = _PVAct+" / "+_PVMax;
 				_stats_mc.PM_txt.text = _PMAct+" / "+_PMMax;
+			} //if
+			
+			if( _statsEnnemies_mc != null ){ //ne pas essayer d'afficher si les points ne sont pas placés!
+				_statsEnnemies_mc.PV_txt.text = _PVAct+" / "+_PVMax;
 			} //if
 		} //afficherStats
 
