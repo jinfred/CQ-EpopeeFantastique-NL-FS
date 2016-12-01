@@ -142,7 +142,7 @@
 		Fonction placerStats
 		******************************************************************************/		
 		public function placerStats():void{
-			if(_type == "Perso"){ // temporaire: il faudrait ajouter une mécanique pour les monstres
+			if(_type == "Perso"){
 				_stats_mc = new Stats();
 				_stats_mc.x = 45; _stats_mc.y = 0;
 				addChild(_stats_mc);
@@ -152,11 +152,11 @@
 		
 		
 		public function placerStatsEnnemies():void{
-			if(_type !== "Perso"){ // temporaire: il faudrait ajouter une mécanique pour les monstres
+			if(_type !== "Perso"){
 				_statsEnnemies_mc = new statsEnnemies();
 				_statsEnnemies_mc.x = 45; _statsEnnemies_mc.y = 0;
 				addChild(_statsEnnemies_mc);
-				trace("Monstre");
+				trace("Monstre STATS");
 				afficherStats();
 			} //if
 		} //placerStatsEnnemies

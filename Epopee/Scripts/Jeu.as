@@ -580,7 +580,7 @@
 				case "MaisonChamane":
 					nomMusique = "MusiqueHarpe";
 					break;
-				case "Village2":
+				case "Ville":
 					nomMusique = "MusiqueVillage2";
 					break;
 				case "InterieurTemple":
