@@ -72,6 +72,9 @@
 		private function afficherLesObjets():void {
 			if(_jeu.getTObjets().length>0){
 				inventaire_txt.text = "• "+_jeu.getTObjets().join("\n• ");
+				if(_jeu.getTObjets().length>4){
+					inventaire2_txt.text = "• "+_jeu.getTObjets().slice(5,_jeu.getTObjets().length).join("\n• ");
+				}
 			} else {
 				inventaire_txt.text = "(Aucun objet)";
 			} //if+else

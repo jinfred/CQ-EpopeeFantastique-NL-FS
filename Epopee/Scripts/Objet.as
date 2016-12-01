@@ -93,7 +93,7 @@
 						_prixObjet = 1
 						if (_jeu.getFortune() >= _prixObjet) {
 							_assezDargent = true;
-							_nomSimple = "L'épée magique d'Azkhaban";
+							_nomSimple = "L'épée d'Azkhaban";
 							tSequence = [
 								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
@@ -105,7 +105,7 @@
 							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
 							return "Dialogue";
 						} else {
-							_nomSimple = "L'épée magique d'Azkhaban";
+							_nomSimple = "L'épée d'Azkhaban";
 							tSequence = [
 								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
 							];
