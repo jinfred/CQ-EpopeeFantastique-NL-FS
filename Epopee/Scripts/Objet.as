@@ -116,6 +116,239 @@
 							return "Dialogue";
 						} // else
 					} //if "epeemarchand_mc"
+					
+					if (nomDuClip == "anneauemeraudemarchand_mc") {
+						_assezDargent = false;
+						_prixObjet = 1
+						if (_jeu.getFortune() >= _prixObjet) {
+							_assezDargent = true;
+							_nomSimple = "L'anneau d'émeraude";
+							tSequence = [
+								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} else {
+							_nomSimple = "L'anneau d'émeraude";
+							tSequence = [
+								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} // else
+					} //if "anneauEmeraudeMarchand_mc"
+					
+					if (nomDuClip == "sacpoudremarchand_mc") {
+						_assezDargent = false;
+						_prixObjet = 1
+						if (_jeu.getFortune() >= _prixObjet) {
+							_assezDargent = true;
+							_nomSimple = "Un sac de poudre magique";
+							tSequence = [
+								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								/*[_OBJET, "Epee", 1],
+								[_DISPARITION]*/
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} else {
+							_nomSimple = "Un sac de poudre magique";
+							tSequence = [
+								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} // else
+					} //if "sacPoudreMarchand_mc"
+					
+					if (nomDuClip == "anneausapphiremarchand_mc") {
+						_assezDargent = false;
+						_prixObjet = 1
+						if (_jeu.getFortune() >= _prixObjet) {
+							_assezDargent = true;
+							_nomSimple = "L'anneau de sapphire";
+							tSequence = [
+								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								/*[_OBJET, "Epee", 1],
+								[_DISPARITION]*/
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} else {
+							_nomSimple = "L'anneau de sapphire";
+							tSequence = [
+								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} // else
+					} //if "anneausapphiremarchand_mc"
+					
+					if (nomDuClip == "baguettemarchand_mc") {
+						_assezDargent = false;
+						_prixObjet = 1
+						if (_jeu.getFortune() >= _prixObjet) {
+							_assezDargent = true;
+							_nomSimple = "Une baguette de pain bien chaude";
+							tSequence = [
+								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								/*[_OBJET, "Epee", 1],
+								[_DISPARITION]*/
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} else {
+							_nomSimple = "Une baguette de pain bien chaude";
+							tSequence = [
+								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} // else
+					} //if "baguettemarchand_mc"
+					
+					
+					if (nomDuClip == "pierreaiguisermarchand_mc") {
+						_assezDargent = false;
+						_prixObjet = 1
+						if (_jeu.getFortune() >= _prixObjet) {
+							_assezDargent = true;
+							_nomSimple = "Une pierre à aiguiser";
+							tSequence = [
+								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								/*[_OBJET, "Epee", 1],
+								[_DISPARITION]*/
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} else {
+							_nomSimple = "Une pierre à aiguiser";
+							tSequence = [
+								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} // else
+					} //if "pierreaiguisermarchand_mc"
+					
+					if (nomDuClip == "anneaurubismarchand_mc") {
+						_assezDargent = false;
+						_prixObjet = 1
+						if (_jeu.getFortune() >= _prixObjet) {
+							_assezDargent = true;
+							_nomSimple = "L'anneau de rubis";
+							tSequence = [
+								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								/*[_OBJET, "Epee", 1],
+								[_DISPARITION]*/
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} else {
+							_nomSimple = "L'anneau de rubis";
+							tSequence = [
+								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} // else
+					} //if "anneaurubismarchand_mc"
+					
+					
+					if (nomDuClip == "bottesmarchand_mc") {
+						_assezDargent = false;
+						_prixObjet = 1
+						if (_jeu.getFortune() >= _prixObjet) {
+							_assezDargent = true;
+							_nomSimple = "Les bottes XX";
+							tSequence = [
+								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								/*[_OBJET, "Epee", 1],
+								[_DISPARITION]*/
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} else {
+							_nomSimple = "Les bottes XX";
+							tSequence = [
+								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} // else
+					} //if "bottesmarchand_mc"
+					
+					
+					if (nomDuClip == "eaumarchand_mc") {
+						_assezDargent = false;
+						_prixObjet = 1
+						if (_jeu.getFortune() >= _prixObjet) {
+							_assezDargent = true;
+							_nomSimple = "Une bouteille d'eau bénite";
+							tSequence = [
+								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								/*[_OBJET, "Epee", 1],
+								[_DISPARITION]*/
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} else {
+							_nomSimple = "Une bouteille d'eau bénite";
+							tSequence = [
+								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
+							];
+							if (modeTest) {
+								return "Ok";
+							} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
+							return "Dialogue";
+						} // else
+					} //if "eaumarchand_mc"
 
 
 				} // else if "marchand"
