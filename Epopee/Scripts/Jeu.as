@@ -31,7 +31,7 @@
 
 		private var _prochainCombat: int // Entier, nombre de tours avant le prochain combat
 		private var _combatPossible: Boolean = false; // Booleen, indique si l'écran en cours permet les combats
-		private var _tTableauxPacifiques: Array = ["Village", "Foret", "MaisonAmi", "MaisonMaman", "Chateau", "SalleDuRoi", "Caverne", "Marchand1", "Marchand2", "Village2", "Foret2", "Marais05", "Lac", "RavinChateau", "InterieurTemple", "Temple", "EntreeVille", "Ville", "Marais04", "Entree", "Taverne"];
+		private var _tTableauxPacifiques: Array = ["Village", "Foret", "MaisonAmi", "MaisonMaman", "Chateau", "SalleDuRoi", "Marchand1", "Marchand2", "Village2", "Foret2", "Marais05", "Lac", "RavinChateau", "InterieurTemple", "Temple", "EntreeVille", "Ville", "Marais04", "Entree", "Taverne"];
 		private var _tTableauxDangereux: Array = ["Foret2", "foretEnchantee02", "foretEnchantee03", "foretEnchantee04", "foretEnchantee05", "Bibliotheque", "SalleDuRoi", "SalleSecrete", "Marais01", "Marais02", "Marais03"];
 		private var _tTousLesTableaux: Array = _tTableauxPacifiques.concat(_tTableauxDangereux); //permet de créer un Array contenant tous les tableaux
 
@@ -59,6 +59,7 @@
 		private var _btMenuInfo: BtMenuInfo;
 
 		private var _persoHasExcalibur = false;
+		private var _persoHasInstrumentDagan = false;
 		private var _cheminForetEstLibre = false;
 
 
@@ -713,6 +714,9 @@
 		public function getPersoHasExcalibur(): Boolean {
 			return _persoHasExcalibur;
 		} //pour débogage, ne pas supprimer cette ligne!
+		public function getPersoHasInstrumentDagan(): Boolean {
+			return _persoHasInstrumentDagan;
+		} //pour débogage, ne pas supprimer cette ligne!
 		public function getCheminForetEstLibre(): Boolean {
 			return _cheminForetEstLibre;
 		} //pour débogage, ne pas supprimer cette ligne!
@@ -735,8 +739,14 @@
 		public function setPersoHasExcalibur(etat: Boolean): void {
 			_persoHasExcalibur = etat;
 		} //pour débogage, ne pas supprimer cette ligne!
+		public function setPersoHasInstrumentDagan(etat: Boolean): void {
+			_persoHasInstrumentDagan = etat;
+		} //pour débogage, ne pas supprimer cette ligne!
 		public function setCheminForetEstLibre(etat: Boolean): void {
 			_cheminForetEstLibre = etat;
+		} //pour débogage, ne pas supprimer cette ligne!
+		public function setTObjets(tableau: Array): void {
+			_tObjets = tableau;
 		} //pour débogage, ne pas supprimer cette ligne!
 
 	} //class

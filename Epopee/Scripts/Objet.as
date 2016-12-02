@@ -86,7 +86,21 @@
 				} else if (nomDuClip.indexOf("barriere") >= 0) {
 					return ""; //l'objet bloque le passage
 				} //if+else if
-				else if (nomDuClip.indexOf("marchand") >= 0) {
+				else if (nomDuClip.indexOf("instrumentdagan") >= 0) {
+					_nomSimple = "L'instrument de Dagan !";
+					tSequence = [
+						[_REPLIQUE, "Vous avez trouvé l'instrument perdu de Dagan !"],
+						[_REPLIQUE, "Vous avez promis de lui ramener à la taverne du village", ""],
+						[_OBJET, "Instrument de Dagan", 1],
+						[_DISPARITION]
+					];
+					_jeu.setPersoHasInstrumentDagan(true);
+					if (modeTest) {
+						return "Ok";
+					} //si appelé par la fn verifierSiValide(), on quitte avant de faire plus (sans erreur)
+					_jeu.declencherDialogue(tSequence, this); // ajoutera l'objet à l'inventaire après l'affichage...;
+					return "Dialogue";
+				} else if (nomDuClip.indexOf("marchand") >= 0) {
 					trace(nomDuClip);
 					if (nomDuClip == "epeemarchand_mc") {
 						_assezDargent = false;
@@ -116,7 +130,7 @@
 							return "Dialogue";
 						} // else
 					} //if "epeemarchand_mc"
-					
+
 					if (nomDuClip == "anneauemeraudemarchand_mc") {
 						_assezDargent = false;
 						_prixObjet = 1
@@ -143,7 +157,7 @@
 							return "Dialogue";
 						} // else
 					} //if "anneauEmeraudeMarchand_mc"
-					
+
 					if (nomDuClip == "sacpoudremarchand_mc") {
 						_assezDargent = false;
 						_prixObjet = 1
@@ -172,7 +186,7 @@
 							return "Dialogue";
 						} // else
 					} //if "sacPoudreMarchand_mc"
-					
+
 					if (nomDuClip == "anneausapphiremarchand_mc") {
 						_assezDargent = false;
 						_prixObjet = 1
@@ -201,7 +215,7 @@
 							return "Dialogue";
 						} // else
 					} //if "anneausapphiremarchand_mc"
-					
+
 					if (nomDuClip == "baguettemarchand_mc") {
 						_assezDargent = false;
 						_prixObjet = 1
@@ -230,8 +244,8 @@
 							return "Dialogue";
 						} // else
 					} //if "baguettemarchand_mc"
-					
-					
+
+
 					if (nomDuClip == "pierreaiguisermarchand_mc") {
 						_assezDargent = false;
 						_prixObjet = 1
@@ -260,7 +274,7 @@
 							return "Dialogue";
 						} // else
 					} //if "pierreaiguisermarchand_mc"
-					
+
 					if (nomDuClip == "anneaurubismarchand_mc") {
 						_assezDargent = false;
 						_prixObjet = 1
@@ -289,8 +303,8 @@
 							return "Dialogue";
 						} // else
 					} //if "anneaurubismarchand_mc"
-					
-					
+
+
 					if (nomDuClip == "bottesmarchand_mc") {
 						_assezDargent = false;
 						_prixObjet = 1
@@ -319,8 +333,8 @@
 							return "Dialogue";
 						} // else
 					} //if "bottesmarchand_mc"
-					
-					
+
+
 					if (nomDuClip == "eaumarchand_mc") {
 						_assezDargent = false;
 						_prixObjet = 1

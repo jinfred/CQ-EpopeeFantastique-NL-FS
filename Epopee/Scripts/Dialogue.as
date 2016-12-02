@@ -121,6 +121,7 @@
 				for (var i: uint = 0; i <= tPersos.length - 1; i++) {
 					_niveautPersos = tPersos[i].getNiveau();
 					tPersos[i].setNiveau(_niveautPersos + 1);
+					_jeu.soigner();
 				}
 			}
 			dialogueMarchand = false;

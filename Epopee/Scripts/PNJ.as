@@ -49,8 +49,8 @@
 				visible = false;
 			} // si ce n'est pas desMaintenant, l'instance demeure visible pour le moment
 		} //cacher
-		
-		
+
+
 		/******************************************************************************
 		Fonction interagir
 		  Elle permet de déclencher l'interaction liée au PNJ rencontré (et les dialogues...)
@@ -65,7 +65,8 @@
 					case "pnjVillageois1_mc":
 						//Exemple: une seule réplique simple!
 						tSequence = [
-							[_REPLIQUE, "Je rêve du jour où nous pourrons vivre paisiblement à nouveau."]
+							[_REPLIQUE, "Ces puits sont enchantés par la Déesse elle-même."],
+							[_REPLIQUE, "Essaie. Tu n’as qu’à jeter une pièce et faire un voeu."],
 						];
 						break;
 					case "pnjVillageois2_mc":
@@ -86,17 +87,13 @@
 					case "pnjVillageois3_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
-							[_REPLIQUE, "Vite, sauvez notre village! Vous êtes notre seul espoir..."],
-							[_REPLIQUE, "Eh... Ok!", "Spero"]
+							[_REPLIQUE, "Quelle belle journée pour prendre de l’air!"],
 						];
 						break;
 					case "pnjVillageois4_mc":
 						//Exemple: plusieurs répliques, qui sont toutes affichées de manière séquentielle (à chaque rencontre)
 						tSequence = [
-							[_REPLIQUE, "Si seulement nous avions un temple..."],
-							[_REPLIQUE, "Un endroit pour nous ressourcer..."],
-							[_REPLIQUE, "Un genre de lieu magique..."],
-							[_REPLIQUE, "De préférence avec de la musique douce..."]
+							[_REPLIQUE, "Je rêve du jour où nous pourrons vivre paisiblement à nouveau."],
 						];
 						break;
 					case "pnjVillageois5_mc":
@@ -132,10 +129,8 @@
 					case "pnjVillageois8_mc":
 						//Exemple: transmission d'un objet dans la séquence du dialogue et disparition du PNJ
 						tSequence = [
-							[_REPLIQUE, "Prenez vite cette patate pour vous encourager dans votre aventure."],
-							[_OBJET, "Patate"],
-							[_REPLIQUE, "Je dois partir maintenant... j'ai un ragoût parmentier sur le feu."],
-							[_DISPARITION]
+							[_REPLIQUE, "On dit qu’en dehors de ce village, il y a un temple qui peut soigner toutes tes blessures…"],
+							[_REPLIQUE, "Tu imagine? Fini les maux de dos…"],
 						];
 						break;
 					case "pnjGarde1_mc":
@@ -173,10 +168,9 @@
 						break;
 					case "pnjMaman_mc":
 						tSequence = [
-							[_REPLIQUE, "Bonjour mon beau Spero! J'ai de la bonne soupe pour toi.\nPrends un petit bol, ça va te faire du bien."],
-							[_REPLIQUE, "(C'est vrai, vous vous sentez un peu mieux!)", "Points de vie"]
+							[_REPLIQUE, "Tout va bien, mon enfant?", "Maman"],
+							[_REPLIQUE, "Tu marmonnais dans ton sommeil…", "Maman"]
 						];
-						_jeu.soigner(2); //tous les personnages récupèrent tous leurs points
 						break;
 					case "pnjRoi_mc":
 						//Exemple: séquences de répliques différentes selon une condition préalable
@@ -193,27 +187,7 @@
 							]; //ajoute de l'or au trésor du joueur...
 						} //if+else
 						break;
-					case "pnjNova_mc":
-						//Exemple: ajout d'un personnage dans l'équipe
-						tSequence = [
-							[_REPLIQUE, "Je refuse d'abandonner devant ce monstre."],
-							[_REPLIQUE, "Je vous accompagnerai jusqu'au bout!"],
-							[_EQUIPIER],
-							[_DISPARITION]
-						];
-						break;
-					case "pnjLucem_mc":
-						tSequence = [
-							[_REPLIQUE, "Qui êtes-vous? Que me voulez-vous?"],
-							[_REPLIQUE, "Je m'appelle Spero. Je veux vaincre Torgul.", "Spero"],
-							[_REPLIQUE, "Oh! Je m'appelle Lucem, je suis chamane. Je peux soigner avec ma magie."],
-							[_REPLIQUE, "Nous aurions grand besoin de votre aide...", "Spero"],
-							[_REPLIQUE, "C'est d'accord. Je vais vous accompagner dans votre épopée et je vais même partager mes patates."],
-							[_EQUIPIER],
-							[_DISPARITION]
-						];
-						_jeu.noterAbsence("barriere_1"); // pour masquer la barriere lors du prochain affichage du tableau
-						break;
+
 
 					case "pnjGardeDuPont_mc":
 						_nomSimple = "Sous-chef";
@@ -227,7 +201,11 @@
 						break;
 					case "pnjTorgul_mc":
 						tSequence = [
-							[_REPLIQUE, "Je suis Torgul!\nVous osez me défier?\nJe vais vous écraser!"],
+							[_REPLIQUE, "Alors c’est toi, Spero. Celui dont tout le monde parle."],
+							[_REPLIQUE, "Celui qui a su sortir Excalibur de son piédestal."],
+							[_REPLIQUE, "Tu n’es qu’un gamin!"],
+							[_REPLIQUE, "Et ton histoire s’arrête là!"],
+							[_REPLIQUE, "Prépare-toi à te mourrir, gamin !"],
 							[_COMBAT, "Chef"],
 							[_DISPARITION, false]
 						];
@@ -284,6 +262,22 @@
 						];
 						break;
 
+					case "pnjMarchand1_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "Si tu veux avoir une chance de vaincre Mordred, tu dois être bien équipé."],
+							[_REPLIQUE, "Justement, regarde ce que j’ai…"],
+						];
+						break;
+
+					case "pnjAubergiste_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "Eh bien, on dirait que Dagan à encore perdu son instrument... Le pauvre !"],
+							[_REPLIQUE, "Alors c’est vrai ce qu’on dit… Tu va vraiment quitter le village ?"],
+						];
+						break;
+
 					case "pnjLostWoodsDelwin_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
@@ -300,6 +294,40 @@
 						];
 						break;
 
+					case "pnjMarchand2_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "Un aventurier bien équipé est un bon aventurier! Surtout si tu achètes ma marchandise!"],
+						];
+						break;
+
+					case "pnjMarchand3_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "Je pense m’être égaré en essayant de trouver le château."],
+							[_REPLIQUE, "Veux tu regarder ma marchandise pendant que j’essaie de retrouver mon chemin?"],
+							[_REPLIQUE, "Attention, je t’ai à l’oeil!"],
+						];
+						break;
+
+					case "pnjAubergiste2_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "Qu’est-ce que je te sers?"],
+							[_REPLIQUE, "Il y a bien des rumeurs qui circulent…"],
+							[_REPLIQUE, "On dit qu'un jeune héros va tenter de vaincre Mordred."],
+							[_REPLIQUE, "Un autre gamin qui cours à sa perte..."],
+						];
+						break;
+
+					case "pnjForgeron_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "Passe ton chemin, gamin."],
+							[_REPLIQUE, "Je n’ai pas d’armure pour ta taille..."],
+						];
+						break;
+
 					case "pnjFortis_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
@@ -307,6 +335,15 @@
 							[_REPLIQUE, "Oh… non ! Ce n’était pas supposé se passer comme ça !", "Delwin"],
 							[_REPLIQUE, "Mais où sommes-nous ?", "Delwin"],
 							[_REPLIQUE, "J’en sais rien… essayons de retrouver notre chemin.", "Dagan"],
+							[_EQUIPIER],
+							[_DISPARITION, false]
+						];
+						break;
+
+					case "pnjNova_mc":
+						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						tSequence = [
+							[_REPLIQUE, "J'ai oublié mes dialogues... Aidez-moi !", "Caitlyn"],
 							[_EQUIPIER],
 							[_DISPARITION, false]
 						];
@@ -326,7 +363,7 @@
 							_jeu.setCheminForetEstLibre(true);
 							var zoneObstacle = _tab.getChildByName("obstacleGuard_mc");
 							//_tab.removeChild(zoneObstacle);
-							zoneObstacle.y+=200;
+							zoneObstacle.y += 200;
 							break;
 						} else {
 							tSequence = [
@@ -342,14 +379,48 @@
 						break;
 
 					case "pnjExaclibur_mc":
-						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						//if (_jeu.getPersoHasExcalibur() == true) {
 						tSequence = [
 							[_REPLIQUE, "Héros, les temps sont durs", "L'épée magique Excalibur"],
 							[_REPLIQUE, "Nous comptons tous sur toi pour ramener la paix au monde de Kylemore", "L'épée magique Excalibur"],
 							[_REPLIQUE, "Avec mon aide, et des camarades... nous vaincrons Mordred.", "L'épée magique Excalibur"],
 							[_OBJET, "Excalibur", 1],
 						];
+						//break;
+						//}
+
 						_jeu.setPersoHasExcalibur(true);
+						break;
+
+					case "pnjLucem_mc":
+						if (_jeu.getPersoHasInstrumentDagan() == false) {
+							tSequence = [
+								[_REPLIQUE, "Oh, hé ! Tu crois pouvoir m’aider ?", "Dagan"],
+								[_REPLIQUE, "Tu vois, j’ai perdu mon instrument l’autre jour…", "Dagan"],
+								[_REPLIQUE, "Je crois l’avoir oublié dans la forêt…", "Dagan"],
+								[_REPLIQUE, "Mais bon, assez parlé de moi ! Toi, tu fais quoi dans une place comme celle-ci ?", "Dagan"],
+								[_REPLIQUE, "Tu veux traverser la forêt !? C’est trop dangereux !", "Dagan"],
+								[_REPLIQUE, "Moi ? Je la connais comme le fond de ma poche.", "Dagan"],
+								[_REPLIQUE, "Tu sais quoi ? Aide moi à retrouver mon instrument et je t’aiderai à traverser la forêt.", "Dagan"],
+							];
+							break;
+						} else if (_jeu.getPersoHasInstrumentDagan() == true) {
+							tSequence = [
+								[_REPLIQUE, "Oh, génial ! Tu l’a retrouvé !", "Dagan"],
+								[_REPLIQUE, "Eh bien, je t’ai fait une promesse. Allons-y !", "Dagan"],
+								[_EQUIPIER],
+								[_DISPARITION, false]
+							];
+							//trace("Essayons " + _jeu.getTObjets().indexOf("Instrument de Dagan", 0));
+							//trace(_jeu.getTObjets());
+							var posInstrument: int = _jeu.getTObjets().indexOf("Instrument de Dagan", 0);
+							//var nouveauTableauTObjets:Array = (_jeu.getTObjets().splice(posInstrument, 1));
+							_jeu.setTObjets(_jeu.getTObjets().splice(posInstrument, 1));
+							//trace(_jeu.getTObjets());
+							trace(_jeu.getTObjets().splice(posInstrument, 1));
+							break;
+						}
+
 						break;
 
 
