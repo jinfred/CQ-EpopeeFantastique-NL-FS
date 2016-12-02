@@ -94,6 +94,7 @@
 		private function acheterObjet(tSequence: Array, clipDemandeur: MovieClip): Function {
 			return function (e: MouseEvent): void {
 				btOui.removeEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
+				btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
 				/*_tSequence = [
 					[_REPLIQUE, "Vous avez acheté " + _clipDemandeur.getNomSimple()],
 					[_OBJET, _clipDemandeur.getNomSimple(), 1],
@@ -129,7 +130,11 @@
 		}
 
 		private function refuserObjet(e: Event = null): void {
+			var tSequence = _tSequence;
+			var clipDemandeur = _clipDemandeur;
 			btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
+			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
+			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet);
 			dialogueMarchand = false;
 			declencherEtape();
 		}
@@ -138,6 +143,9 @@
 		Fonction quitterDialogue
 		******************************************************************************/
 		private function quitterDialogue(e: Event = null): void {
+			var tSequence = _tSequence;
+			var clipDemandeur = _clipDemandeur;
+			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
 			btSuite.removeEventListener(MouseEvent.CLICK, declencherEtape);
 
 			message_txt.text = "";

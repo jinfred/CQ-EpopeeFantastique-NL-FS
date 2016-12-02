@@ -17,7 +17,8 @@
 		public var pVitesseRonde:int; // sa vitesse pour cette ronde d'attaque (variable publique pour permettre un tri sur le Array des attaquants dans combat.as)
 		protected var _type:String; // le type : perso ou monstre
 		protected var _stats_mc:MovieClip; // le MC des points
-		protected var _statsEnnemies_mc:MovieClip; // le MC des points des ennemies
+		protected var _statsEnnemies_mc:MovieClip = new statsEnnemies();// le MC des points des ennemies
+		
 		
 		
 		public function Etre(){ } // CONSTRUCTEUR
@@ -153,7 +154,7 @@
 		
 		public function placerStatsEnnemies():void{
 			if(_type !== "Perso"){
-				_statsEnnemies_mc = new statsEnnemies();
+				
 				_statsEnnemies_mc.x = 45; _statsEnnemies_mc.y = 0;
 				addChild(_statsEnnemies_mc);
 				trace("Monstre STATS");
@@ -170,7 +171,7 @@
 				_stats_mc = null;
 			} //if
 			
-			if( _statsEnnemies_mc != null ){ //ne pas enlever les points s'ils ne sont pas affichés...
+			if( _statsEnnemies_mc.parent !== null ){ //ne pas enlever les points s'ils ne sont pas affichés...
 				removeChild(_statsEnnemies_mc);
 				_statsEnnemies_mc = null;
 			} //if

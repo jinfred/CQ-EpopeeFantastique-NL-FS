@@ -31,6 +31,9 @@
 		private var _nbMonstresMorts: uint = 0;
 		private var cibleActive: Boolean = false;
 
+		private var _target = new flecheCibleCombat();
+
+
 		public function Combat(unTableauPersos: Array, unTypeCombat: String) {
 			// CONSTRUCTEUR
 			_tPersos = unTableauPersos;
@@ -491,30 +494,25 @@
 				}
 			}
 
-			_ancienneCible = _cible;
+			//_ancienneCible = _cible;
 
 			if (_cible == null) {
 				//trace("I AM NULL");
 				_cible = m;
 				activerLesChoix(null);
+				_target.visible=true;
 			}
 
 			if (m !== null) {
-				var target = new flecheCibleCombat();
-				//if (cibleActive) {
-				//	trace(_ancienneCible);
-				//	//_ancienneCible = _cible;
-				//	_ancienneCible.removeChild(target);   // Elever le cercle rouge sur l'ancienne cible
-				//}
+				
 				_cible = m;
-				//trace(_cible);
-				//_cible.addChild(new flecheCibleCombat());
-				//_cible.addChild(target);  // // Ajouter le cercle rouge sur la nouvelle cible
+				//trace(_cible)
+				_cible.addChild(_target); // // Ajouter le cercle rouge sur la nouvelle cible
 				cibleActive = true;
-				//_ancienneCible=_cible
+				_target.visible=true;
 			}
 		}
-
+		
 		/******************************************************************************
 		Fonction joueurAttaque
 		  Elle est exécutée lorsqu'un personage attaque
@@ -522,6 +520,7 @@
 		******************************************************************************/
 		private function joueurAttaque(lePerso) {
 			if (_cible == null) {
+				_target.visible=false;
 				activerLesChoix(null);
 			} else {
 				log('joueurAttaque', 3);
@@ -650,6 +649,7 @@
 						_cible.removeEventListener(MouseEvent.CLICK, choisirCible);
 						_cible = null; // si le monstre est mort, on change de cible
 						_nbMonstresMorts++;
+						_target.visible=false;
 					} //if
 
 					afficherEtape(_messAction);
