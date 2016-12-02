@@ -379,17 +379,20 @@
 						break;
 
 					case "pnjExaclibur_mc":
-						//if (_jeu.getPersoHasExcalibur() == true) {
-						tSequence = [
-							[_REPLIQUE, "Héros, les temps sont durs", "L'épée magique Excalibur"],
-							[_REPLIQUE, "Nous comptons tous sur toi pour ramener la paix au monde de Kylemore", "L'épée magique Excalibur"],
-							[_REPLIQUE, "Avec mon aide, et des camarades... nous vaincrons Mordred.", "L'épée magique Excalibur"],
-							[_OBJET, "Excalibur", 1],
-						];
-						//break;
-						//}
+						if (_jeu.getPersoHasExcalibur() == false) {
+							tSequence = [
+								[_REPLIQUE, "Héros, les temps sont durs", "L'épée magique Excalibur"],
+								[_REPLIQUE, "Nous comptons tous sur toi pour ramener la paix au monde de Kylemore", "L'épée magique Excalibur"],
+								[_REPLIQUE, "Avec mon aide, et des camarades... nous vaincrons Mordred.", "L'épée magique Excalibur"],
+								[_OBJET, "Excalibur", 1],
+							];
+							_jeu.setPersoHasExcalibur(true);
+							break;
+						}else{
+							return "Absent";
+						}
 
-						_jeu.setPersoHasExcalibur(true);
+						//_jeu.setPersoHasExcalibur(true);
 						break;
 
 					case "pnjLucem_mc":
@@ -404,7 +407,7 @@
 								[_REPLIQUE, "Tu sais quoi ? Aide moi à retrouver mon instrument et je t’aiderai à traverser la forêt.", "Dagan"],
 							];
 							break;
-						} else if (_jeu.getPersoHasInstrumentDagan() == true) {
+						} else{
 							tSequence = [
 								[_REPLIQUE, "Oh, génial ! Tu l’a retrouvé !", "Dagan"],
 								[_REPLIQUE, "Eh bien, je t’ai fait une promesse. Allons-y !", "Dagan"],
