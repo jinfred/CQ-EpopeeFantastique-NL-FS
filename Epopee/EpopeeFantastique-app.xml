@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!-- 
 	Usage:
 
@@ -16,13 +16,13 @@
 	<text xml:lang="ja">Japanese App name goes here</text>
 	</name>
 -->
-<application xmlns="http://ns.adobe.com/air/application/21.0">
+<application xmlns="http://ns.adobe.com/air/application/20.0">
     <id>EpopeeFantastique</id>
     <versionNumber>1.0</versionNumber>
     <filename>EpopeeFantastique</filename>
-    <description/>
+    <description></description>
     <name>EpopeeFantastique</name>
-    <copyright/>
+    <copyright></copyright>
     <initialWindow>
         <content>EpopeeFantastique.swf</content>
         <systemChrome>standard</systemChrome>
@@ -35,8 +35,13 @@
         <minimizable>true</minimizable>
         <resizable>true</resizable>
     </initialWindow>
-    <icon/>
+    <icon>
+        <image16x16>appIconsForPublish/x16.png</image16x16>
+        <image32x32>appIconsForPublish/x32.png</image32x32>
+        <image48x48>appIconsForPublish/x48.png</image48x48>
+        <image128x128>appIconsForPublish/x128.png</image128x128>
+    </icon>
     <customUpdateUI>false</customUpdateUI>
     <allowBrowserInvocation>false</allowBrowserInvocation>
-    <version>1.0</version>
+    
 </application>

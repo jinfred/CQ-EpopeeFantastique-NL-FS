@@ -35,7 +35,12 @@
         <minimizable>true</minimizable>
         <resizable>true</resizable>
     </initialWindow>
-    <icon></icon>
+    <icon>
+        <image16x16>appIconsForPublish/x16.png</image16x16>
+        <image32x32>appIconsForPublish/x32.png</image32x32>
+        <image48x48>appIconsForPublish/x48.png</image48x48>
+        <image128x128>appIconsForPublish/x128.png</image128x128>
+    </icon>
     <customUpdateUI>false</customUpdateUI>
     <allowBrowserInvocation>false</allowBrowserInvocation>
     
