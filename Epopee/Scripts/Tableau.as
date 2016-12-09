@@ -94,7 +94,7 @@
 		******************************************************************************/
 		private function excaliburPlacerFrameVide(): void {
 			if (_jeu.getPersoHasExcalibur() == true && this is TabForet) {
-				pnjExaclibur_mc.gotoAndPlay("Sans Epee");
+				pnjExcalibur_mc.gotoAndPlay("Sans Epee");
 			}
 		}
 		

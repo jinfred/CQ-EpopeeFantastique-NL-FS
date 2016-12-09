@@ -30,8 +30,7 @@
 		private var _toggleOuiNon: int = -1; //-1 veut dire non, 1 veut dire oui
 
 		private var tPersos: Array = [];
-		private var _niveautPersos:int
-		,0;
+		private var _niveautPersos:int;
 
 		public function Dialogue() {
 			// CONSTRUCTEUR
