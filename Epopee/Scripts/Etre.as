@@ -25,8 +25,6 @@
 		
 		public function initParamEtre(nom:String, PVAct:int, PVMax:int, PMAct:int, PMMax:int, baseAtt:int, baseDef:int, baseAttMag:int, baseDefMag:int, baseVitesse:int, type:String, niveau:int=1){
 		var mutliplicateurNiveau = (niveau+(niveau+1))*0.04;
-		trace(mutliplicateurNiveau);
-		trace(PVMax * mutliplicateurNiveau);
 			_nom=nom;
 			_PVMax=Math.floor((PVMax * mutliplicateurNiveau) + PVMax);
 			_PVAct=_PVMax;

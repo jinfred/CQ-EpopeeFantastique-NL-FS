@@ -31,8 +31,8 @@
 
 		private var _prochainCombat: int // Entier, nombre de tours avant le prochain combat
 		private var _combatPossible: Boolean = false; // Booleen, indique si l'écran en cours permet les combats
-		private var _tTableauxPacifiques: Array = ["Village", "Foret", "MaisonAmi", "MaisonMaman", "Chateau", "SalleDuRoi", "Marchand1", "Marchand2", "Village2", "Foret2", "Marais05", "Lac", "RavinChateau", "InterieurTemple", "Temple", "EntreeVille", "Ville", "Marais04", "Entree", "Taverne"];
-		private var _tTableauxDangereux: Array = ["Foret2", "foretEnchantee02", "foretEnchantee03", "foretEnchantee04", "foretEnchantee05", "Bibliotheque", "SalleDuRoi", "SalleSecrete", "Marais01", "Marais02", "Marais03"];
+		private var _tTableauxPacifiques: Array = ["Village", "Foret", "MaisonAmi", "MaisonMaman", "SalleDuRoi", "Marchand1", "Marchand2", "Village2", "Foret2", "Marais05", "Lac", "RavinChateau", "InterieurTemple", "Temple", "EntreeVille", "Ville", "Marais04", "Entree", "Taverne", "SalleDuRoi"];
+		private var _tTableauxDangereux: Array = ["foretEnchantee02", "foretEnchantee03", "foretEnchantee04", "foretEnchantee05", "Marais01", "Marais02", "Marais03", "Chateau"];
 		private var _tTousLesTableaux: Array = _tTableauxPacifiques.concat(_tTableauxDangereux); //permet de créer un Array contenant tous les tableaux
 
 		private var _distance: Number;
@@ -584,8 +584,23 @@
 				case "Ville":
 					nomMusique = "MusiqueVillage2";
 					break;
-				case "InterieurTemple":
-					nomMusique = "MusiqueTemple";
+				case "SalleDuRoi":
+					nomMusique = "MusiqueClavier";
+					break;
+				case "Entree":
+					nomMusique = "MusiqueClavier";
+					break;
+				case "foretEnchantee02":
+					nomMusique = "MusiqueTambour";
+					break;
+				case "foretEnchantee03":
+					nomMusique = "MusiqueTambour";
+					break;
+				case "foretEnchantee04":
+					nomMusique = "MusiqueTambour";
+					break;
+				case "foretEnchantee05":
+					nomMusique = "MusiqueTambour";
 					break;
 				default:
 					if (redemarrage) {

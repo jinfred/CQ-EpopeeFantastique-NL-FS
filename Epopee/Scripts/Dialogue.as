@@ -30,7 +30,7 @@
 		private var _toggleOuiNon: int = -1; //-1 veut dire non, 1 veut dire oui
 
 		private var tPersos: Array = [];
-		private var _niveautPersos:int;
+		private var _niveautPersos: int;
 
 		public function Dialogue() {
 			// CONSTRUCTEUR
@@ -119,24 +119,24 @@
 			var _nomDuClip = clipDemandeur.toString();
 
 			//A REPARER ------------------------------------------------------
-			
-			/*if (_nomDuClip.indexOf("Puit") >= 0) {
+
+			if (_nomDuClip.indexOf("Puit") >= 0) {
 				tPersos = _jeu.getTPersos();
-				for (var i: uint = 0; i <= tPersos.length; i++) {
+				for (var i: uint = 0; i <= tPersos.length - 1; i++) {
 					_niveautPersos = tPersos[i].getNiveau();
 					tPersos[i].setNiveau(_niveautPersos + 1);
 					_jeu.soigner();
 				}
 			} else {
-				for (var i: uint = 0; i <= tPersos.length; i++) {
-					_niveautPersos = tPersos[i].getNiveau();
-					tPersos[i].setNiveau(_niveautPersos + 1);
-					trace("Niveau...^");
+				tPersos = _jeu.getTPersos();
+				for (var k: uint = 0; k <= tPersos.length-1; k++) {
+					_niveautPersos = tPersos[k].getNiveau();
+					tPersos[k].setNiveau(_niveautPersos + 1);
 				}
-			}*/
-			
+			}
+
 			//A REPARER -------------------------------------------------------
-			
+
 			dialogueMarchand = false;
 			declencherEtape();
 		}
@@ -174,7 +174,7 @@
 				_jeu.getEcranDeJeu().sortTeleport_mc.visible = true;
 			}
 
-			if (_clipDemandeur.name.indexOf("pnjExcalibur_mc") >= 0) {
+			if (_clipDemandeur.name.indexOf("Excalibur") >= 0) {
 				_jeu.getEcranDeJeu().pnjExcalibur_mc.gotoAndStop("Sans Epee");
 			}
 

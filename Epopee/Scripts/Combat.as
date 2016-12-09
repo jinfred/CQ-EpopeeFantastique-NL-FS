@@ -395,8 +395,9 @@
 		  Pour permettre les choix
 		******************************************************************************/
 		private function activerLesChoix(e: Event = null) {
-			trace(_cible);
-			trace("HERE BEFORE IF");
+			if (_tMonstres.length == 1) {
+				_cible = _tMonstres[0];
+			}
 			if (_cible == null) {
 				_peutChoisir = false;
 				barreActions_mc.removeEventListener(MouseEvent.CLICK, choisirAction);
@@ -404,7 +405,6 @@
 				_messAction = "Choisissez une cible à attaquer";
 				afficherEtape(_messAction);
 			} else {
-				trace("HERE !");
 				_peutChoisir = true;
 				barreActions_mc.addEventListener(MouseEvent.CLICK, choisirAction);
 				barreActions_mc.alpha = 1;
@@ -478,9 +478,6 @@
 		} //monstreAttaque
 
 		private function choisirCible(e: MouseEvent): void {
-			//_cible = (e.target.name).slice(8, 5);
-
-			//trace(e.target.getNom());
 
 			var m: Monstre = null;
 			var t: DisplayObject = DisplayObject(e.target);
@@ -500,19 +497,19 @@
 				//trace("I AM NULL");
 				_cible = m;
 				activerLesChoix(null);
-				_target.visible=true;
+				_target.visible = true;
 			}
 
 			if (m !== null) {
-				
+
 				_cible = m;
 				//trace(_cible)
 				_cible.addChild(_target); // // Ajouter le cercle rouge sur la nouvelle cible
 				cibleActive = true;
-				_target.visible=true;
+				_target.visible = true;
 			}
 		}
-		
+
 		/******************************************************************************
 		Fonction joueurAttaque
 		  Elle est exécutée lorsqu'un personage attaque
@@ -520,7 +517,7 @@
 		******************************************************************************/
 		private function joueurAttaque(lePerso) {
 			if (_cible == null) {
-				_target.visible=false;
+				_target.visible = false;
 				activerLesChoix(null);
 			} else {
 				log('joueurAttaque', 3);
@@ -649,7 +646,7 @@
 						_cible.removeEventListener(MouseEvent.CLICK, choisirCible);
 						_cible = null; // si le monstre est mort, on change de cible
 						_nbMonstresMorts++;
-						_target.visible=false;
+						_target.visible = false;
 					} //if
 
 					afficherEtape(_messAction);
