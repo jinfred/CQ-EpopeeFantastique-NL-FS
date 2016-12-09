@@ -94,7 +94,7 @@
 			_tMonstres = [];
 			_tMonstres.push(new MonstreMordred());
 			//caractéristiques:          nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
-			_tMonstres[0].initParam("Mordred", 500, 500, 250, 250, 50, 25, 50, 50, 50, 25);
+			_tMonstres[0].initParam("Mordred", 400, 400, 150, 150, 50, 10, 15, 10, 30, 2500);
 			addChild(_tMonstres[0]); //ajout de l'object monstre, afin de lui permettre d'ajouter son MC ensuite
 			_tMonstres[0].placerCorps(new Point(300, 200)); //ajout du clip, à la position X, Y souhaitée;
 			afficherNomsMonstres();

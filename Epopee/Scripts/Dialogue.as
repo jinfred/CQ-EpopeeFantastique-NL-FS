@@ -30,6 +30,7 @@
 		private var _toggleOuiNon: int = -1; //-1 veut dire non, 1 veut dire oui
 
 		private var tPersos: Array = [];
+		private var _niveautPersos:ints;
 
 		public function Dialogue() {
 			// CONSTRUCTEUR
@@ -116,15 +117,26 @@
 			_jeu.enleverOr(_prixItem);
 			_jeu.getEcranDeJeu().updateNbOr();
 			var _nomDuClip = clipDemandeur.toString();
-			if (_nomDuClip.indexOf("Puit") >= 0) {
+
+			//A REPARER ------------------------------------------------------
+			
+			/*if (_nomDuClip.indexOf("Puit") >= 0) {
 				tPersos = _jeu.getTPersos();
-				var _niveautPersos;
-				for (var i: uint = 0; i <= tPersos.length - 1; i++) {
+				for (var i: uint = 0; i <= tPersos.length; i++) {
 					_niveautPersos = tPersos[i].getNiveau();
 					tPersos[i].setNiveau(_niveautPersos + 1);
 					_jeu.soigner();
 				}
-			}
+			} else {
+				for (var i: uint = 0; i <= tPersos.length; i++) {
+					_niveautPersos = tPersos[i].getNiveau();
+					tPersos[i].setNiveau(_niveautPersos + 1);
+					trace("Niveau...^");
+				}
+			}*/
+			
+			//A REPARER -------------------------------------------------------
+			
 			dialogueMarchand = false;
 			declencherEtape();
 		}
@@ -157,15 +169,15 @@
 			btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
 			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet);
 			_jeu.terminerDialogue();
-			
-			if(_clipDemandeur.name.indexOf("LostWoodsDelwin") >= 0){
+
+			if (_clipDemandeur.name.indexOf("LostWoodsDelwin") >= 0) {
 				_jeu.getEcranDeJeu().sortTeleport_mc.visible = true;
 			}
-			
-			if(_clipDemandeur.name.indexOf("Exaclibur") >= 0){
+
+			if (_clipDemandeur.name.indexOf("Exaclibur") >= 0) {
 				_jeu.getEcranDeJeu().pnjExaclibur_mc.gotoAndStop("Sans Epee");
 			}
-				
+
 		} //quitterDialogue
 
 		/******************************************************************************
@@ -281,7 +293,7 @@
 				btNon.upState = btNon.downState;
 				btOui.upState = btOui.upState;
 			}
-			
+
 		}
 
 		/******************************************************************************

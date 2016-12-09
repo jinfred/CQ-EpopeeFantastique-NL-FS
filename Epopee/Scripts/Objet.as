@@ -94,6 +94,7 @@
 						[_OBJET, "Instrument de Dagan", 1],
 						[_DISPARITION]
 					];
+					_tab.obj_instrumentdagan_mc.gotoAndStop("Normal");
 					_jeu.setPersoHasInstrumentDagan(true);
 					if (modeTest) {
 						return "Ok";
@@ -109,7 +110,7 @@
 							_assezDargent = true;
 							_nomSimple = "L'épée d'Azkhaban";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
 								[_DISPARITION]*/
 							];
@@ -138,7 +139,7 @@
 							_assezDargent = true;
 							_nomSimple = "L'anneau d'émeraude";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 							];
 							if (modeTest) {
 								return "Ok";
@@ -165,7 +166,7 @@
 							_assezDargent = true;
 							_nomSimple = "Un sac de poudre magique";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
 								[_DISPARITION]*/
 							];
@@ -194,7 +195,7 @@
 							_assezDargent = true;
 							_nomSimple = "L'anneau de sapphire";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
 								[_DISPARITION]*/
 							];
@@ -223,7 +224,7 @@
 							_assezDargent = true;
 							_nomSimple = "Une baguette de pain bien chaude";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
 								[_DISPARITION]*/
 							];
@@ -253,7 +254,7 @@
 							_assezDargent = true;
 							_nomSimple = "Une pierre à aiguiser";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
 								[_DISPARITION]*/
 							];
@@ -282,7 +283,7 @@
 							_assezDargent = true;
 							_nomSimple = "L'anneau de rubis";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
 								[_DISPARITION]*/
 							];
@@ -310,9 +311,9 @@
 						_prixObjet = 1
 						if (_jeu.getFortune() >= _prixObjet) {
 							_assezDargent = true;
-							_nomSimple = "Les bottes XX";
+							_nomSimple = "Les bottes d'Hermès";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
 								[_DISPARITION]*/
 							];
@@ -322,7 +323,7 @@
 							_jeu.declencherDialogueMarchand(tSequence, this); //le nom du clip est ajouté pour permettre des «dialogues» successifs
 							return "Dialogue";
 						} else {
-							_nomSimple = "Les bottes XX";
+							_nomSimple = "Les bottes d'Hermès";
 							tSequence = [
 								[_REPLIQUE, "Vous avez besoin de " + _prixObjet + " pièces d'or pour acheter cet objet"],
 							];
@@ -342,7 +343,7 @@
 							_assezDargent = true;
 							_nomSimple = "Une bouteille d'eau bénite";
 							tSequence = [
-								[_REPLIQUE, "Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
+								[_REPLIQUE, "Vous fait gagner un niveau. Voulez-vous l'acheter pour " + _prixObjet + " pièces d'or ?"],
 								/*[_OBJET, "Epee", 1],
 								[_DISPARITION]*/
 							];

@@ -10,6 +10,7 @@
 		private var _tPersos: Array;
 		private var _tObstacles: Array = [];
 		private var estMarchand: Boolean = false;
+		private var _nomDuTableau;
 
 		private var _jeu: MovieClip;
 
@@ -53,6 +54,7 @@
 			gestionMarchand();
 			deplacerCollisionGuard();
 			excaliburPlacerFrameVide();
+			placerPointExclamationIntrument();
 		} //initParam
 
 		/******************************************************************************
@@ -63,6 +65,7 @@
 
 			_jeu = MovieClip(parent); // initialisation de la référence du parent
 			addEventListener(Event.REMOVED_FROM_STAGE, nettoyer)
+			 _nomDuTableau = this.toString();
 		} //init
 
 		/******************************************************************************
@@ -87,11 +90,20 @@
 		}
 		
 		/******************************************************************************
-		Cette fonction sert à règler 
+		Cette fonction sert à ce que le piedestal d'Excalibur soit vide après que le joueur ait ramassé l'Épée
 		******************************************************************************/
 		private function excaliburPlacerFrameVide(): void {
 			if (_jeu.getPersoHasExcalibur() == true && this is TabForet) {
 				pnjExaclibur_mc.gotoAndPlay("Sans Epee");
+			}
+		}
+		
+		/******************************************************************************
+		Cette fonction sert à placer les point d'excalamation (dialogues importants)
+		******************************************************************************/
+		private function placerPointExclamationIntrument(): void {
+			if (_nomDuTableau.indexOf("Foret2") >= 0){
+					obj_instrumentdagan_mc.gotoAndStop("VIP");
 			}
 		}
 
@@ -246,8 +258,7 @@
 		} //placerSandwichPerso
 
 		private function gestionMarchand(): void {
-			var nomDuTableau = this.toString();
-			if (nomDuTableau.indexOf("Marchand") >= 0) {
+			if (_nomDuTableau.indexOf("Marchand") >= 0) {
 				estMarchand = true;
 				updateNbOr();
 			}

@@ -343,7 +343,10 @@
 					case "pnjNova_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
-							[_REPLIQUE, "J'ai oublié mes dialogues... Aidez-moi !", "Caitlyn"],
+							[_REPLIQUE, "Eh bien, morveux ! Vous allez où comme ça ?", "Caitlyn"],
+							[_REPLIQUE, "Nous allons donner la râclé de sa vie à Mordred !", "Delwin"],
+							[_REPLIQUE, "C'est vrai... ? Enfin quelqu'un va se battre contre Mordred ?", "Caitlyn"],
+							[_REPLIQUE, "Et bien, si c'est comme ça... Je me joins à vous. Hors de question de manquer un tel combat !", "Caitlyn"],
 							[_EQUIPIER],
 							[_DISPARITION, false]
 						];
@@ -360,6 +363,7 @@
 								[_REPLIQUE, "Beaucoup de gens se perdent et on ne les retrouve plus jamais…", "Garde"],
 								[_DISPARITION, false]
 							];
+							_tab.pnjGuardForet_mc.gotoAndStop("Normal");
 							_jeu.setCheminForetEstLibre(true);
 							var zoneObstacle = _tab.getChildByName("obstacleGuard_mc");
 							//_tab.removeChild(zoneObstacle);
@@ -414,6 +418,7 @@
 								[_EQUIPIER],
 								[_DISPARITION, false]
 							];
+							_tab.pnjLucem_mc.gotoAndStop("Normal");
 							//trace("Essayons " + _jeu.getTObjets().indexOf("Instrument de Dagan", 0));
 							//trace(_jeu.getTObjets());
 							var posInstrument: int = _jeu.getTObjets().indexOf("Instrument de Dagan", 0);
