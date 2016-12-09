@@ -205,7 +205,7 @@
 							[_REPLIQUE, "Celui qui a su sortir Excalibur de son piédestal."],
 							[_REPLIQUE, "Tu n’es qu’un gamin!"],
 							[_REPLIQUE, "Et ton histoire s’arrête là!"],
-							[_REPLIQUE, "Prépare-toi à te mourrir, gamin !"],
+							[_REPLIQUE, "Prépare-toi à mourrir, gamin !"],
 							[_COMBAT, "Chef"],
 							[_DISPARITION, false]
 						];
@@ -257,7 +257,7 @@
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
 							[_REPLIQUE, "Bon, nous y voilà !", "Dagan"],
-							[_REPLIQUE, "Oh, non ! Le pont à été détruit… C’était le seul chemin !", "Dagan"],
+							[_REPLIQUE, "Oh, non ! Le pont a été détruit… C’était le seul chemin !", "Dagan"],
 							[_DISPARITION, false]
 						];
 						break;
@@ -273,8 +273,8 @@
 					case "pnjAubergiste_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
-							[_REPLIQUE, "Eh bien, on dirait que Dagan à encore perdu son instrument... Le pauvre !"],
-							[_REPLIQUE, "Alors c’est vrai ce qu’on dit… Tu va vraiment quitter le village ?"],
+							[_REPLIQUE, "Eh bien, on dirait que Dagan a encore perdu son instrument... Le pauvre !"],
+							[_REPLIQUE, "Alors c’est vrai ce qu’on dit… Tu vas vraiment quitter le village ?"],
 						];
 						break;
 
@@ -288,7 +288,7 @@
 							[_REPLIQUE, "C’est bien simple, je vais vous téléporter de l’autre côté.", "Delwin"],
 							[_REPLIQUE, "Tu es dingue !? L’as-tu déjà fait ?", "Dagan"],
 							[_REPLIQUE, "Bien sûr que je l’ai déjà fait ! En quelque sorte…", "Delwin"],
-							[_REPLIQUE, "D’accord… si tu en est certaine…", "Dagan"],
+							[_REPLIQUE, "D’accord… si tu en es certaine…", "Dagan"],
 							[_REPLIQUE, "Bon… allons-y !", "Delwin"],
 							[_DISPARITION, false]
 						];
@@ -382,7 +382,7 @@
 						}
 						break;
 
-					case "pnjExaclibur_mc":
+					case "pnjExcalibur_mc":
 						if (_jeu.getPersoHasExcalibur() == false) {
 							tSequence = [
 								[_REPLIQUE, "Héros, les temps sont durs", "L'épée magique Excalibur"],
@@ -413,7 +413,7 @@
 							break;
 						} else{
 							tSequence = [
-								[_REPLIQUE, "Oh, génial ! Tu l’a retrouvé !", "Dagan"],
+								[_REPLIQUE, "Oh, génial ! Tu l’as retrouvé !", "Dagan"],
 								[_REPLIQUE, "Eh bien, je t’ai fait une promesse. Allons-y !", "Dagan"],
 								[_EQUIPIER],
 								[_DISPARITION, false]

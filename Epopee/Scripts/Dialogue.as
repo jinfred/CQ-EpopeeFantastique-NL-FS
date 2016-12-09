@@ -30,7 +30,8 @@
 		private var _toggleOuiNon: int = -1; //-1 veut dire non, 1 veut dire oui
 
 		private var tPersos: Array = [];
-		private var _niveautPersos:ints;
+		private var _niveautPersos:int
+		,0;
 
 		public function Dialogue() {
 			// CONSTRUCTEUR
@@ -174,8 +175,8 @@
 				_jeu.getEcranDeJeu().sortTeleport_mc.visible = true;
 			}
 
-			if (_clipDemandeur.name.indexOf("Exaclibur") >= 0) {
-				_jeu.getEcranDeJeu().pnjExaclibur_mc.gotoAndStop("Sans Epee");
+			if (_clipDemandeur.name.indexOf("pnjExcalibur_mc") >= 0) {
+				_jeu.getEcranDeJeu().pnjExcalibur_mc.gotoAndStop("Sans Epee");
 			}
 
 		} //quitterDialogue
