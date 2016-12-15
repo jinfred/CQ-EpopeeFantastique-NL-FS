@@ -594,6 +594,9 @@
 				case "foretEnchantee05":
 					nomMusique = "MusiqueTambour";
 					break;
+				case "InterieurTemple":
+					nomMusique = "MusiqueTemple";
+					break;
 				default:
 					if (redemarrage) {
 						nomMusique = nomMusiqueEnCours; //dans ce cas, on veut relancer la musique précédente (POUR DÉBOGAGE)
