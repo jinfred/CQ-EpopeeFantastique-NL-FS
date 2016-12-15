@@ -41,7 +41,7 @@
 			_haut: Boolean = false,
 			_bas: Boolean = false;
 
-		private var _spero: Perso, _nova: Perso, _lucem: Perso, _fortis: Perso;
+		private var _spero: Perso, _Caitlyn: Perso, _Dagan: Perso, _Delwin: Perso;
 		private var _tPersos: Array;
 		private var _tAbsences: Array = [];
 		private var _tObjets: Array = [];
@@ -60,6 +60,10 @@
 
 		private var _persoHasExcalibur = false;
 		private var _persoHasInstrumentDagan = false;
+		private var _persoHasDagan:Boolean = false;
+		private var _persoHasCaitlyn:Boolean = false;
+		private var _persoHasDelwin:Boolean = false;
+		private var _persoHasDelwinTeleport:Boolean = false;
 		private var _cheminForetEstLibre = false;
 
 
@@ -67,14 +71,14 @@
 			// CONSTRUCTEUR
 			// création des personnages amis, puis définition de leurs caractéristiques:
 			_spero = new PersoSpero();
-			_nova = new PersoNova();
-			_lucem = new PersoLucem();
-			_fortis = new PersoFortis();
+			_Caitlyn = new PersoCaitlyn();
+			_Dagan = new PersoDagan();
+			_Delwin = new PersoDelwin();
 			//caractéristiques:    nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVites	se, niv, XPAct, XPSuivant, estPresent
 			_spero.initParam("Spero", 125, 125, 50, 50, 25, 25, 5, 5, 20, 1, 0, 100, true);
-			_nova.initParam("Nova", 100, 100, 10, 10, 20, 20, 15, 10, 10, 1, 0, 100, false);
-			_lucem.initParam("Lucem", 50, 50, 75, 75, 10, 15, 25, 25, 25, 1, 0, 100, false);
-			_fortis.initParam("Fortis", 75, 75, 175, 175, 5, 10, 30, 30, 15, 1, 0, 300, false);
+			_Caitlyn.initParam("Caitlyn", 100, 100, 10, 10, 20, 20, 15, 10, 10, 1, 0, 100, false);
+			_Dagan.initParam("Dagan", 50, 50, 75, 75, 10, 15, 25, 25, 25, 1, 0, 100, false);
+			_Delwin.initParam("Delwin", 75, 75, 175, 175, 5, 10, 30, 30, 15, 1, 0, 300, false);
 
 			_tPersos = [_spero]; //ajout du perso principal dans le Array de l'équipe
 
@@ -220,18 +224,6 @@
 		  si c'est une réplique, un combat ou un dialogue.
 		******************************************************************************/
 		public function declencherDialogue(tSequence: Array, demandeur: MovieClip): Boolean {
-			if (_dialogue.declencherSiOk(tSequence, demandeur)) {
-				addChild(_dialogue);
-				_estEnDialogue = true; //est utilisé pour prévenir les déplacements du perso
-				_gauche = false, _droite = false, _haut = false, _bas = false; //arret de tous les mouvements en cours 
-				_ecranDeJeu.arreterJoueur(_spero);
-				return true; //signifie que le dialogue a eu lieu
-			} else {
-				return false; //signifie que le dialogue n'a pas eu lieu
-			} //if+else
-		} //declencherDialogue
-
-		public function declencherDialogueMarchand(tSequence: Array, demandeur: MovieClip): Boolean {
 			if (_dialogue.declencherSiOk(tSequence, demandeur)) {
 				addChild(_dialogue);
 				_estEnDialogue = true; //est utilisé pour prévenir les déplacements du perso
@@ -484,14 +476,14 @@
 		public function ajouterPerso(nomInstance): void {
 			var lePerso: Perso; //référence temporaire à un perso précis
 			switch (nomInstance) {
-				case "pnjNova_mc":
-					lePerso = _nova;
+				case "pnjCaitlyn_mc":
+					lePerso = _Caitlyn;
 					break;
-				case "pnjLucem_mc":
-					lePerso = _lucem;
+				case "pnjDagan_mc":
+					lePerso = _Dagan;
 					break;
-				case "pnjFortis_mc":
-					lePerso = _fortis;
+				case "pnjDelwin_mc":
+					lePerso = _Delwin;
 					break;
 			} //switch
 			if (_tPersos.length <= 3) {
@@ -514,14 +506,14 @@
 				_tAbsences.splice(_tAbsences.indexOf(nomInstance), 1)
 				var lePerso: Perso; //référence temporaire à un perso précis
 				switch (nomInstance) {
-					case "pnjNova_mc":
-						lePerso = _nova;
+					case "pnjCaitlyn_mc":
+						lePerso = _Caitlyn;
 						break;
-					case "pnjLucem_mc":
-						lePerso = _lucem;
+					case "pnjDagan_mc":
+						lePerso = _Dagan;
 						break;
-					case "pnjFortis_mc":
-						lePerso = _fortis;
+					case "pnjDelwin_mc":
+						lePerso = _Delwin;
 						break;
 				} //switch
 				lePerso.setEstPresent(false);
@@ -732,6 +724,18 @@
 		public function getPersoHasInstrumentDagan(): Boolean {
 			return _persoHasInstrumentDagan;
 		} //pour débogage, ne pas supprimer cette ligne!
+		public function getPersoHasDagan(): Boolean {
+			return _persoHasDagan;
+		}
+		public function getPersoHasDelwin(): Boolean {
+			return _persoHasDelwin;
+		}
+		public function getPersoHasDelwinTeleport(): Boolean {
+			return _persoHasDelwinTeleport;
+		}
+		public function getPersoHasCaitlyn(): Boolean {
+			return _persoHasCaitlyn;
+		}
 		public function getCheminForetEstLibre(): Boolean {
 			return _cheminForetEstLibre;
 		} //pour débogage, ne pas supprimer cette ligne!
@@ -763,6 +767,18 @@
 		public function setTObjets(tableau: Array): void {
 			_tObjets = tableau;
 		} //pour débogage, ne pas supprimer cette ligne!
+		public function setPersoHasDagan(state:Boolean): void {
+			_persoHasDagan = state;
+		}
+		public function setPersoHasDelwinTeleport(state:Boolean): void {
+			_persoHasDelwinTeleport = state;
+		}
+		public function setPersoHasDelwin(state:Boolean): void {
+			_persoHasDelwin = state;
+		}
+		public function setPersoHasCaitlyn(state:Boolean): void {
+			_persoHasCaitlyn = state;
+		}
 
 	} //class
 } //package

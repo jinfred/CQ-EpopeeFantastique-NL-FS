@@ -55,6 +55,7 @@
 			deplacerCollisionGuard();
 			excaliburPlacerFrameVide();
 			placerPointExclamationIntrument();
+			afficherTeleportDelwin();
 		} //initParam
 
 		/******************************************************************************
@@ -86,6 +87,15 @@
 				trace("HELO");
 				var zoneObstacle = this.getChildByName("obstacleGuard_mc");
 				zoneObstacle.y += 200;
+			}
+		}
+		
+		/******************************************************************************
+		Cette fonction sert à s'assurer que le teleport de Delwin soit visible si le joueur retourne sur ses pas
+		******************************************************************************/
+		private function afficherTeleportDelwin(): void {
+			if (_jeu.getPersoHasDelwinTeleport() == true && this is TabRavinChateau) {
+				_jeu.getEcranDeJeu().sortTeleport_mc.visible = true;
 			}
 		}
 		

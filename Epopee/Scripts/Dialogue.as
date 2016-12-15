@@ -79,7 +79,7 @@
 					btOui.visible = true;
 					btNon.visible = true;
 					btSuite.visible = false;
-					btOui.addEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
+					btOui.addEventListener(MouseEvent.CLICK, acheterObjet);
 					btNon.addEventListener(MouseEvent.CLICK, refuserObjet);
 				}
 				dialogueMarchand = false;
@@ -92,50 +92,44 @@
 		} //declencherSiOk
 
 
-		private function acheterObjet(tSequence: Array, clipDemandeur: MovieClip): Function {
-			return function (e: MouseEvent): void {
-				btOui.removeEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
-				btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
-				/*_tSequence = [
+		private function acheterObjet(e: MouseEvent): void {
+
+			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet);
+			btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
+			/*_tSequence = [
 					[_REPLIQUE, "Vous avez acheté " + _clipDemandeur.getNomSimple()],
 					[_OBJET, _clipDemandeur.getNomSimple(), 1],
 					[_DISPARITION]
 				];*/
-				faireActionsAchat(tSequence, clipDemandeur);
-				//declencherEtape();
+			faireActionsAchat();
+			//declencherEtape();
 
-			};
+
 		}
 
-		private function faireActionsAchat(tSequence: Array, clipDemandeur: MovieClip): void {
+		private function faireActionsAchat(): void {
 			_tSequence = [
-				[_REPLIQUE, "Vous avez acheté " + clipDemandeur.getNomSimple()],
-				[_OBJET, clipDemandeur.getNomSimple(), 1],
+				[_REPLIQUE, "Vous avez acheté " + _clipDemandeur.getNomSimple()],
+				[_OBJET, _clipDemandeur.getNomSimple(), 1],
 				[_DISPARITION]
 			];
-			var _prixItem = clipDemandeur.getPrixObjet()
+			var _prixItem = _clipDemandeur.getPrixObjet()
 			_jeu.enleverOr(_prixItem);
 			_jeu.getEcranDeJeu().updateNbOr();
-			var _nomDuClip = clipDemandeur.toString();
+			var _nomDuClip = _clipDemandeur.toString();
 
-			//A REPARER ------------------------------------------------------
 
 			if (_nomDuClip.indexOf("Puit") >= 0) {
 				tPersos = _jeu.getTPersos();
-				for (var i: uint = 0; i <= tPersos.length - 1; i++) {
-					_niveautPersos = tPersos[i].getNiveau();
-					tPersos[i].setNiveau(_niveautPersos + 1);
-					_jeu.soigner();
-				}
+				_jeu.soigner(5000); //Je dois spécifier un montant pour éviter le bug de mort
 			} else {
 				tPersos = _jeu.getTPersos();
-				for (var k: uint = 0; k <= tPersos.length-1; k++) {
+				for (var k: uint = 0; k <= tPersos.length - 1; k++) {
 					_niveautPersos = tPersos[k].getNiveau();
 					tPersos[k].setNiveau(_niveautPersos + 1);
+					tPersos[k].augmenterStats(tPersos[k].getNiveau());
 				}
 			}
-
-			//A REPARER -------------------------------------------------------
 
 			dialogueMarchand = false;
 			declencherEtape();
@@ -145,7 +139,6 @@
 			var tSequence = _tSequence;
 			var clipDemandeur = _clipDemandeur;
 			btNon.removeEventListener(MouseEvent.CLICK, refuserObjet);
-			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
 			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet);
 			dialogueMarchand = false;
 			declencherEtape();
@@ -157,7 +150,7 @@
 		private function quitterDialogue(e: Event = null): void {
 			var tSequence = _tSequence;
 			var clipDemandeur = _clipDemandeur;
-			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
+			btOui.removeEventListener(MouseEvent.CLICK, acheterObjet);
 			btSuite.removeEventListener(MouseEvent.CLICK, declencherEtape);
 
 			message_txt.text = "";
@@ -211,7 +204,7 @@
 								btOui.visible = true;
 								btNon.visible = true;
 								btSuite.visible = false;
-								btOui.addEventListener(MouseEvent.CLICK, acheterObjet(tSequence, clipDemandeur));
+								btOui.addEventListener(MouseEvent.CLICK, acheterObjet);
 								btNon.addEventListener(MouseEvent.CLICK, refuserObjet);
 
 								//stage.addEventListener(KeyboardEvent.KEY_DOWN, funcToggleOuiNon);

@@ -88,13 +88,13 @@
 
 		/******************************************************************************
 		Fonction creerChef
-		  Elle permet de creer le méchant Torgul
+		  Elle permet de creer le méchant Mordred
 		******************************************************************************/
 		private function creerChef(): void {
 			_tMonstres = [];
 			_tMonstres.push(new MonstreMordred());
 			//caractéristiques:          nom, PVAct, PVMax, PMAct, PMMax, baseAtt, baseDef, baseAttMag, baseDefMag, baseVitesse, valeurXP
-			_tMonstres[0].initParam("Mordred", 400, 400, 150, 150, 50, 10, 15, 10, 30, 2500);
+			_tMonstres[0].initParam("Mordred", 1600, 1600, 150, 150, 57, 10, 20, 10, 30, 2500);
 			addChild(_tMonstres[0]); //ajout de l'object monstre, afin de lui permettre d'ajouter son MC ensuite
 			_tMonstres[0].placerCorps(new Point(300, 200)); //ajout du clip, à la position X, Y souhaitée;
 			afficherNomsMonstres();
@@ -535,16 +535,16 @@
 						_messAction = lePerso.getNom() + " fait " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage sur " + _cible.getNom() + ".";
 						lePerso.jouerAnim("Attaque");
 						switch (lePerso.getNom()) {
-							case "Nova":
+							case "Caitlyn":
 								lePerso.setPMAct(PMAct + 10);
 								break;
-							case "Fortis":
+							case "Delwin":
 								lePerso.setPMAct(PMAct + 25);
 								break;
 							case "Spero":
 								lePerso.setPMAct(PMAct + 15);
 								break;
-							case "Lucem":
+							case "Dagan":
 								lePerso.setPMAct(PMAct + 15);
 								break;
 
@@ -557,15 +557,15 @@
 						var PMAct: int = lePerso.getPMAct();
 						_defense = _cible.getBaseDefMag();
 						switch (lePerso.getNom()) {
-							case "Nova":
-							case "Fortis":
+							case "Caitlyn":
+							case "Delwin":
 							case "Spero":
 								if (lePerso.getPMAct() >= 10) {
 									_attaque = lePerso.etablirAttMagRonde(2.5);
 									if (isNaN(_attaque) || isNaN(_defense)) {
 										log("boque important: _attaque=" + _attaque + " _defense=" + _defense);
 									} //if
-									if (lePerso.getNom() == "Fortis") {
+									if (lePerso.getNom() == "Delwin") {
 										var nbChanceAttaque = Math.floor(Math.random() * (10 - 1 + 1) + 1);
 										trace(nbChanceAttaque);
 										if (nbChanceAttaque == 1) {
@@ -599,7 +599,7 @@
 									}
 								}
 								break;
-							case "Lucem":
+							case "Dagan":
 								if (lePerso.getPMAct() >= 25) {
 									_attaque = lePerso.etablirAttMagRonde(3);
 									for (var i = 0; i < _tPersos.length; i++) {
@@ -629,13 +629,13 @@
 							case "Spero":
 								_messAction = lePerso.getNom() + " profère des insultes à " + _cible.getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
 								break;
-							case "Nova":
+							case "Caitlyn":
 								_messAction = lePerso.getNom() + " lance une flèche enchantée sur " + _cible.getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
 								break;
-							case "Lucem":
+							case "Dagan":
 								_messAction = lePerso.getNom() + " lance «Guérison» sur le groupe, permettant de récupérer " + _attaque + " point" + ((_attaque > 1) ? "s" : "") + ".";
 								break;
-							case "Fortis":
+							case "Delwin":
 								_messAction = lePerso.getNom() + " lance «Boule de Feu» sur " + _cible.getNom() + ", causant " + _dommages + " point" + ((_dommages > 1) ? "s" : "") + " de dommage.";
 								break;
 						} //switch
@@ -644,9 +644,22 @@
 					} //if(c'est une attaque)			
 					if (_cible.getPVAct() <= 0) {
 						_cible.removeEventListener(MouseEvent.CLICK, choisirCible);
-						_cible = null; // si le monstre est mort, on change de cible
+						//trace(_cible)
+						
+						/* -- Tentative de choisir une cible automatiquement à la mort d'un ennemie : cause une erreur
+						var posMonstre = _tMonstres.indexOf(_cible, 0);
+						_tMonstres[posMonstre] = null;
+						trace(_tMonstres);
+						if(posMonstre==0){
+							_cible = _tMonstres[posMonstre+1];
+						}else{
+							_cible = _tMonstres[posMonstre-1];
+						}
+						*///* -- Tentative de choisir une cible automatiquement à la mort d'un ennemie : cause une erreur
 						_nbMonstresMorts++;
 						_target.visible = false;
+						
+						
 					} //if
 
 					afficherEtape(_messAction);

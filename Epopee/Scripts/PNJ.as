@@ -174,11 +174,11 @@
 						break;
 					case "pnjRoi_mc":
 						//Exemple: séquences de répliques différentes selon une condition préalable
-						if (_jeu.verifierAbsence("pnjNova_mc") == false) {
-							//si Nova n'est pas dans la liste d'absence, le roi propose sa participation
+						if (_jeu.verifierAbsence("pnjCaitlyn_mc") == false) {
+							//si Caitlyn n'est pas dans la liste d'absence, le roi propose sa participation
 							tSequence = [
-								[_REPLIQUE, "Torgul a détruit notre armée, nous sommes maintenant pratiquement sans défense..."],
-								[_REPLIQUE, "Je crains que notre fin soit proche... \nSi vous souhaitez tenter votre chance, la princesse Nova pourrait vous accompagner."]
+								[_REPLIQUE, "Mordred a détruit notre armée, nous sommes maintenant pratiquement sans défense..."],
+								[_REPLIQUE, "Je crains que notre fin soit proche... \nSi vous souhaitez tenter votre chance, la princesse Caitlyn pourrait vous accompagner."]
 							];
 						} else {
 							tSequence = [
@@ -199,7 +199,7 @@
 							[_DISPARITION, false]
 						];
 						break;
-					case "pnjTorgul_mc":
+					case "pnjMordred_mc":
 						tSequence = [
 							[_REPLIQUE, "Alors c’est toi, Spero. Celui dont tout le monde parle."],
 							[_REPLIQUE, "Celui qui a su sortir Excalibur de son piédestal."],
@@ -214,12 +214,15 @@
 						//Dialogues personnalisés - DÉBUT
 
 					case "pnjLostWoodsDagan1_mc":
-						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
+						//if (_jeu.getPersoHasDagan() == true) {		Aurait dû être appliqué à tous les dialogues qui dépendent d'un compagnon pour s'assurer
+						//que le dialogue ne se déclenche pas si le Perso n'a pas été acquis. Cependant, la fonction crée un bogue.
 						tSequence = [
 							[_REPLIQUE, "D’accord, alors si je me souviens bien il faut aller… par là !", "Dagan"],
 							[_DISPARITION, false]
 						];
 						break;
+						//}
+						//break;
 
 					case "pnjLostWoodsDagan2_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
@@ -292,6 +295,7 @@
 							[_REPLIQUE, "Bon… allons-y !", "Delwin"],
 							[_DISPARITION, false]
 						];
+						_jeu.setPersoHasDelwinTeleport(true);
 						break;
 
 					case "pnjMarchand2_mc":
@@ -328,7 +332,7 @@
 						];
 						break;
 
-					case "pnjFortis_mc":
+					case "pnjDelwin_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
 							[_REPLIQUE, "Qu’est-ce qui s’est passé ?", "Dagan"],
@@ -338,9 +342,10 @@
 							[_EQUIPIER],
 							[_DISPARITION, false]
 						];
+						_jeu.setPersoHasDelwin(true);
 						break;
 
-					case "pnjNova_mc":
+					case "pnjCaitlyn_mc":
 						//Exemple: répliques de type «ping pong» (avec réponse du héros!)
 						tSequence = [
 							[_REPLIQUE, "Eh bien, morveux ! Vous allez où comme ça ?", "Caitlyn"],
@@ -350,6 +355,7 @@
 							[_EQUIPIER],
 							[_DISPARITION, false]
 						];
+						_jeu.setPersoHasCaitlyn(true);
 						break;
 
 					case "pnjGuardForet_mc":
@@ -392,14 +398,14 @@
 							];
 							_jeu.setPersoHasExcalibur(true);
 							break;
-						}else{
+						} else {
 							return "Absent";
 						}
 
 						//_jeu.setPersoHasExcalibur(true);
 						break;
 
-					case "pnjLucem_mc":
+					case "pnjDagan_mc":
 						if (_jeu.getPersoHasInstrumentDagan() == false) {
 							tSequence = [
 								[_REPLIQUE, "Oh, hé ! Tu crois pouvoir m’aider ?", "Dagan"],
@@ -411,21 +417,22 @@
 								[_REPLIQUE, "Tu sais quoi ? Aide moi à retrouver mon instrument et je t’aiderai à traverser la forêt.", "Dagan"],
 							];
 							break;
-						} else{
+						} else {
 							tSequence = [
 								[_REPLIQUE, "Oh, génial ! Tu l’as retrouvé !", "Dagan"],
 								[_REPLIQUE, "Eh bien, je t’ai fait une promesse. Allons-y !", "Dagan"],
 								[_EQUIPIER],
 								[_DISPARITION, false]
 							];
-							_tab.pnjLucem_mc.gotoAndStop("Normal");
+							_jeu.setPersoHasDagan(true);
+							_tab.pnjDagan_mc.gotoAndStop("Normal");
 							//trace("Essayons " + _jeu.getTObjets().indexOf("Instrument de Dagan", 0));
 							//trace(_jeu.getTObjets());
 							var posInstrument: int = _jeu.getTObjets().indexOf("Instrument de Dagan", 0);
-							//var nouveauTableauTObjets:Array = (_jeu.getTObjets().splice(posInstrument, 1));
+							var nouveauTableauTObjets: Array = (_jeu.getTObjets().splice(posInstrument, 1));
 							_jeu.setTObjets(_jeu.getTObjets().splice(posInstrument, 1));
 							//trace(_jeu.getTObjets());
-							trace(_jeu.getTObjets().splice(posInstrument, 1));
+							trace(nouveauTableauTObjets);
 							break;
 						}
 

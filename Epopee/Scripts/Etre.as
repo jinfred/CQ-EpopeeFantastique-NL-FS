@@ -152,7 +152,6 @@
 		
 		public function placerStatsEnnemies():void{
 			if(_type !== "Perso"){
-				
 				_statsEnnemies_mc.x = 45; _statsEnnemies_mc.y = 0;
 				addChild(_statsEnnemies_mc);
 				trace("Monstre STATS");
@@ -169,12 +168,29 @@
 				_stats_mc = null;
 			} //if
 			
-			if( _statsEnnemies_mc.parent !== null ){ //ne pas enlever les points s'ils ne sont pas affichés...
+			if( _statsEnnemies_mc.parent !== null){ //ne pas enlever les points s'ils ne sont pas affichés...
+				trace("ENLEVER~~~");
 				removeChild(_statsEnnemies_mc);
 				_statsEnnemies_mc = null;
 			} //if
 		} //enleverStats
 
+		/******************************************************************************
+		Fonction augmenterStats
+		******************************************************************************/	
+		public function augmenterStats(niv:int):void{
+			var niveau:int = niv;
+			var mutliplicateurNiveau = (niveau+(niveau+1))*0.01;
+			_PVMax=Math.floor((_PVMax * mutliplicateurNiveau) + _PVMax);
+			_PVAct=_PVMax;
+			_PMMax=Math.floor((_PMMax * mutliplicateurNiveau) + _PMMax);
+			_PMAct=_PMMax;
+			_baseAtt=Math.floor((_baseAtt * mutliplicateurNiveau) + _baseAtt);
+			_baseDef=Math.floor((_baseDef * mutliplicateurNiveau) + _baseDef);
+			_baseAttMag=Math.floor((_baseAttMag * mutliplicateurNiveau) + _baseAttMag);
+			_baseDefMag=Math.floor((_baseDefMag * mutliplicateurNiveau) + _baseDefMag);
+			_baseVitesse=Math.floor((_baseVitesse * mutliplicateurNiveau) + _baseVitesse);	
+		}
 		/******************************************************************************
 		Fonction afficherStats
 		******************************************************************************/		
@@ -207,8 +223,8 @@
 		/******************************************************************************
 		*******************************     SETTERS     *******************************
 		******************************************************************************/
-		public function setPVAct(PVAct:int):void {
-			if( PVAct < 0 ){ PVAct = 0; } //permet d'empêcher d'être mort avec une valeur négative
+		public function setPVAct(PVAct:int):void {  //Mettre un uint ici rend les ennemis invincibles !!
+			if( PVAct <= 0 ){ PVAct = 0; } //permet d'empêcher d'être mort avec une valeur négative
 			if( PVAct > getPVMax() ){ PVAct = getPVMax(); } // si ça dépasse le max, on applique le max
 			_PVAct = PVAct;
 		} //setPVAct

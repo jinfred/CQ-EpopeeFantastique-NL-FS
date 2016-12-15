@@ -174,13 +174,13 @@
 					if (_jeu.getEcranDeJeu() is Tableau && _jeu.getEstEnDialogue() == false) {
 						switch (touche) {
 							case Keyboard.NUMBER_2:
-								_jeu.ajouterPersoDebogage("pnjNova_mc");
+								_jeu.ajouterPersoDebogage("pnjCaitlyn_mc");
 								break; // «ctrl+shift+2» + DÉBOGAGE ajoute Nova pour tests
 							case Keyboard.NUMBER_3:
-								_jeu.ajouterPersoDebogage("pnjLucem_mc");
+								_jeu.ajouterPersoDebogage("pnjDelwin_mc");
 								break; // «ctrl+shift+3» + DÉBOGAGE ajoute Lucem pour tests
 							case Keyboard.NUMBER_4:
-								_jeu.ajouterPersoDebogage("pnjFortis_mc");
+								_jeu.ajouterPersoDebogage("pnjDagan_mc");
 								break; // «ctrl+shift+4» + DÉBOGAGE ajoute Fortis  pour tests
 							case Keyboard.NUMBER_8:
 								_jeu.ajouterObjet("Patate");
