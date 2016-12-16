@@ -43,6 +43,8 @@ Nouveautés:
 - Intégration des dialogues
 - Intégration des symboles PNJs.
 - Correction de plusieurs bugs visuels. Voir base Mantis.
+- Sonorisation des tableaux.
+- Sonorisation des monstres et des personnages.
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 VERSION 2.14 beta 1
@@ -52,8 +54,6 @@ Nouveautés:
 - Ajout d'éléments pourles tableaux.
 - Implémentation du stystème de viser pour attaquer.
 - Intégration de dialogues
-- Sonorisation des tableaux.
-- Sonorisation des monstres et des personnages.
 - Balance des ennemis par rapport aux personnages, en combat.
 - Ajout d'éléments par rapport à l'histoire. Notamment Excalibur, Delwyn et son portail...
 ---------------------------------------------------------------------------------
