@@ -4,7 +4,58 @@
 L'ÉPOPÉE FANTASTIQUE
 PAR Nicolas Labonté et Frédérique St-Georges
 TIM – CÉGEP DE SAINT-JÉRÔME
-
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 3.0
+Date: 2016-12-15.
+Par Frédérique St-Georges et Nicolas Labonté
+Nouveautés:
+- Correction de plusieurs bogues (voir Mantis).
+- Ajout d'un frame de mort pour les personnages.
+- Sonorisation de Mordred.
+- Correction du bug relié à la mort du personnage lorsqu'il jette une pièce dans le puit.
+- Préparation des documents de qualité.
+- Fermeture de bugs dans Mantis.
+- Ménage dans la librairie. Suppression d'éléments obsolètes.
+- Suppression de PNJs qui n'avaient plus rapport à l'histoire courante.
+- S'il y a juste un ennemi dans un combat, ciblage automatique sur celui-ci.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.16 beta 2
+Date: 2016-12-08.
+Par Frédérique St-Georges et Nicolas Labonté
+Nouveautés:
+- Corrections de certains éléments suite aux tests utilisateurs. Les maisons fermées donnent des messages lorsqu'il y a une collision avec.
+- Correction de certains bogues liés au son.
+- Correction de fautes d'orthographe dans les dialogues.
+- Colorisation finale de la cinématique de fin (épilogue).
+- Intégration de l'épilogue dans les frames de navigation.
+- On peut "appuyer pour continuer", dans l'épilogue.
+- Correction de bogues dans la base de données Mantis.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.15 beta 2
+Date: 2016-12-02.
+Par Frédérique St-Georges et Nicolas Labonté
+Nouveautés:
+- Corrections de certains éléments suite aux tests utilisateurs. Notamment: les puits soignent les équipiers.
+- Ajout de l'élément de l'histoire lié avec Dagan.
+- Intégration des dialogues
+- Intégration des symboles PNJs.
+- Correction de plusieurs bugs visuels. Voir base Mantis.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.14 beta 1
+Date: 2016-11-25.
+Par Frédérique St-Georges et Nicolas Labonté
+Nouveautés:
+- Ajout d'éléments pourles tableaux.
+- Implémentation du stystème de viser pour attaquer.
+- Intégration de dialogues
+- Sonorisation des tableaux.
+- Sonorisation des monstres et des personnages.
+- Balance des ennemis par rapport aux personnages, en combat.
+- Ajout d'éléments par rapport à l'histoire. Notamment Excalibur, Delwyn et son portail...
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 VERSION 2.13 alpha 2
