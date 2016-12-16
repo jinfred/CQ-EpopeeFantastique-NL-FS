@@ -1,0 +1,204 @@
+﻿---------------------------------------------------------------------------------
+#################################################################################
+---------------------------------------------------------------------------------
+L'ÉPOPÉE FANTASTIQUE
+PAR Nicolas Labonté et Frédérique St-Georges
+TIM – CÉGEP DE SAINT-JÉRÔME
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.13 alpha 2
+Date: 2016-11-17.
+Par Frédérique St-Georges et Nicolas Labonté
+Nouveautés:
+- Ajout d'éléments pour la map.
+- Intégration des monstres. Ils peuvent mainteant être combattus.
+- Ajout de collision et clootures invisibles pour certains éléments de la map.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.12 alpha 2
+Date: 2016-11-17.
+Par Frédérique St-Georges
+Nouveautés:
+- Ajout d'animation de Mordred.
+- Colorisation des loups de terre et de feu
+- Animation des loups de terre et de feu
+- Ajout de nouvelles cornes pour Fomoire mage et Fomoire Lancier.
+- Ajout de nouvelles armes pour Fomoire mage et Fomoire Lancier.
+- Ajout de nouvelles animations pour Fomoire mage et Fomoire Lancier.
+- Ajout des variantes des fantômes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.11 alpha 2
+Date: 2016-11-16.
+Par Frédérique St-Georges et Nicolas Labonté
+Nouveautés:
+- Ajout des dessins de Mordred.
+- Conversion du loup en symbole.
+- Séparation des calques du Loup et Mordred.
+- Intégration du système de dialogues liés à l'histoire - Forêt Enchantée
+- Rehausse du système de combat (choix de cible)
+- Finition de la mécanique des puits
+- Intégration de nouveau mode de debogage, accommodation des 36 niveaux
+- Mécanique de Delwin (Mage) manque ses sorts 10% de chance
+- Nombreux fix de bugs, optimization et fonctionnalités diverses
+- ...
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.10 alpha 1
+Date: 2016-11-15.
+Par Frédérique St-Georges
+Nouveautés:
+- Ajout des dessins et animations des fantômes, des Fomoires.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.9 alpha 1
+Date: 2016-11-11.
+Par Frédérique St-Georges
+Nouveautés:
+- Ajout du visuel permanent de Delwyn et Caitlyn
+- Correction de la tête de Spero.
+- Correction du cycle de marche.
+- Ajout d'animation de combat pour Caitlyn.
+- Intégration de nouveaux modèles de PNJs.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.8 alpha 1
+Date: 2016-11-10.
+Par Nicolas Labonté
+Nouveautés:
+- Intégration de la programmation des animations de combat (visuel temporaire).
+- Ajout d'une map: Ravin.
+- Intégration complète de portes et de téléports.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.7 alpha 1
+Date: 2016-11-09.
+Par Nicolas Labonté et Frédérique St-Georges
+Nouveautés:
+- Ajout des clips des maps (Ajouter les éléments de décors).
+- Ajout des portes et téléports.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.6 alpha 1
+Date: 2016-11-08.
+Par Nicolas Labonté
+Nouveautés:
+- Réglage du problème de dialogue après avoir fait un hitTest avec les objets marchands.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.5 alpha 1
+Date: 2016-11-04.
+Par Nicolas Labonté et Frédérique St-Georges
+Nouveautés:
+- Ajout de programmation du puit (visuel temporaire).
+- Retraçage des maisons et des buissons.
+- Mise à jour de l'échéancier.
+- Mise à jour du publish model.
+- Nouvelles icônes.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.4 alpha 1
+Date: 2016-11-01.
+Par Nicolas Labonté et Frédérique St-Georges
+Nouveautés:
+- Ajout des cycles de marche vers le haut et vers le bas pour [Spero]
+- Ajout de la programmation liée aux cycles de marches
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.3 alpha 1
+Date: 2016-11-01.
+Par Nicolas Labonté et Frédérique St-Georges
+Nouveautés:
+- Colorisation de l'entièreté de la cinématique.
+- Ajout de programmation pour que le joueur puisse passer les bouts de cinématique.
+- Ajout du marchand et de sa programmation (visuel temporaire).
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.1 alpha 1
+Date: 2016-10-30.
+Par Frédérique St-Georges
+Nouveautés:
+- Ajout du prototype de cinématique.
+- Colorisation du village détruit de la cinématique.
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 2.0 alpha 1
+Date: 2016-10-29.
+Par Nicolas Labonté
+Nouveautés:
+- Fait en sorte que le joueur ne puisse pas fuire le combat avec le sous-chef1
+- Fait en sorte que l'utilisation de la magie coûte des points de magie qui se régénèrent en attaquant
+Problèmes connus:
+- Quand un perso utilise de la magie sans avoir assez de points de magie, le message voulu ne s'affiche pas
+- Parfois, les personnages ne perdent pas de points en utilisant la magie
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 1.2.1
+Date: 2016-10-08
+Par Jonathan Tremblay
+Nouveautés:
+- Correction d'un bogue lié au système de débogage (après la mort ou la victoire).
+Problèmes connus:
+- Pas de gestion des points de magie.
+- Pas de progression de la difficulté.
+- Les changements de niveau des personnages n'ont pas d'effets.
+- Objets inutiles pour le moment.
+- Quelques bogues intermittents doivent être identifiés.
+- Le récit et le visuel doivent être développés...
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 1.2
+Date: 2016-10-02
+Par Jonathan Tremblay
+Nouveautés:
+- Nouveau système de dialogues.
+- Ajout d'un système de tests automatisés.
+- Nouvelle mécanique d'accès au débogage.
+- Gestion de la direction gauche/droite.
+- Ajout d'animations et d'effets sonores.
+- Ajout d'une barrière dans le champ de patates.
+- Clarification dans la nomenclature des éléments.
+Problèmes connus:
+- Pas de gestion des points de magie.
+- Pas de progression de la difficulté.
+- Les changements de niveau des personnages n'ont pas d'effets.
+- Objets inutiles pour le moment.
+- Quelques bogues intermittents doivent être identifiés.
+- Le récit et le visuel doivent être développés...
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 1.1
+Date: 2015-10-04
+Par Jonathan Tremblay
+Nouveautés:
+- Ajouts et améliorations d'éléments visuels (arbres, roches, tonneaux, ravins).
+- Programmation du nouveau système de gestion de la profondeur.
+- Modification du système de gestion des collisions.
+- Changements mineurs aux dialogues.
+- Ajout du tableau Foret2.
+- Implémentation de méthodes «Try & Catch» dans le code.
+Problèmes connus:
+- Pas de gestion des points de magie.
+- Pas de progression de la difficulté.
+- Les changements de niveau des personnages n'ont pas d'effets.
+- Objets inutiles pour le moment.
+- Quelques bogues intermittents doivent être identifiés.
+- Le récit et le visuel doivent être développés...
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+VERSION 1.0
+Date: 2014-10-02
+Par Jonathan Tremblay
+Nouveautés:
+- Nouveau visuel, nouveau code, nouveaux tableaux...
+Problèmes connus:
+- Système de collision médiocre.
+- Pas de gestion des points de magie.
+- Pas de progression de la difficulté.
+- Les changements de niveau des personnages n'ont pas d'effets.
+- Objets inutiles pour le moment.
+- Quelques bogues intermittents doivent être identifiés.
+- Le récit et le visuel doivent être développés...
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
